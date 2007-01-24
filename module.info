@@ -1,0 +1,4 @@
+desc=Virtualmin Protected Directories
+hidden=1
+depends=htaccess-htpasswd 1.222
+version=1.3
