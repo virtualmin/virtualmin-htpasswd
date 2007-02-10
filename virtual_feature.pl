@@ -1,9 +1,6 @@
 # Defines functions for this feature
 
-do '../web-lib.pl';
-&init_config();
-do '../ui-lib.pl';
-&foreign_require("htaccess-htpasswd", "htaccess-lib.pl");
+require 'virtualmin-htpasswd-lib.pl';
 $input_name = $module_name;
 $input_name =~ s/[^A-Za-z0-9]/_/g;
 
@@ -31,7 +28,7 @@ local ($user, $new, $dom) = @_;
 
 # Find protected directories
 local @dirs = &htaccess_htpasswd::list_directories();
-@dirs = grep { &htaccess_htpasswd::can_access_dir($_->[0]) } @dirs;
+@dirs = grep { &can_directory($_->[0], $dom) } @dirs;
 return undef if (!@dirs);
 
 # Work out which ones this user has access to
@@ -50,15 +47,7 @@ local $main::ui_table_cols = 2;
 return &ui_table_row(&hlink($text{'user_dirs'}, "dirs"),
 	     &ui_select($input_name, \@indir,
 		[ map { [ $_->[0], &remove_public_html($_->[0], $dom) ] }
-		      @dirs ], 3, 1));
-}
-
-sub remove_public_html
-{
-local ($dir, $dom) = @_;
-local $hdir = $dom->{'home'};
-$dir =~ s/^\Q$hdir\E\///;
-return $dir;
+		      @dirs ], scalar(@dirs) < 3 ? 3 : scalar(@dirs), 1));
 }
 
 # mailbox_validate(&user, &old-user, &in, new, &domain)
@@ -77,7 +66,7 @@ local ($user, $old, $in, $new, $dom) = @_;
 
 # Find protected directories
 local @dirs = &htaccess_htpasswd::list_directories();
-@dirs = grep { &htaccess_htpasswd::can_access_dir($_->[0]) } @dirs;
+@dirs = grep { &can_directory($_->[0], $dom) } @dirs;
 return undef if (!@dirs);
 local %indir = &get_in_dirs(\@dirs, $old->{'user'});
 local $count = 0;
@@ -130,7 +119,7 @@ local ($user, $old, $dom) = @_;
 
 # Find protected directories
 local @dirs = &htaccess_htpasswd::list_directories();
-@dirs = grep { &htaccess_htpasswd::can_access_dir($_->[0]) } @dirs;
+@dirs = grep { &can_directory($_->[0], $dom) } @dirs;
 local %indir = &get_in_dirs(\@dirs, $old->{'user'});
 
 # Update the user
@@ -157,7 +146,7 @@ local ($user, $dom) = @_;
 
 # Find protected directories
 local @dirs = &htaccess_htpasswd::list_directories();
-@dirs = grep { &htaccess_htpasswd::can_access_dir($_->[0]) } @dirs;
+@dirs = grep { &can_directory($_->[0], $dom) } @dirs;
 local %indir = &get_in_dirs(\@dirs, $user->{'user'});
 
 # Take the user out of them
@@ -191,7 +180,7 @@ sub mailbox_defaults_inputs
 local ($defs, $dom) = @_;
 local $lref =&read_file_lines("$module_config_directory/defaults.$dom->{'id'}");
 local @dirs = &htaccess_htpasswd::list_directories();
-@dirs = grep { &htaccess_htpasswd::can_access_dir($_->[0]) } @dirs;
+@dirs = grep { &can_directory($_->[0], $dom) } @dirs;
 return undef if (!@dirs);
 return &ui_table_row($text{'user_dirs'},
      &ui_select($input_name, $lref,
@@ -224,6 +213,33 @@ foreach my $d (@$dirs) {
 	$indir{$d->[0]} = $got if ($got);
 	}
 return %indir;
+}
+
+# feature_always_links(&domain)
+# Returns an array of link objects for webmin modules for this plugin
+sub feature_always_links
+{
+local ($d) = @_;
+if ($d->{'web'} && $d->{'dir'} && !$d->{'alias'}) {
+	return ( { 'mod' => $module_name,
+		   'desc' => $text{'links_link'},
+		   'page' => 'index.cgi?dom='.$d->{'id'},
+		   'cat' => 'services',
+		 } );
+	}
+}
+
+# Grant this Webmin module only for domain owners who have some web domains
+sub feature_webmin
+{
+local @doms = grep { $_->{'web'} && $_->{'dir'} && !$_->{'alias'} } @{$_[1]};
+print STDERR "doms = ",scalar(@doms),"\n";
+if (@doms) {
+	return ( [ $module_name ] );
+	}
+else {
+	return ( );
+	}
 }
 
 1;
