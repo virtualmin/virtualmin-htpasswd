@@ -233,7 +233,6 @@ if ($d->{'web'} && $d->{'dir'} && !$d->{'alias'}) {
 sub feature_webmin
 {
 local @doms = grep { $_->{'web'} && $_->{'dir'} && !$_->{'alias'} } @{$_[1]};
-print STDERR "doms = ",scalar(@doms),"\n";
 if (@doms) {
 	return ( [ $module_name ] );
 	}
