@@ -21,7 +21,7 @@ if ($in{'dom'}) {
 # Show table of directories
 @links = ( &select_all_link("d"),
 	   &select_invert_link("d"),
-	   "<a href='add_form.cgi?dom=$in{'dom'}'>$text{'index_add'}</a>" );
+	   "<a href='add_form.cgi?dom=$d->{'dom'}'>$text{'index_add'}</a>" );
 if (@dirs) {
 	# Show table of directories
 	print &ui_form_start("delete.cgi");
