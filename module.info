@@ -3,3 +3,4 @@ hidden=1
 depends=htaccess-htpasswd virtual-server/3.35 1.320
 version=1.4
 desc_fi=Virtualmin Hakemistojen Suojaus
+desc_nl=Virtualmin Beschermde Directory's
