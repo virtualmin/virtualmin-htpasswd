@@ -23,8 +23,10 @@ foreach $path (@d) {
 		if (&can_directory($dir->[1], $d)) {
 			&unlink_logged($dir->[1]);
 			}
+		@dirs = grep { $_ ne $dir } @dirs;
 		}
 	}
+&htaccess_htpasswd::save_directories(\@dirs);
 
 &redirect("index.cgi?dom=$in{'dom'}");
 
