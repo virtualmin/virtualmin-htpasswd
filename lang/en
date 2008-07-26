@@ -21,6 +21,7 @@ add_header=New web directory protection
 add_dom=Virtual server
 add_dir=Website subdirectory
 add_all=Entire website
+add_subdir=Sub-directory
 add_desc=Authentication realm
 add_err=Failed to protect new directory
 add_edir=No directory entered

@@ -27,11 +27,12 @@ else {
 	}
 
 # Directory under public_html
-print &ui_table_row($text{'add_dir'},
-	&ui_opt_textbox("dir", undef, 30, $text{'add_all'}));
+print &ui_table_row(&hlink($text{'add_dir'}, 'add_dir'),
+	&ui_opt_textbox("dir", undef, 30, $text{'add_all'},
+			$text{'add_subdir'}));
 
 # Authentication realm
-print &ui_table_row($text{'add_desc'},
+print &ui_table_row(&hlink($text{'add_desc'}, 'add_desc'),
 	&ui_textbox("desc", undef, 40));
 
 print &ui_table_end();
