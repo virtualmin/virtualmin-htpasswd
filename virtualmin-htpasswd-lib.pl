@@ -27,6 +27,8 @@ else {
 }
 
 # remove_public_html(dir, &domain)
+# Returns a path relative to public_html, for display. If under cgi-bin, 
+# path is relative to home
 sub remove_public_html
 {
 local ($dir, $dom) = @_;
@@ -34,7 +36,13 @@ local $hdir = &virtual_server::public_html_dir($dom);
 if ($hdir eq $dir) {
 	return "<i>$text{'index_hdir'}</i>";
 	}
-$dir =~ s/^\Q$hdir\E\///;
+local $cdir = &virtual_server::cgi_bin_dir($dom);
+if ($dir =~ /^\Q$hdir\E\/(.*)$/) {
+	return $1;
+	}
+elsif ($dir =~ /^\Q$cdir\E\/(.*)$/) {
+	return $1." (CGI)";
+	}
 return $dir;
 }
 

@@ -28,8 +28,10 @@ else {
 
 # Directory under public_html
 print &ui_table_row(&hlink($text{'add_dir'}, 'add_dir'),
-	&ui_opt_textbox("dir", undef, 30, $text{'add_all'},
-			$text{'add_subdir'}));
+	&ui_radio_table("dir_def", 1,
+		[ [ 1, $text{'add_all'} ],
+		  [ 0, $text{'add_subdir'}, &ui_textbox("dir", undef, 30) ],
+		  [ 2, $text{'add_subcgi'}, &ui_textbox("cgi", undef, 30) ] ]));
 
 # Authentication realm
 print &ui_table_row(&hlink($text{'add_desc'}, 'add_desc'),

@@ -1,0 +1,2 @@
+---- Changes since 1.6 ----
+Password protection of a domain's CGI subdirectories can now be added.

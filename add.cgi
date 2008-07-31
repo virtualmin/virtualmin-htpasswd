@@ -9,15 +9,25 @@ require './virtualmin-htpasswd-lib.pl';
 $d = &virtual_server::get_domain($in{'dom'});
 &virtual_server::can_edit_domain($d) || &error($text{'index_ecannot'});
 $pub = &virtual_server::public_html_dir($d);
-if ($in{'dir_def'}) {
+$cgi = &virtual_server::cgi_bin_dir($d);
+if ($in{'dir_def'} == 1) {
+	# Whole website
 	$dir = $pub;
 	}
 else {
-	$in{'dir'} =~ /\S/ || &error($text{'add_edir'});
-	$in{'dir'} !~ /\.\./ && $in{'dir'} !~ /\0/ ||
+	$dirname = $in{'dir_def'} == 2 ? $in{'cgi'} : $in{'dir'};
+	$dirname =~ /\S/ || &error($text{'add_edir'});
+	$dirname !~ /\.\./ && $dirname !~ /\0/ ||
 		&error($text{'add_edir2'});
-	$in{'dir'} !~ /^\// || &error($text{'add_edir3'});
-	$dir = $pub."/".$in{'dir'};
+	$dirname !~ /^\// || &error($text{'add_edir3'});
+	if ($in{'dir_def'} == 2) {
+		# Under cgi-bin
+		$dir = $cgi."/".$in{'cgi'};
+		}
+	else {
+		# Under public_html
+		$dir = $pub."/".$in{'dir'};
+		}
 	-d $dir || &error($text{'add_edir4'});
 	}
 $in{'desc'} =~ /\S/ || &error($text{'add_edesc'});

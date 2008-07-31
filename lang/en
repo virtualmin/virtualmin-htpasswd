@@ -20,6 +20,7 @@ add_title=Protect New Directory
 add_header=New web directory protection
 add_dom=Virtual server
 add_dir=Website subdirectory
+add_subcgi=CGI subdirectory
 add_all=Entire website
 add_subdir=Sub-directory
 add_desc=Authentication realm
