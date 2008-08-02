@@ -4,3 +4,4 @@ depends=htaccess-htpasswd virtual-server/3.35 1.420
 version=1.6
 desc_fi=Virtualmin Hakemistojen Suojaus
 desc_nl=Virtualmin Beschermde Directory's
+feedback=jcameron@webmin.com
