@@ -33,20 +33,30 @@ sub remove_public_html
 {
 local ($dir, $dom) = @_;
 local $hdir = &virtual_server::public_html_dir($dom);
-if ($hdir eq $dir) {
-	return "<i>$text{'index_hdir'}</i>";
+if ($hdir) {
+	# Take relative to public_html or cgi-bin dir
+	if ($hdir eq $dir) {
+		return "<i>$text{'index_hdir'}</i>";
+		}
+	local $cdir = &virtual_server::cgi_bin_dir($dom);
+	if ($dir =~ /^\Q$hdir\E\/(.*)$/) {
+		return $1;
+		}
+	elsif ($dir =~ /^\Q$cdir\E\/(.*)$/) {
+		return $1." (CGI)";
+		}
+	else {
+		# Not under either .. return full path
+		return $dir;
+		}
 	}
-local $cdir = &virtual_server::cgi_bin_dir($dom);
-if ($dir =~ /^\Q$hdir\E\/(.*)$/) {
-	return $1;
+else {
+	# Take relative to home
+	local $hdir = $dom->{'home'};
+	$dir =~ s/^\Q$hdir\E\///;
+	return $dir;
 	}
-elsif ($dir =~ /^\Q$cdir\E\/(.*)$/) {
-	return $1." (CGI)";
-	}
-return $dir;
 }
-
-
 
 1;
 
