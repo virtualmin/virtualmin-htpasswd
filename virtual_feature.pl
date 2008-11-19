@@ -3,6 +3,7 @@
 require 'virtualmin-htpasswd-lib.pl';
 $input_name = $module_name;
 $input_name =~ s/[^A-Za-z0-9]/_/g;
+&load_theme_library();
 
 # feature_name()
 # Returns a short name for this feature
