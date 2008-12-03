@@ -50,7 +50,8 @@ $usersfile = "$dir/htusers";
 # Create users file
 &open_lock_tempfile(USERS, ">$usersfile");
 &close_tempfile(USERS);
-&set_ownership_permissions($d->{'uid'}, $d->{'gid'}, 0750, $usersfile);
+$perms = &virtual_server::apache_in_domain_group($d) ? 0750 : 0755;
+&set_ownership_permissions($d->{'uid'}, $d->{'gid'}, $perms, $usersfile);
 
 # Add to protected dirs list
 @dirs = &htaccess_htpasswd::list_directories();
