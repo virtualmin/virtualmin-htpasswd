@@ -30,21 +30,28 @@ else {
 		}
 	-d $dir || &error($text{'add_edir4'});
 	}
-$in{'desc'} =~ /\S/ || &error($text{'add_edesc'});
+$in{'desc'} =~ /\S/ && $in{'desc'} !~ /["\0\r\n]/ || &error($text{'add_edesc'});
 
 # Check for existing files
 $file = "$dir/$htaccess_htpasswd::config{'htaccess'}";
--r $file && &error(&text('add_eclash', $file));
+$conf = &apache::get_htaccess_config($file);
+foreach $clash ("AuthUserFile", "AuthType", "AuthName") {
+	$dirclash = &apache::find_directive($clash, $conf);
+	if ($dirclash) {
+		&error(&text('add_eclash3', $usersfile, $clash));
+		}
+	}
 $usersfile = "$dir/htusers";
 -r $usersfile && &error(&text('add_eclash2', $usersfile));
 
 # Create .htaccess (as domain owner)
-&open_lock_tempfile(HTACCESS, ">$file");
-&print_tempfile(HTACCESS, "AuthUserFile \"$usersfile\"\n");
-&print_tempfile(HTACCESS, "AuthType Basic\n");
-&print_tempfile(HTACCESS, "AuthName \"$in{'desc'}\"\n");
-&print_tempfile(HTACCESS, "require valid-user\n");
-&close_tempfile(HTACCESS);
+&lock_file($file);
+&apache::save_directive("AuthUserFile", [ "\"$usersfile\"" ], $conf, $conf);
+&apache::save_directive("AuthType", [ "Basic" ], $conf, $conf);
+&apache::save_directive("AuthName", [ "\"$in{'desc'}\"" ], $conf, $conf);
+&apache::save_directive("require", [ "valid-user" ], $conf, $conf);
+&flush_file_lines($file);
+&unlock_file($file);
 &set_ownership_permissions($d->{'uid'}, $d->{'gid'}, 0755, $file);
 
 # Create users file

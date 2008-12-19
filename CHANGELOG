@@ -1,2 +1,4 @@
 ---- Changes since 1.6 ----
 Password protection of a domain's CGI subdirectories can now be added.
+---- Changes since 1.8 ----
+Support adding protection to directories with an existing .htaccess file, and removing it without deleting the file.

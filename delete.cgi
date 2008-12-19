@@ -18,8 +18,23 @@ foreach $path (@d) {
 	&can_directory($path, $d) || &error($text{'delete_ecannot'});
 	($dir) = grep { $_->[0] eq $path } @dirs;
 	if ($dir) {
-		&unlink_logged(
-			"$dir->[0]/$htaccess_htpasswd::config{'htaccess'}");
+		# Remove protection directives
+		$file = "$dir->[0]/$htaccess_htpasswd::config{'htaccess'}";
+		&lock_file($file);
+		$conf = &apache::get_htaccess_config($file);
+		&apache::save_directive("AuthUserFile", [ ], $conf, $conf);
+		&apache::save_directive("AuthType", [ ], $conf, $conf);
+		&apache::save_directive("AuthName", [ ], $conf, $conf);
+		&apache::save_directive("require", [ ], $conf, $conf);
+		&flush_file_lines($file);
+
+		# Remove whole file if empty
+		if (&empty_file($file)) {
+			&unlink_logged($file);
+			}
+		&unlock_file($file);
+
+		# Remove htusers file
 		if (&can_directory($dir->[1], $d)) {
 			&unlink_logged($dir->[1]);
 			}

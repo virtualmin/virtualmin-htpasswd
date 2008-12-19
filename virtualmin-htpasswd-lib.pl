@@ -5,6 +5,7 @@ do '../web-lib.pl';
 do '../ui-lib.pl';
 &foreign_require("htaccess-htpasswd", "htaccess-lib.pl");
 &foreign_require("virtual-server", "virtual-server-lib.pl");
+&foreign_require("apache", "apache-lib.pl");
 
 # can_directory(dir, [&domain])
 # Returns 1 if the current user can edit protection in the given directory
@@ -56,6 +57,18 @@ else {
 	$dir =~ s/^\Q$hdir\E\///;
 	return $dir;
 	}
+}
+
+# empty_file(filename)
+# Returns true if a file contains no non-whitespace lines
+sub empty_file
+{
+local ($file) = @_;
+local $lref = &read_file_lines($file, 1);
+foreach my $l (@$lref) {
+	return 0 if ($l =~ /\S/);
+	}
+return 1;
 }
 
 1;

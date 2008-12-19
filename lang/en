@@ -31,6 +31,7 @@ add_edir3=Directory must not start with a /
 add_edir4=Web directory does not exist
 add_eclash=The protection file $1 already exists
 add_eclash2=The users file $1 already exists
+add_eclash3=The protection file $1 already exists and contains the $2 directive
 add_edesc=No description entered
 
 delete_err=Failed to remove protection
