@@ -45,10 +45,20 @@ else {
 	}
 
 local $main::ui_table_cols = 2;
+local @opts;
+foreach my $dir (@dirs) {
+	local $reldir = &remove_public_html($dir->[0], $dom);
+	push(@opts, [ $dir->[0], $reldir ]);
+	}
+local @vals;
+foreach my $dir (@indir) {
+	local $reldir = &remove_public_html($dir, $dom);
+	push(@vals, [ $dir, $reldir ]);
+	}
 return &ui_table_row(&hlink($text{'user_dirs'}, "dirs"),
-	     &ui_select($input_name, \@indir,
-		[ map { [ $_->[0], &remove_public_html($_->[0], $dom) ] }
-		      @dirs ], scalar(@dirs) < 3 ? 3 : scalar(@dirs), 1));
+	     &ui_multi_select($input_name, \@vals, \@opts,
+			      scalar(@dirs) < 3 ? 3 : scalar(@dirs), 0, 0,
+			      $text{'user_opts'}, $text{'user_vals'}));
 }
 
 # mailbox_validate(&user, &old-user, &in, new, &domain)
@@ -73,7 +83,7 @@ local %indir = &get_in_dirs(\@dirs, $old->{'user'});
 local $count = 0;
 
 # Update them all
-local %seldir = map { $_, 1 } split(/\0/, $in->{$input_name});
+local %seldir = map { $_, 1 } split(/\r?\n/, $in->{$input_name});
 foreach my $d (@dirs) {
 	local $suser = $indir{$d->[0]};
 	if ($suser && !$seldir{$d->[0]}) {
