@@ -35,6 +35,7 @@ add_eclash=The protection file $1 already exists
 add_eclash2=The users file $1 already exists
 add_eclash3=The protection file $1 already exists and contains the $2 directive
 add_edesc=No description entered
+add_esymlink=The protection file $1 is a symbolic link
 
 delete_err=Failed to remove protection
 delete_enone=None selected

@@ -43,6 +43,7 @@ foreach $clash ("AuthUserFile", "AuthType", "AuthName") {
 	}
 $usersfile = "$dir/htusers";
 -r $usersfile && &error(&text('add_eclash2', $usersfile));
+-l $file && &error(&text('add_esymlink', $file));
 
 # Create .htaccess (as domain owner)
 &lock_file($file);
