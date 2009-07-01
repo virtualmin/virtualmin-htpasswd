@@ -51,15 +51,18 @@ $usersfile = "$dir/htusers";
 &apache::save_directive("AuthType", [ "Basic" ], $conf, $conf);
 &apache::save_directive("AuthName", [ "\"$in{'desc'}\"" ], $conf, $conf);
 &apache::save_directive("require", [ "valid-user" ], $conf, $conf);
-&flush_file_lines($file);
+&virtual_server::write_as_domain_user($d,
+	sub { &flush_file_lines($file) });
 &unlock_file($file);
-&set_ownership_permissions($d->{'uid'}, $d->{'gid'}, 0755, $file);
+&virtual_server::set_permissions_as_domain_user($d, 0755, $file);
 
 # Create users file
-&open_lock_tempfile(USERS, ">$usersfile");
-&close_tempfile(USERS);
+&lock_file($usersfile);
+&virtual_server::open_tempfile_as_domain_user($d, USERS, ">$usersfile");
+&virtual_server::close_tempfile_as_domain_user($d, USERS);
 $perms = &virtual_server::apache_in_domain_group($d) ? 0750 : 0755;
-&set_ownership_permissions($d->{'uid'}, $d->{'gid'}, $perms, $usersfile);
+&virtual_server::set_permissions_as_domain_user($d, $perms, $usersfile);
+&unlock_file($usersfile);
 
 # Add to protected dirs list
 @dirs = &htaccess_htpasswd::list_directories();

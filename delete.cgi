@@ -26,17 +26,20 @@ foreach $path (@d) {
 		&apache::save_directive("AuthType", [ ], $conf, $conf);
 		&apache::save_directive("AuthName", [ ], $conf, $conf);
 		&apache::save_directive("require", [ ], $conf, $conf);
-		&flush_file_lines($file);
+		&virtual_server::write_as_domain_user($d,
+			sub { &flush_file_lines($file) });
 
 		# Remove whole file if empty
 		if (&empty_file($file)) {
-			&unlink_logged($file);
+			&virtual_server::unlink_logged_as_domain_user(
+				$d, $file);
 			}
 		&unlock_file($file);
 
 		# Remove htusers file
 		if (&can_directory($dir->[1], $d)) {
-			&unlink_logged($dir->[1]);
+			&virtual_server::unlink_logged_as_domain_user(
+				$d, $dir->[1]);
 			}
 		@dirs = grep { $_ ne $dir } @dirs;
 		}

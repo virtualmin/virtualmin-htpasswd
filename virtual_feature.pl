@@ -88,7 +88,8 @@ foreach my $d (@dirs) {
 	local $suser = $indir{$d->[0]};
 	if ($suser && !$seldir{$d->[0]}) {
 		# Take out of this directory
-		&htaccess_htpasswd::delete_user($suser);
+		&virtual_server::write_as_domain_user($dom,
+			sub { &htaccess_htpasswd::delete_user($suser) });
 		}
 	elsif (!$suser && $seldir{$d->[0]}) {
 		# Add to this directory
@@ -103,7 +104,8 @@ foreach my $d (@dirs) {
 		else {
 			$suser->{'pass'} = $user->{'pass'};
 			}
-		&htaccess_htpasswd::create_user($suser, $d->[1]);
+		&virtual_server::write_as_domain_user($dom,
+		    sub { &htaccess_htpasswd::create_user($suser, $d->[1]) });
 		$count++;
 		}
 	elsif ($suser && $seldir{$d->[0]}) {
@@ -115,7 +117,8 @@ foreach my $d (@dirs) {
 			$suser->{'pass'} = &htaccess_htpasswd::encrypt_password(
 				$user->{'plainpass'}, undef, $d->[2]);
 			}
-		&htaccess_htpasswd::modify_user($suser);
+		&virtual_server::write_as_domain_user($dom,
+			sub { &htaccess_htpasswd::modify_user($suser) });
 		$count++;
 		}
 	}
@@ -144,7 +147,8 @@ foreach my $d (@dirs) {
 			$suser->{'pass'} = &htaccess_htpasswd::encrypt_password(
 				$user->{'plainpass'}, undef, $d->[2]);
 			}
-		&htaccess_htpasswd::modify_user($suser);
+		&virtual_server::write_as_domain_user($dom,
+			sub { &htaccess_htpasswd::modify_user($suser) });
 		}
 	}
 }
@@ -164,7 +168,8 @@ local %indir = &get_in_dirs(\@dirs, $user->{'user'});
 foreach my $d (@dirs) {
 	local $suser = $indir{$d->[0]};
 	if ($suser) {
-		&htaccess_htpasswd::delete_user($suser);
+		&virtual_server::write_as_domain_user($dom,
+			sub { &htaccess_htpasswd::delete_user($suser) });
 		}
 	}
 }
