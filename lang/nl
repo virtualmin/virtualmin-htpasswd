@@ -11,6 +11,7 @@ add_edir2=Ongeldige directory
 add_edir3=Directory mag niet beginnen met een /
 add_edir4=Web directory bestaat niet
 add_err=Mislukt om nieuwe directory te beschermen
+add_esymlink=De beschermings file $1 is een symbolische link
 add_header=Nieuwe web directory bescherming
 add_subcgi=CGI subdirectory
 add_subdir=Sub-directory
