@@ -8,6 +8,8 @@ index_none=No protected directories have been defined yet.
 index_add=Add protection for a new directory.
 index_return=protected directories
 index_hdir=Entire website
+index_find=Find Protected Directories
+index_finddesc=Find other directories under $1 that have been protected manually, so that their allowed users can be managed.
 
 feat_name=Protected web directories
 feat_edep=The Protected Web Directories module is not installed
@@ -40,3 +42,13 @@ add_esymlink=The protection file $1 is a symbolic link
 delete_err=Failed to remove protection
 delete_enone=None selected
 delete_ecannot=You are not allowed to manage this directory
+
+find_title=Find Protected Directories
+find_err=Failed to find protected directories
+find_edom=Missing virtual server
+find_ecannot=You are not allowed to find directories for this virtual server
+find_doing=Searching for protected directories under $1 ..
+find_found=Found new Apache options file $1 with users in $2.
+find_already=Skipping known Apache options file $1.
+find_noprot=Skipping Apache options file $1, as it does not protect the directory.
+find_foundnot=Found new Apache options file $1, but you are not allowed to manage this directory.

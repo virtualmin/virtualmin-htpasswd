@@ -7,7 +7,7 @@ require './virtualmin-htpasswd-lib.pl';
 
 # Validate inputs
 $d = &virtual_server::get_domain($in{'dom'});
-&virtual_server::can_edit_domain($d) || &error($text{'index_ecannot'});
+$d && &virtual_server::can_edit_domain($d) || &error($text{'index_ecannot'});
 $pub = &virtual_server::public_html_dir($d);
 $cgi = &virtual_server::cgi_bin_dir($d);
 if ($in{'dir_def'} == 1) {

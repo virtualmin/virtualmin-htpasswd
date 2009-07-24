@@ -50,6 +50,16 @@ print &ui_form_columns_table(
 	undef,
 	$text{'index_none'});
 
+# Show button to find more
+if ($d) {
+	print &ui_hr();
+	print &ui_buttons_start();
+	print &ui_buttons_row("find.cgi", $text{'index_find'},
+			      &text('index_finddesc', "<tt>$d->{'home'}</tt>"),
+			      &ui_hidden("dom", $in{'dom'}));
+	print &ui_buttons_end();
+	}
+
 if ($d) {
 	&ui_print_footer($d ? &virtual_server::domain_footer_link($d) : ( ),
 			 "/virtual-server/",
