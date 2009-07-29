@@ -9,7 +9,7 @@ $d = &virtual_server::get_domain($in{'dom'});
 $d && &virtual_server::can_edit_domain($d) || &error($text{'find_ecannot'});
 
 @dirs = &htaccess_htpasswd::list_directories();
-%got = map { ( "$_->[0]/$config{'htaccess'}", 1 ) } @dirs;
+%got = map { ( "$_->[0]/$htaccess_htpasswd::config{'htaccess'}", 1 ) } @dirs;
 
 # Start the search
 &ui_print_header(&virtual_server::domain_in($d), $text{'find_title'}, "");
