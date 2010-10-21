@@ -66,7 +66,7 @@ $perms = &virtual_server::apache_in_domain_group($d) ? 0750 : 0755;
 
 # Add to protected dirs list
 @dirs = &htaccess_htpasswd::list_directories();
-$dirstr = [ $dir, "$usersfile", 0, 0, undef ];
+$dirstr = [ $dir, $usersfile, 0, 0, undef ];
 push(@dirs, $dirstr);
 &htaccess_htpasswd::save_directories(\@dirs);
 
