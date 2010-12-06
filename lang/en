@@ -52,3 +52,4 @@ find_found=Found new Apache options file $1 with users in $2.
 find_already=Skipping known Apache options file $1.
 find_noprot=Skipping Apache options file $1, as it does not protect the directory.
 find_foundnot=Found new Apache options file $1, but you are not allowed to manage this directory.
+__norefs=1
