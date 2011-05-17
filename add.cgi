@@ -51,6 +51,14 @@ $usersfile = "$dir/htusers";
 &apache::save_directive("AuthType", [ "Basic" ], $conf, $conf);
 &apache::save_directive("AuthName", [ "\"$in{'desc'}\"" ], $conf, $conf);
 &apache::save_directive("require", [ "valid-user" ], $conf, $conf);
+&apache::save_directive_struct(undef, { 'name' => 'Files',
+					'value' => 'htusers',
+					'type' => 1,
+					'members' => [
+					  { 'name' => 'deny',
+					    'value' => 'from all' },
+					],
+				      }, $conf, $conf);
 &virtual_server::write_as_domain_user($d,
 	sub { &flush_file_lines($file) });
 &unlock_file($file);
