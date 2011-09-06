@@ -96,12 +96,18 @@ foreach my $d (@dirs) {
 		$suser = { 'user' => $user->{'user'},
 			   'dom' => $dom->{'dom'},
 			   'enabled' => 1 };
-		if ($user->{'passmode'} == 3 ||
-		    defined($user->{'plainpass'})) {
+		if ($user->{'pass_crypt'}) {
+			# Use stored hashed password
+			$suser->{'pass'} = $user->{'pass_crypt'};
+			}
+		elsif ($user->{'passmode'} == 3 ||
+		       defined($user->{'plainpass'})) {
+			# Re-hashed plaintext password
 			$suser->{'pass'} = &htaccess_htpasswd::encrypt_password(
 				$user->{'plainpass'}, undef, $d->[2]);
 			}
 		else {
+			# Use MD5 hashed password
 			$suser->{'pass'} = $user->{'pass'};
 			}
 		&virtual_server::write_as_domain_user($dom,
@@ -114,7 +120,8 @@ foreach my $d (@dirs) {
 			$suser->{'user'} = $user->{'user'};
 			}
 		if ($user->{'pass'} ne $old->{'pass'}) {
-			$suser->{'pass'} = &htaccess_htpasswd::encrypt_password(
+			$suser->{'pass'} = $user->{'pass_crypt'} ||
+			    &htaccess_htpasswd::encrypt_password(
 				$user->{'plainpass'}, undef, $d->[2]);
 			}
 		&virtual_server::write_as_domain_user($dom,
@@ -144,7 +151,8 @@ foreach my $d (@dirs) {
 			$suser->{'user'} = $user->{'user'};
 			}
 		if ($user->{'pass'} ne $old->{'pass'}) {
-			$suser->{'pass'} = &htaccess_htpasswd::encrypt_password(
+			$suser->{'pass'} = $user->{'pass_crypt'} ||
+			    &htaccess_htpasswd::encrypt_password(
 				$user->{'plainpass'}, undef, $d->[2]);
 			}
 		&virtual_server::write_as_domain_user($dom,
