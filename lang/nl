@@ -1,6 +1,6 @@
 __norefs=1
 add_all=Gehele website
-add_desc=Identificatie realm
+add_desc=Authenticatie realm
 add_dir=Website subdirectory
 add_dom=Virtuele server
 add_eclash=De bescherming's file $1 bestaat reeds
