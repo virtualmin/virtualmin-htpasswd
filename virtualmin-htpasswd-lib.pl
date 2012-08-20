@@ -47,7 +47,7 @@ if ($hdir) {
 	elsif ($dir =~ /^\Q$cdir\E\/(.*)$/) {
 		return $1." (CGI)";
 		}
-	elsif ($dir =~ /^\Q$d->{'home'}\E\/domains\/([^\/]+)/) {
+	elsif ($dir =~ /^\Q$dom->{'home'}\E\/domains\/([^\/]+)/) {
 		# Under a sub-server
 		local $sd = &virtual_server::get_domain_by("dom", $1);
 		if ($sd) {
