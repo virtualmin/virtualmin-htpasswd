@@ -58,7 +58,7 @@ foreach my $dir (@indir) {
 return &ui_table_row(&hlink($text{'user_dirs'}, "dirs"),
 	     &ui_multi_select($input_name, \@vals, \@opts,
 			      scalar(@dirs) < 3 ? 3 : scalar(@dirs), 0, 0,
-			      $text{'user_opts'}, $text{'user_vals'}));
+			      $text{'user_opts'}, $text{'user_vals'}, 400));
 }
 
 # mailbox_validate(&user, &old-user, &in, new, &domain)

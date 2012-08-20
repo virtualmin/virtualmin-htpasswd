@@ -29,7 +29,8 @@ else {
 
 # remove_public_html(dir, &domain)
 # Returns a path relative to public_html, for display. If under cgi-bin, 
-# path is relative to home
+# path is relative to home. If under another domain's public_html dir, path
+# is relative to that.
 sub remove_public_html
 {
 local ($dir, $dom) = @_;
@@ -46,10 +47,18 @@ if ($hdir) {
 	elsif ($dir =~ /^\Q$cdir\E\/(.*)$/) {
 		return $1." (CGI)";
 		}
-	else {
-		# Not under either .. return full path
-		return $dir;
+	elsif ($dir =~ /^\Q$d->{'home'}\E\/domains\/([^\/]+)/) {
+		# Under a sub-server
+		local $sd = &virtual_server::get_domain_by("dom", $1);
+		if ($sd) {
+			local $rv = &remove_public_html($dir, $sd);
+			if ($rv) {
+				return $rv." (".$sd->{'dom'}.")";
+				}
+			}
 		}
+	# Not under either .. return full path
+	return $dir;
 	}
 else {
 	# Take relative to home
