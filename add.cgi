@@ -41,7 +41,8 @@ foreach $clash ("AuthUserFile", "AuthType", "AuthName") {
 		&error(&text('add_eclash3', $usersfile, $clash));
 		}
 	}
-$usersfile = "$dir/htusers";
+$htusers = $htaccess_htpasswd::config{'htpasswd'} || "htusers";
+$usersfile = "$dir/$htusers";
 -r $usersfile && &error(&text('add_eclash2', $usersfile));
 -l $file && &error(&text('add_esymlink', $file));
 
@@ -52,7 +53,7 @@ $usersfile = "$dir/htusers";
 &apache::save_directive("AuthName", [ "\"$in{'desc'}\"" ], $conf, $conf);
 &apache::save_directive("require", [ "valid-user" ], $conf, $conf);
 &apache::save_directive_struct(undef, { 'name' => 'Files',
-					'value' => 'htusers',
+					'value' => $htusers,
 					'type' => 1,
 					'members' => [
 					  { 'name' => 'deny',
