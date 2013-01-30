@@ -5,3 +5,4 @@ version=2.6
 desc_fi=Virtualmin Hakemistojen Suojaus
 desc_nl=Virtualmin Beschermde Directory's
 feedback=jcameron@webmin.com
+desc_no=Virtualmin beskyttede kataloger
