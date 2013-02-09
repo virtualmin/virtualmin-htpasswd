@@ -17,8 +17,9 @@ return $text{'feat_name'};
 # or an error message if not
 sub feature_check
 {
-return &foreign_installed("htaccess-htpasswd", 1) ? undef :
-	$text{'feat_edep'};
+return $text{'feat_edep'} if (!&foreign_installed("htaccess-htpasswd", 1));
+return $text{'feat_eweb'} if (!$virtual_server::config{'web'});
+return undef;
 }
 
 # mailbox_inputs(&user, new, &domain)
