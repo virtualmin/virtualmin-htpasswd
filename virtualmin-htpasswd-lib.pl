@@ -1,4 +1,7 @@
 # Common functions for simple protected directory management
+use strict;
+use warnings;
+our (%text);
 
 BEGIN { push(@INC, ".."); };
 eval "use WebminCore;";
@@ -11,14 +14,14 @@ eval "use WebminCore;";
 # Returns 1 if the current user can edit protection in the given directory
 sub can_directory
 {
-local ($dir, $d) = @_;
+my ($dir, $d) = @_;
 if ($d) {
 	# Just check specific domain
 	return &is_under_directory($d->{'home'}, $dir);
 	}
 else {
 	# Check all of his domains
-	local @doms = grep { &virtual_server::can_edit_domain($_) } 
+	my @doms = grep { &virtual_server::can_edit_domain($_) }
 			   &virtual_server::list_domains();
 	foreach my $dd (@doms) {
 		return 1 if (&is_under_directory($dd->{'home'}, $dir));
@@ -28,19 +31,19 @@ else {
 }
 
 # remove_public_html(dir, &domain)
-# Returns a path relative to public_html, for display. If under cgi-bin, 
+# Returns a path relative to public_html, for display. If under cgi-bin,
 # path is relative to home. If under another domain's public_html dir, path
 # is relative to that.
 sub remove_public_html
 {
-local ($dir, $dom) = @_;
-local $hdir = &virtual_server::public_html_dir($dom);
+my ($dir, $dom) = @_;
+my $hdir = &virtual_server::public_html_dir($dom);
 if ($hdir) {
 	# Take relative to public_html or cgi-bin dir
 	if ($hdir eq $dir) {
 		return "<i>$text{'index_hdir'}</i>";
 		}
-	local $cdir = &virtual_server::cgi_bin_dir($dom);
+	my $cdir = &virtual_server::cgi_bin_dir($dom);
 	if ($dir =~ /^\Q$hdir\E\/(.*)$/) {
 		return $1;
 		}
@@ -49,9 +52,9 @@ if ($hdir) {
 		}
 	elsif ($dir =~ /^\Q$dom->{'home'}\E\/domains\/([^\/]+)/) {
 		# Under a sub-server
-		local $sd = &virtual_server::get_domain_by("dom", $1);
+		my $sd = &virtual_server::get_domain_by("dom", $1);
 		if ($sd) {
-			local $rv = &remove_public_html($dir, $sd);
+			my $rv = &remove_public_html($dir, $sd);
 			if ($rv) {
 				return $rv." (".$sd->{'dom'}.")";
 				}
@@ -62,7 +65,7 @@ if ($hdir) {
 	}
 else {
 	# Take relative to home
-	local $hdir = $dom->{'home'};
+	my $hdir = $dom->{'home'};
 	$dir =~ s/^\Q$hdir\E\///;
 	return $dir;
 	}
@@ -72,8 +75,8 @@ else {
 # Returns true if a file contains no non-whitespace lines
 sub empty_file
 {
-local ($file) = @_;
-local $lref = &read_file_lines($file, 1);
+my ($file) = @_;
+my $lref = &read_file_lines($file, 1);
 foreach my $l (@$lref) {
 	return 0 if ($l =~ /\S/);
 	}
@@ -81,4 +84,3 @@ return 1;
 }
 
 1;
-

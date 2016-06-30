@@ -1,8 +1,12 @@
 #!/usr/local/bin/perl
 # Show a form for adding protection to a directory
+use strict;
+use warnings;
+our (%in, %text);
 
 require './virtualmin-htpasswd-lib.pl';
 &ReadParse();
+my $d;
 if ($in{'dom'}) {
 	$d = &virtual_server::get_domain($in{'dom'});
 	&virtual_server::can_edit_domain($d) || &error($text{'index_ecannot'});
@@ -16,7 +20,7 @@ print &ui_table_start($text{'add_header'}, undef, 2);
 
 # Domain selector
 if (!$d) {
-	@doms = grep { &virtual_server::can_edit_domain($_) } 
+	my @doms = grep { &virtual_server::can_edit_domain($_) }
 		     &virtual_server::list_domains();
 	print &ui_table_row($text{'add_dom'},
 	    &ui_select("dom", undef,
@@ -41,4 +45,3 @@ print &ui_table_end();
 print &ui_form_end([ [ "create", $text{'create'} ] ]);
 
 &ui_print_footer("index.cgi?dom=$in{'dom'}", $text{'index_return'});
-

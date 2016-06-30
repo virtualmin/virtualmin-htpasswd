@@ -2,29 +2,34 @@
 # Show directories for which web protection is enabled, with a form
 # to add a new one. For Virtualmin domain owners, the list is limited to
 # a single domain.
+use strict;
+use warnings;
+our (%text, %in);
 
 require './virtualmin-htpasswd-lib.pl';
 &ReadParse();
 &foreign_require("apache", "apache-lib.pl");
 
 # Get domain and directories
+my $d;
 if ($in{'dom'}) {
 	$d = &virtual_server::get_domain($in{'dom'});
 	&virtual_server::can_edit_domain($d) || &error($text{'index_ecannot'});
 	}
-@dirs = &htaccess_htpasswd::list_directories();
+my @dirs = &htaccess_htpasswd::list_directories();
 @dirs = grep { &can_directory($_->[0], $d) } @dirs;
 
 &ui_print_header($d ? &virtual_server::domain_in($d) : undef,
 		 $text{'index_title'}, "", "intro", 0, 1);
 
 # Build table of directories
-@table = ( );
-foreach $dir (@dirs) {
-	$conf = &apache::get_htaccess_config(
+my @table = ( );
+foreach my $dir (@dirs) {
+	no warnings "once";
+	my $conf = &apache::get_htaccess_config(
 		"$dir->[0]/$htaccess_htpasswd::config{'htaccess'}");
-	$desc = &apache::find_directive("AuthName", $conf, 1);
-	$users = $dir->[2] == 3 ?
+	my $desc = &apache::find_directive("AuthName", $conf, 1);
+	my $users = $dir->[2] == 3 ?
 		&htaccess_htpasswd::list_digest_users($dir->[1]) :
 		&htaccess_htpasswd::list_users($dir->[1]);
 	push(@table, [
@@ -61,11 +66,12 @@ if ($d) {
 	}
 
 if ($d) {
+	no warnings "once";
 	&ui_print_footer($d ? &virtual_server::domain_footer_link($d) : ( ),
 			 "/virtual-server/",
 			 $virtual_server::text{'index_return'});
+	use warnings "once";
 	}
 else {
 	&ui_print_footer("/", $text{'index'});
 	}
-

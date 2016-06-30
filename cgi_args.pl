@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 
 do 'virtualmin-htpasswd-lib.pl';
 
