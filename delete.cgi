@@ -18,6 +18,7 @@ if ($in{'dom'}) {
 	}
 
 my @dirs = &htaccess_htpasswd::list_directories();
+my $htusers = $htaccess_htpasswd::config{'htpasswd'} || "htusers";
 foreach my $path (@d) {
 	&can_directory($path, $d) || &error($text{'delete_ecannot'});
 	my ($dir) = grep { $_->[0] eq $path } @dirs;
@@ -31,6 +32,9 @@ foreach my $path (@d) {
 		&apache::save_directive("AuthType", [ ], $conf, $conf);
 		&apache::save_directive("AuthName", [ ], $conf, $conf);
 		&apache::save_directive("require", [ ], $conf, $conf);
+		my @files = &apache::find_directive_struct("Files", $conf);
+		@files = grep { $_->{'value'} ne $htusers } @files;
+		&apache::save_directive("Files", \@files, $conf, $conf);
 		if ($main::file_cache{$file}) {
 			&virtual_server::write_as_domain_user($d,
 				sub { &flush_file_lines($file) });
