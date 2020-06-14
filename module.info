@@ -2,7 +2,4 @@ desc=Virtualmin Protected Directories
 hidden=1
 depends=htaccess-htpasswd apache virtual-server/3.70 1.420
 version=2.6
-desc_fi=Virtualmin Hakemistojen Suojaus
-desc_nl=Virtualmin Beschermde Directory's
 feedback=jcameron@webmin.com
-desc_no=Virtualmin beskyttede kataloger
