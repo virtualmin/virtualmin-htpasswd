@@ -9,7 +9,7 @@ require './virtualmin-htpasswd-lib.pl';
 &error_setup($text{'delete_err'});
 
 # Validate inputs
-my @d = split(/\s+/, $in{'d'});
+my @d = split(/\0/, $in{'d'});
 @d || &error($text{'delete_enone'});
 my $d;
 if ($in{'dom'}) {
