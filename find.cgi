@@ -18,8 +18,7 @@ my %got = map { ( "$_->[0]/$htaccess_htpasswd::config{'htaccess'}", 1 ) } @dirs;
 &ui_print_header(&virtual_server::domain_in($d), $text{'find_title'}, "");
 
 print &text('find_doing', "<tt>$d->{'home'}</tt>"),"<p>\n";
-# 2XXX Make this use Perl File::Find
-open(my $FIND, "<", "find ".quotemeta($d->{'home'})." -name ".
+open(my $FIND, "find ".quotemeta($d->{'home'})." -name ".
 	   quotemeta($htaccess_htpasswd::config{'htaccess'}).
 	   " -print 2>/dev/null |");
 while(my $f = <$FIND>) {
