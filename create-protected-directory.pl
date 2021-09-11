@@ -13,7 +13,9 @@ C<--path> flag, which can be followed by either a full path or one relative to
 the domain's home directory.
 
 The optional C<--desc> flag can be used to set the description for the directory
-shown when an end user accesses it via a web browser.
+shown when an end user accesses it via a web browser. The password hashing
+format to use can be changed from the default with one of the flags
+C<--crypt>, C<--md5>, C<--sha1> or C<--digest>.
 
 =cut
 
@@ -39,6 +41,7 @@ my @OLDARGV = @ARGV;
 
 # Parse command-line args
 my ($dname, $path, $desc);
+my $format = 0;
 while(@ARGV > 0) {
         my $a = shift(@ARGV);
         if ($a eq "--domain") {
@@ -50,6 +53,18 @@ while(@ARGV > 0) {
         elsif ($a eq "--desc") {
                 $desc = shift(@ARGV);
                 }
+	elsif ($a eq "--crypt") {
+		$format = 0;
+		}
+	elsif ($a eq "--md5") {
+		$format = 1;
+		}
+	elsif ($a eq "--sha1") {
+		$format = 2;
+		}
+	elsif ($a eq "--digest") {
+		$format = 3;
+		}
         else {
                 &usage();
                 }
@@ -119,7 +134,7 @@ my $perms = &virtual_server::apache_in_domain_group($d) ? 0750 : 0755;
 &unlock_file($usersfile);
 
 # Add to protected dirs list
-my $dirstr = [ $path, $usersfile, 0, 0, undef ];
+my $dirstr = [ $path, $usersfile, $format, 0, undef ];
 push(@dirs, $dirstr);
 &htaccess_htpasswd::save_directories(\@dirs);
 
@@ -134,5 +149,6 @@ print "\n";
 print "virtualmin create-protected-directory --domain name\n";
 print "                                      --path directory\n";
 print "                                     [--desc \"description\"]\n";
+print "                                     [--crypt | --md5 | --sha1 | --digest]\n";
 exit(1);
 }
