@@ -5,7 +5,12 @@ our $module_name;
 
 =head1 list-protected-directories.pl
 
-XXX
+Lists protected directories owned by some virtual server.
+
+This command outputs a table of all protected web directories owned by some
+virtual server, identified by the C<--domain> flag. You an also switch to a more
+easily parsed format with the C<--multiline> flag, or get just a list of
+directories with the C<--dir-only> flag.
 
 =cut
 
