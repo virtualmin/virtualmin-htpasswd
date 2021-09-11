@@ -8,7 +8,7 @@ our $module_name;
 Lists users in some protected directory.
 
 This command outputs a table of all users with access to some protected
-directory, identified by the C<--domain> flag and C<--path> flags. You an also
+directory, identified by the C<--domain> and C<--path> flags. You an also
 switch to a more easily parsed format with the C<--multiline> flag, or get just
 a list of usernames with the C<--name-only> flag.
 

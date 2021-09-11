@@ -81,10 +81,12 @@ my ($dir) = grep { $_->[0] eq $path ||
 	           &remove_public_html($_->[0], $d) eq $path } @dirs;
 $dir || &usage("Directory $path is not registered");
 
-# Get the current users for the dir
+# Get the current users for the dir and check for a clash
 my $users = $dir->[2] == 3 ?
 	&htaccess_htpasswd::list_digest_users($dir->[1]) :
 	&htaccess_htpasswd::list_users($dir->[1]);
+my ($clash) = grep { $_->{'user'} eq $user } @$users;
+$clash && &usage("A user named $user already exists");
 
 # Add a new user object
 my $suser = { 'user' => $user,
