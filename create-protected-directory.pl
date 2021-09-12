@@ -125,10 +125,9 @@ if ($desc) {
 
 # Create users file
 &lock_file($usersfile);
-no strict "subs"; # XXX Lexical?
-&virtual_server::open_tempfile_as_domain_user($d, USERS, ">$usersfile");
-&virtual_server::close_tempfile_as_domain_user($d, USERS);
-use strict "subs";
+my $fh = "USERS";
+&virtual_server::open_tempfile_as_domain_user($d, $fh, ">$usersfile");
+&virtual_server::close_tempfile_as_domain_user($d, $fh);
 my $perms = &virtual_server::apache_in_domain_group($d) ? 0750 : 0755;
 &virtual_server::set_permissions_as_domain_user($d, $perms, $usersfile);
 &unlock_file($usersfile);
