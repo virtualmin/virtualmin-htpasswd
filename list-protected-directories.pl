@@ -73,6 +73,7 @@ elsif ($multiline) {
 		no warnings "once";
 		my $afile = "$dir->[0]/$htaccess_htpasswd::config{'htaccess'}";
 		my $conf = &apache::get_htaccess_config($afile);
+		my $desc = &apache::find_directive("AuthName", $conf, 1);
 		print $dir->[0],"\n";
 		print "  Users file: $dir->[1]\n";
 		print "  Access file: $afile\n";
@@ -82,6 +83,7 @@ elsif ($multiline) {
 		print "  Format: ",($dir->[2] == 0 ? "Crypt" :
 				    $dir->[2] == 1 ? "MD5" :
 				    $dir->[2] == 2 ? "SHA1" : "Digest"),"\n";
+		print "  Description: $desc\n";
 		print "  User count: ",scalar(@$users),"\n";
 		}
 	}
