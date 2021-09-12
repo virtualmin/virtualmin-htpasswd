@@ -44,7 +44,7 @@ my $usersfile = "$dir/$htusers";
 foreach my $clash ("AuthUserFile", "AuthType", "AuthName") {
 	my $dirclash = &apache::find_directive($clash, $conf);
 	if ($dirclash) {
-		&error(&text('add_eclash3', $usersfile, $clash));
+		&error(&text('add_eclash3', $file, $clash));
 		}
 	}
 -r $usersfile && &error(&text('add_eclash2', $usersfile));
