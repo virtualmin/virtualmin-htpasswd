@@ -1,6 +1,7 @@
 # Common functions for simple protected directory management
 use strict;
 use warnings;
+no warnings qw(redefine);
 our (%text);
 
 BEGIN { push(@INC, ".."); };
