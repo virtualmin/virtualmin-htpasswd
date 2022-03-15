@@ -34,8 +34,8 @@ else {
 print &ui_table_row(&hlink($text{'add_dir'}, 'add_dir'),
 	&ui_radio_table("dir_def", 1,
 		[ [ 1, $text{'add_all'} ],
-		  [ 0, $text{'add_subdir'}, &ui_textbox("dir", undef, 30) ],
-		  [ 2, $text{'add_subcgi'}, &ui_textbox("cgi", undef, 30) ] ]));
+		  [ 0, $text{'add_subdir'}, &ui_textbox("dir", undef, 40, undef, undef, " placeholder=\"$text{'add_tip_under'} @{[&quote_escape($d->{'public_html_dir'})]}/\"") ],
+		  [ 2, $text{'add_subcgi'}, &ui_textbox("cgi", undef, 40, undef, undef, " placeholder=\"$text{'add_tip_under'} @{[&quote_escape($d->{'cgi_bin_dir'})]}/\"") ] ]));
 
 # Authentication realm
 print &ui_table_row(&hlink($text{'add_desc'}, 'add_desc'),

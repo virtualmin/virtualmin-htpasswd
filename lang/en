@@ -10,6 +10,8 @@ index_return=protected directories
 index_hdir=Entire website
 index_find=Find Protected Directories
 index_finddesc=Find other directories under $1 that have been protected manually, so that their allowed users can be managed.
+index_alert_added_desc=You can control which users have access to $2 using <a href='$1'>Edit Users: Mail and FTP Users</a> page.
+index_alert_added_title=Protection Enabled!
 
 feat_name=Protected web directories
 feat_edep=The Protected Web Directories module is not installed
@@ -39,6 +41,7 @@ add_eclash2=The users file $1 already exists
 add_eclash3=The protection file $1 already exists and contains the $2 directive
 add_edesc=No description entered
 add_esymlink=The protection file $1 is a symbolic link
+add_tip_under=i.e. under
 
 delete_err=Failed to remove protection
 delete_enone=None selected

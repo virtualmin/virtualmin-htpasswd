@@ -14,6 +14,10 @@ $d && &virtual_server::can_edit_domain($d) || &error($text{'index_ecannot'});
 my $pub = &virtual_server::public_html_dir($d);
 my $cgi = &virtual_server::cgi_bin_dir($d);
 my $dir;
+my $tdir_escaped = $in{'dir_def'} == 1 ? "<em>".&html_escape($text{'add_all'})."</em>" :
+           $in{'cgi'} ? "<tt>".&html_escape("$d->{'cgi_bin_dir'}/$in{'cgi'}")."</tt>" : 
+           $in{'dir'} ? "<tt>".&html_escape("$d->{'public_html_dir'}/$in{'dir'}")."</tt>" : "";
+
 if ($in{'dir_def'} == 1) {
 	# Whole website
 	$dir = $pub;
@@ -85,5 +89,5 @@ my $dirstr = [ $dir, $usersfile, 0, 0, undef ];
 push(@dirs, $dirstr);
 &htaccess_htpasswd::save_directories(\@dirs);
 
-&redirect("index.cgi?dom=$in{'dom'}");
+&redirect("index.cgi?dom=$in{'dom'}&added=1&type=".&urlize($tdir_escaped));
 

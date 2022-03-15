@@ -21,7 +21,15 @@ my @dirs = &htaccess_htpasswd::list_directories();
 
 &ui_print_header($d ? &virtual_server::domain_in($d) : undef,
 		 $text{'index_title'}, "", "intro", 0, 1);
-
+if ($in{'added'}) {
+	print &ui_alert_box(
+		    &text("index_alert_added_desc",
+	          "@{[&virtual_server::get_webprefix_safe()]}/virtual-server/list_users.cgi?dom=".&urlize($in{'dom'}),
+	          $in{'type'}
+	        ),
+	        "success", undef, 1, $text{'index_alert_added_title'}, 'fa-lock'
+	      );
+	}
 # Build table of directories
 my @table = ( );
 foreach my $dir (@dirs) {
