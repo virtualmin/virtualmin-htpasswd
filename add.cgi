@@ -89,5 +89,5 @@ my $dirstr = [ $dir, $usersfile, 0, 0, undef ];
 push(@dirs, $dirstr);
 &htaccess_htpasswd::save_directories(\@dirs);
 
-&redirect("index.cgi?dom=$in{'dom'}&added=1&type=".&urlize($tdir_escaped));
+&redirect("index.cgi?dom=$in{'dom'}&added=1&site=".&urlize($in{'dir_def'})."&type=".&urlize($tdir_escaped));
 

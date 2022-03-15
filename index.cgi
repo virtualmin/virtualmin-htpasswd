@@ -23,7 +23,7 @@ my @dirs = &htaccess_htpasswd::list_directories();
 		 $text{'index_title'}, "", "intro", 0, 1);
 if ($in{'added'}) {
 	print &ui_alert_box(
-		    &text("index_alert_added_desc",
+		    &text($in{'site'} ? "index_alert_added_desc" : "index_alert_added_desc2",
 	          "@{[&virtual_server::get_webprefix_safe()]}/virtual-server/list_users.cgi?dom=".&urlize($in{'dom'}),
 	          $in{'type'}
 	        ),

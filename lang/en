@@ -11,6 +11,7 @@ index_hdir=Entire website
 index_find=Find Protected Directories
 index_finddesc=Find other directories under $1 that have been protected manually, so that their allowed users can be managed.
 index_alert_added_desc=You can control which users have access to $2 using <a href='$1'>Edit Users: Mail and FTP Users</a> page.
+index_alert_added_desc2=You can control which users have access to $2 directory using <a href='$1'>Edit Users: Mail and FTP Users</a> page.
 index_alert_added_title=Protection Enabled!
 
 feat_name=Protected web directories
