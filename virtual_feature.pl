@@ -107,7 +107,9 @@ foreach my $d (@dirs) {
 			   'enabled' => 1 };
 		if ($user->{'pass_crypt'}) {
 			# Use stored hashed password
-			$suser->{'pass'} = $user->{'pass_crypt'};
+			$suser->{'pass'} = $user->{'pass_unix'} ||
+			                   $user->{'pass_md5'} ||
+			                   $user->{'pass_crypt'};
 			}
 		elsif ($user->{'passmode'} == 3 ||
 		       defined($user->{'plainpass'})) {
@@ -129,7 +131,9 @@ foreach my $d (@dirs) {
 			$suser->{'user'} = $user->{'user'};
 			}
 		if ($user->{'pass'} ne $old->{'pass'}) {
-			$suser->{'pass'} = $user->{'pass_crypt'} ||
+			$suser->{'pass'} = $user->{'pass_unix'} ||
+			                   $user->{'pass_md5'} ||
+			                   $user->{'pass_crypt'} ||
 			    &htaccess_htpasswd::encrypt_password(
 				$user->{'plainpass'}, undef, $d->[2]);
 			}
@@ -160,7 +164,9 @@ foreach my $d (@dirs) {
 			$suser->{'user'} = $user->{'user'};
 			}
 		if ($user->{'pass'} ne $old->{'pass'}) {
-			$suser->{'pass'} = $user->{'pass_crypt'} ||
+			$suser->{'pass'} = $user->{'pass_unix'} ||
+			                   $user->{'pass_md5'} ||
+			                   $user->{'pass_crypt'} ||
 			    &htaccess_htpasswd::encrypt_password(
 				$user->{'plainpass'}, undef, $d->[2]);
 			}
