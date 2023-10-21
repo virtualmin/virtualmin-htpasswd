@@ -263,7 +263,7 @@ if ($d->{'web'} && $d->{'dir'} && !$d->{'alias'}) {
 	return ( { 'mod' => $module_name,
 		   'desc' => $text{'links_link'},
 		   'page' => 'index.cgi?dom='.$d->{'id'},
-		   'cat' => 'services',
+		   'cat' => 'web',
 		 } );
 	}
 }
