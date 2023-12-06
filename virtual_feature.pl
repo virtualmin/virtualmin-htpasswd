@@ -1,6 +1,7 @@
 # Defines functions for this feature
 use strict;
 use warnings;
+no warnings 'uninitialized';
 our (%text);
 our ($module_name, $module_config_directory);
 
