@@ -54,6 +54,17 @@ foreach my $clash ("AuthUserFile", "AuthType", "AuthName") {
 -r $usersfile && &error(&text('add_eclash2', $usersfile));
 -l $file && &error(&text('add_esymlink', $file));
 
+# Add protected directory in other webserver plugins
+foreach my $p (&virtual_server::list_feature_plugins()) {
+	my $err = &virtual_server::plugin_call($p,
+		"feature_add_protected_dir", $d, 
+			{ 'protected_dir' => $dir,
+			  'protected_user_file_path' => $usersfile, 
+			  'protected_user_file' => $htusers,
+			  'protected_name' => $in{'desc'} });
+	&error($err) if ($err);
+	}
+
 # Create .htaccess (as domain owner)
 &lock_file($file);
 &apache::save_directive("AuthUserFile", [ "\"$usersfile\"" ], $conf, $conf);

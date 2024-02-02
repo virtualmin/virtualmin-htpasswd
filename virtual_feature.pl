@@ -24,7 +24,7 @@ sub feature_check
 {
 return $text{'feat_edep'} if (!&foreign_installed("htaccess-htpasswd", 1));
 no warnings "once";
-return $text{'feat_eweb'} if (!$virtual_server::config{'web'});
+return $text{'feat_eweb'} if (!&virtual_server::domain_has_website());
 use warnings "once";
 return undef;
 }
@@ -260,7 +260,7 @@ return %indir;
 sub feature_always_links
 {
 my ($d) = @_;
-if ($d->{'web'} && $d->{'dir'} && !$d->{'alias'}) {
+if (&virtual_server::domain_has_website($d) && $d->{'dir'} && !$d->{'alias'}) {
 	return ( { 'mod' => $module_name,
 		   'desc' => $text{'links_link'},
 		   'page' => 'index.cgi?dom='.$d->{'id'},
