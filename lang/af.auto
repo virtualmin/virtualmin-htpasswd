@@ -10,13 +10,20 @@ index_return=beskermde kaarte
 index_hdir=Die hele webwerf
 index_find=Vind beskermde kaarte
 index_finddesc=Soek ander kaarte onder $1 wat met die hand beskerm is, sodat hul toegelate gebruikers bestuur kan word.
+index_alert_added_desc=Jy kan beheer watter gebruikers toegang tot $2 het deur die <a href='$1'>Redigeer gebruikers: Pos- en FTP-gebruikers</a>-bladsy.
+index_alert_added_desc2=Jy kan beheer watter gebruikers toegang tot $2-gids het deur die <a href='$1'>Redigeer Gebruikers: Pos- en FTP-gebruikers</a>-bladsy.
+index_alert_added_title=Beskerming geaktiveer!
+
 feat_name=Beskermde webgidse
 feat_edep=Die module Protected Web Directories is nie geïnstalleer nie
-feat_eweb=Die Apache-webwerffunksie is nie geaktiveer nie
+feat_eweb='n Webwerfkenmerk is nie geaktiveer nie
+
 user_dirs=Laat toegang tot webkaarte toe
 user_opts=Alle gidse
 user_vals=Toegestane kaarte
+
 links_link=Beskermde kaarte
+
 add_title=Beskerm nuwe gids
 add_header=Nuwe webgidsbeskerming
 add_dom=Virtuele bediener
@@ -30,20 +37,30 @@ add_edir=Geen gids ingevoer nie
 add_edir2=Ongeldige gids
 add_edir3=Gids moet nie met 'n /
 add_edir4=Webgids bestaan nie
-add_eclash=Die beskermingslêer $1 bestaan reeds
-add_eclash2=Die gebruikerslêer $1 bestaan reeds
-add_eclash3=Die beskermingslêer $1 bestaan reeds en bevat die $2 -richtlijn
+add_egclash=Die beskerming vir hierdie gids bestaan reeds
 add_edesc=Geen beskrywing is ingevoer nie
 add_esymlink=Die beskermingslêer $1 is 'n simboliese skakel
+add_tip_under=d.w.s onder
+
 delete_err=Kon nie beskerming verwyder nie
 delete_enone=Geen gekies nie
 delete_ecannot=U mag nie hierdie gids bestuur nie
+
 find_title=Vind beskermde kaarte
 find_err=Kon nie beskermde kaarte vind nie
 find_edom=Virtuele bediener ontbreek
 find_ecannot=U mag nie kaarte vir hierdie virtuele bediener vind nie
 find_doing=Soek na beskermde kaarte onder $1.
-find_found=Nuwe Apache-opsielêer $1 gevind by gebruikers in $2.
-find_already=Slaan oor bekende Apache-opsielêer $1 oor.
-find_noprot=Slaan oor Apache-opsielêer $1, aangesien dit nie die gids beskerm nie.
-find_foundnot=Nuwe Apache-opsielêer $1 gevind, maar u mag nie hierdie gids bestuur nie.
+find_found= ..het nuwe opsielêer $1 gevind met gebruikers in $2
+find_already=..slaan bekende opsielêer $1 oor
+find_noprot=..slaan opsielêer $1 oor, aangesien dit nie die gids beskerm nie
+find_foundnot=..het nuwe opsielêer $1 gevind, maar jy word nie toegelaat om hierdie gids te bestuur nie
+find_found2= ..het nuwe opsielêer vanaf $1 gids ingevoer
+find_already2=..slaan bekende opsieslêer oor vanaf $1 gids
+find_noprot2=..spring opsielêer van $1 af, aangesien dit nie die gids beskerm nie
+find_foundnot2=..het nuwe opsieslêer in $1 gevind, maar jy word nie toegelaat om hierdie gids te bestuur nie
+find_founddone=..klaar
+find_authreq=Stawing vereis
+find_webservstatus0=en nuwe gidsbeskerminginstellings by die webbedienerkonfigurasie gevoeg
+find_webservstatus1=maar kon nie gidsbeskerminginstellings by die webbedienerkonfigurasie voeg nie
+find_webservstatus-1=en het bestaande gidsbeskerminginstellings van die webbedienerkonfigurasie behou

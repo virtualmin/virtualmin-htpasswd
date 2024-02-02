@@ -10,13 +10,20 @@ index_return=directoris protegits
 index_hdir=Lloc web complet
 index_find=Cerqueu directoris protegits
 index_finddesc=Cerqueu altres directoris de $1 protegits manualment, de manera que es puguin gestionar els usuaris permesos.
+index_alert_added_desc=Podeu controlar quins usuaris tenen accés a $2 mitjançant la pàgina <a href='$1'>Edita usuaris: usuaris de correu i FTP</a>.
+index_alert_added_desc2=Podeu controlar quins usuaris tenen accés al directori $2 mitjançant la pàgina <a href='$1'>Edita usuaris: usuaris de correu i FTP</a>.
+index_alert_added_title=Protecció activada!
+
 feat_name=Directori web protegit
 feat_edep=El mòdul Directoris web protegits no està instal·lat
-feat_eweb=La funció del lloc web d’Apache no està habilitada
+feat_eweb=Una funció del lloc web no està activada
+
 user_dirs=Permet l'accés als directoris web
 user_opts=Tots els directoris
 user_vals=Directori permès
+
 links_link=Directoris protegits
+
 add_title=Protegiu el nou directori
 add_header=Nova protecció de directori web
 add_dom=Servidor virtual
@@ -30,20 +37,30 @@ add_edir=No s'ha entrat cap directori
 add_edir2=Directori no vàlid
 add_edir3=El directori no ha de començar amb un /
 add_edir4=El directori web no existeix
-add_eclash=El fitxer de protecció $1 ja existeix
-add_eclash2=El fitxer d'usuaris $1 ja existeix
-add_eclash3=El fitxer de protecció $1 ja existeix i conté la directiva $2 
+add_egclash=La protecció per a aquest directori ja existeix
 add_edesc=No s'ha introduït cap descripció
 add_esymlink=El fitxer de protecció $1 és un enllaç simbòlic
+add_tip_under=és a dir, sota
+
 delete_err=No s'ha pogut eliminar la protecció
 delete_enone=Cap seleccionada
 delete_ecannot=No teniu permís de gestionar aquest directori
+
 find_title=Cerqueu directoris protegits
 find_err=No s'ha pogut trobar els directoris protegits
 find_edom=Falta el servidor virtual
 find_ecannot=No teniu permís de trobar directoris per a aquest servidor virtual
 find_doing=Cerqueu directoris protegits a $1.
-find_found=S'han trobat nous fitxers d'opcions Apache $1 amb els usuaris a $2.
-find_already=Saltar el fitxer d’opcions Apache conegut $1.
-find_noprot=Saltar el fitxer Opcions Apache $1, ja que no protegeix el directori
-find_foundnot=S'ha trobat un nou fitxer d'opcions Apache $1, però no podeu gestionar aquest directori.
+find_found= ..he trobat un nou fitxer d'opcions $1 amb usuaris a $2
+find_already=..omet el fitxer d'opcions conegudes $1
+find_noprot=..omet el fitxer d'opcions $1, ja que no protegeix el directori
+find_foundnot=..he trobat un nou fitxer d'opcions $1, però no teniu permís per gestionar aquest directori
+find_found2= ..s'ha importat un fitxer d'opcions nou del directori $1
+find_already2=..omet el fitxer d'opcions coneguts del directori $1
+find_noprot2=..omet el fitxer d'opcions de $1, ja que no protegeix el directori
+find_foundnot2=..he trobat un fitxer d'opcions nou a $1, però no teniu permís per gestionar aquest directori
+find_founddone=..fet
+find_authreq=Autenticació necessària
+find_webservstatus0=i va afegir nous paràmetres de protecció de directoris a la configuració del servidor web
+find_webservstatus1=però no s'ha pogut afegir la configuració de protecció del directori a la configuració del servidor web
+find_webservstatus-1=i va mantenir la configuració de protecció del directori existent des de la configuració del servidor web

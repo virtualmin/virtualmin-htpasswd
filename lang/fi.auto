@@ -10,10 +10,17 @@ index_return=suojatut hakemistot
 index_hdir=Koko verkkosivusto
 index_find=Etsi suojattuja hakemistoja
 index_finddesc=Etsi muut hakemistossa $1 olevat hakemistot, jotka on suojattu manuaalisesti, jotta niiden sallittuja käyttäjiä voidaan hallita.
-feat_eweb=Apache-verkkosivustoominaisuus ei ole käytössä
+index_alert_added_desc=Voit hallita, millä käyttäjillä on pääsy kohteeseen $2 <a href='$1'>Muokkaa käyttäjiä: sähköposti- ja FTP-käyttäjiä</a> -sivulla.
+index_alert_added_desc2=Voit hallita, millä käyttäjillä on pääsy $2-hakemistoon <a href='$1'>Muokkaa käyttäjiä: sähköposti- ja FTP-käyttäjiä</a> -sivulla.
+index_alert_added_title=Suojaus käytössä!
+
+feat_eweb=Verkkosivustotoiminto ei ole käytössä
+
 user_opts=Kaikki hakemistot
 user_vals=Sallitut hakemistot
+
 links_link=Suojatut hakemistot
+
 add_title=Suojaa uusi hakemisto
 add_header=Uusi verkkohakemistosuojaus
 add_dom=Virtuaalinen palvelin
@@ -27,20 +34,30 @@ add_edir=Hakemistoa ei annettu
 add_edir2=Virheellinen hakemisto
 add_edir3=Hakemisto ei saa alkaa /
 add_edir4=Web-hakemistoa ei ole
-add_eclash=Suojaustiedosto $1 on jo olemassa
-add_eclash2=Käyttäjätiedosto $1 on jo olemassa
-add_eclash3=Suojaustiedosto $1 on jo olemassa, ja se sisältää $2 -direktiivin
+add_egclash=Tämän hakemiston suojaus on jo olemassa
 add_edesc=Kuvausta ei annettu
 add_esymlink=Suojaustiedosto $1 on symbolinen linkki
+add_tip_under=eli alle
+
 delete_err=Suojauksen poistaminen epäonnistui
 delete_enone=Mitään ei ole valittu
 delete_ecannot=Et voi hallita tätä hakemistoa
+
 find_title=Etsi suojattuja hakemistoja
 find_err=Suojattujen hakemistojen löytäminen epäonnistui
 find_edom=Puuttuva virtuaalipalvelin
 find_ecannot=Et voi löytää hakemistoja tälle virtuaalipalvelimelle
 find_doing=Suojattujen hakemistojen etsiminen alle $1 ..
-find_found=Löytyi uusi Apache-asetusten tiedosto $1 käyttäjillä $2 : ssa.
-find_already=Ohitetaan tunnettu Apache-asetusten tiedosto $1.
-find_noprot=Ohitetaan Apache-asetusten tiedosto $1, koska se ei suojaa hakemistoa.
-find_foundnot=Löytyi uusi Apache-asetusten tiedosto $1, mutta et voi hallita tätä hakemistoa.
+find_found= ..löytyi uusi asetustiedosto $1 käyttäjien kanssa sijainnista $2
+find_already=..ohitetaan tunnettu asetustiedosto $1
+find_noprot=..ohitetaan asetustiedosto $1, koska se ei suojaa hakemistoa
+find_foundnot=..löytyi uusi asetustiedosto $1, mutta sinulla ei ole oikeutta hallita tätä hakemistoa
+find_found2= ..tuotu uusi asetustiedosto hakemistosta $1
+find_already2=..ohitetaan tunnettu asetustiedosto hakemistosta $1
+find_noprot2=..ohitetaan asetustiedosto tiedostosta $1, koska se ei suojaa hakemistoa
+find_foundnot2=..löytyi uusi asetustiedosto tiedostosta $1, mutta sinulla ei ole oikeutta hallita tätä hakemistoa
+find_founddone=..tehty
+find_authreq=Todennus vaaditaan
+find_webservstatus0=ja lisäsi uudet hakemistosuojausasetukset verkkopalvelimen kokoonpanoon
+find_webservstatus1=mutta ei onnistunut lisäämään hakemistosuojausasetuksia verkkopalvelimen kokoonpanoon
+find_webservstatus-1=ja säilytti nykyiset hakemistosuojausasetukset verkkopalvelimen asetuksista

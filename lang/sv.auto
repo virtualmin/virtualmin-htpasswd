@@ -10,13 +10,20 @@ index_return=skyddade kataloger
 index_hdir=Hela webbplatsen
 index_find=Hitta skyddade kataloger
 index_finddesc=Hitta andra kataloger under $1 som har skyddats manuellt så att deras tillåtna användare kan hanteras.
+index_alert_added_desc=Du kan styra vilka användare som har åtkomst till $2 med hjälp av sidan <a href='$1'>Redigera användare: Mail- och FTP-användare</a>.
+index_alert_added_desc2=Du kan styra vilka användare som har åtkomst till katalogen $2 med hjälp av sidan <a href='$1'>Redigera användare: E-post- och FTP-användare</a>.
+index_alert_added_title=Skydd aktiverat!
+
 feat_name=Skyddade webbkataloger
 feat_edep=Modulen Protected Web Directories är inte installerad
-feat_eweb=Apache-webbplatsfunktionen är inte aktiverad
+feat_eweb=En webbplatsfunktion är inte aktiverad
+
 user_dirs=Tillåt åtkomst till webbkataloger
 user_opts=Alla kataloger
 user_vals=Tillåtna kataloger
+
 links_link=Skyddade kataloger
+
 add_title=Skydda ny katalog
 add_header=Nytt webbkatalogskydd
 add_dom=Virtuell server
@@ -30,20 +37,30 @@ add_edir=Ingen katalog anges
 add_edir2=Ogiltig katalog
 add_edir3=Katalogen får inte börja med ett /
 add_edir4=Webbkatalog finns inte
-add_eclash=Skyddsfilen $1 finns redan
-add_eclash2=Användarfilen $1 finns redan
-add_eclash3=Skyddsfilen $1 finns redan och innehåller $2 -direktivet
+add_egclash=Skyddet för den här katalogen finns redan
 add_edesc=Ingen beskrivning anges
 add_esymlink=Skyddsfilen $1 är en symbolisk länk
+add_tip_under=dvs under
+
 delete_err=Det gick inte att ta bort skyddet
 delete_enone=Ingen vald
 delete_ecannot=Du får inte hantera den här katalogen
+
 find_title=Hitta skyddade kataloger
 find_err=Det gick inte att hitta skyddade kataloger
 find_edom=Saknar virtuell server
 find_ecannot=Du får inte hitta kataloger för den här virtuella servern
 find_doing=Söker efter skyddade kataloger under $1 ..
-find_found=Hittade nya Apache-alternativfil $1 med användare i $2.
-find_already=Hoppar över kända Apache-alternativfil $1.
-find_noprot=Hoppa över Apache-alternativfilen $1, eftersom den inte skyddar katalogen.
-find_foundnot=Hittade nya Apache-alternativfil $1, men du får inte hantera den här katalogen.
+find_found= ..hittade en ny alternativfil $1 med användare i $2
+find_already=..hoppar över kända alternativfil $1
+find_noprot=..hoppa över alternativfilen $1, eftersom den inte skyddar katalogen
+find_foundnot=..hittade en ny alternativfil $1, men du får inte hantera den här katalogen
+find_found2= ..importerade ny alternativfil från katalogen $1
+find_already2=..hoppar över känd alternativfil från katalogen $1
+find_noprot2=..hoppar över alternativfil från $1, eftersom den inte skyddar katalogen
+find_foundnot2=..hittade en ny alternativfil i $1, men du får inte hantera den här katalogen
+find_founddone=..Gjort
+find_authreq=Autentisering krävs
+find_webservstatus0=och lade till nya katalogskyddsinställningar till webbserverns konfiguration
+find_webservstatus1=men det gick inte att lägga till katalogskyddsinställningar till webbserverns konfiguration
+find_webservstatus-1=och behöll befintliga katalogskyddsinställningar från webbserverns konfiguration

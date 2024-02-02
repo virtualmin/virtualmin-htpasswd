@@ -10,10 +10,17 @@ index_return=korunan dizinler
 index_hdir=Tüm web sitesi
 index_find=Korumalı Klasörleri Bul
 index_finddesc=$1 altında, izin verilen kullanıcılarının yönetilebilmesi için manuel olarak korunan diğer dizinleri bulun.
-feat_eweb=Apache web sitesi özelliği etkin değil
+index_alert_added_desc=<a href='$1'>Kullanıcıları Düzenle: Posta ve FTP Kullanıcıları</a> sayfasını kullanarak $2'ye hangi kullanıcıların erişebileceğini kontrol edebilirsiniz.
+index_alert_added_desc2=<a href='$1'>Kullanıcıları Düzenle: Posta ve FTP Kullanıcıları</a> sayfasını kullanarak hangi kullanıcıların $2 dizinine erişebileceğini kontrol edebilirsiniz.
+index_alert_added_title=Koruma Etkinleştirildi!
+
+feat_eweb=Bir web sitesi özelliği etkin değil
+
 user_opts=Tüm dizinler
 user_vals=İzin verilen dizinler
+
 links_link=Korumalı Dizinler
+
 add_title=Yeni Dizini Koru
 add_header=Yeni web dizini koruması
 add_dom=Sanal sunucu
@@ -27,20 +34,30 @@ add_edir=Hiçbir dizin girilmedi
 add_edir2=Geçersiz dizin
 add_edir3=Dizin bir / ile başlamamalıdır
 add_edir4=Web dizini mevcut değil
-add_eclash=$1 koruma dosyası zaten var
-add_eclash2=$1 kullanıcı dosyası zaten var
-add_eclash3=$1 koruma dosyası zaten var ve $2 yönergesini içeriyor
+add_egclash=Bu dizinin koruması zaten mevcut
 add_edesc=Açıklama girilmedi
 add_esymlink=$1 koruma dosyası sembolik bir bağlantıdır
+add_tip_under=yani altında
+
 delete_err=Koruma kaldırılamadı
 delete_enone=Hiçbiri seçilmedi
 delete_ecannot=Bu dizini yönetme izniniz yok
+
 find_title=Korumalı Klasörleri Bul
 find_err=Korunan dizinler bulunamadı
 find_edom=Sanal sunucu eksik
 find_ecannot=Bu sanal sunucu için dizin bulma izniniz yok
 find_doing=$1 altındaki korumalı dizinler aranıyor.
-find_found=$2 içindeki kullanıcılarla yeni $1 Apache seçenek dosyası bulundu.
-find_already=Bilinen Apache seçenekleri dosyası $1 atlanıyor.
-find_noprot=Dizini korumadığından $1 Apache seçenekleri dosyası atlanıyor.
-find_foundnot=Yeni $1 Apache seçenek dosyası bulundu, ancak bu dizini yönetmenize izin verilmiyor.
+find_found= ..$2 bölgesindeki kullanıcılarla $1 yeni seçenekler dosyası bulundu
+find_already=..bilinen seçenekler dosyası $1 atlanıyor
+find_noprot=..dizini korumadığından $1 seçenekler dosyası atlanıyor
+find_foundnot=..yeni seçenekler dosyası $1 bulundu, ancak bu dizini yönetme izniniz yok
+find_found2= ..$1 dizininden yeni seçenekler dosyası içe aktarıldı
+find_already2=..$1 dizinindeki bilinen seçenekler dosyası atlanıyor
+find_noprot2=..dizini korumadığından $1'deki seçenekler dosyası atlanıyor
+find_foundnot2=..$1'de yeni seçenekler dosyası bulundu, ancak bu dizini yönetme izniniz yok
+find_founddone=..Tamamlandı
+find_authreq=Kimlik Doğrulaması Gerekli
+find_webservstatus0=ve web sunucusu yapılandırmasına yeni dizin koruma ayarları eklendi
+find_webservstatus1=ancak web sunucusu yapılandırmasına dizin koruma ayarları eklenemedi
+find_webservstatus-1=ve mevcut dizin koruma ayarlarını web sunucusu yapılandırmasından tuttu

@@ -10,13 +10,20 @@ index_return=chronione katalogi
 index_hdir=Cała strona internetowa
 index_find=Znajdź chronione katalogi
 index_finddesc=Znajdź inne katalogi w $1, które zostały ręcznie zabezpieczone, aby można było zarządzać ich dozwolonymi użytkownikami.
+index_alert_added_desc=Możesz kontrolować, którzy użytkownicy mają dostęp do $2, korzystając ze strony <a href='$1'>Edytuj użytkowników: Użytkownicy poczty i FTP</a>.
+index_alert_added_desc2=Możesz kontrolować, którzy użytkownicy mają dostęp do katalogu $2, korzystając ze strony <a href='$1'>Edytuj użytkowników: Użytkownicy poczty i FTP</a>.
+index_alert_added_title=Ochrona włączona!
+
 feat_name=Chronione katalogi internetowe
 feat_edep=Moduł Protected Web Directories nie jest zainstalowany
-feat_eweb=Funkcja strony Apache nie jest włączona
+feat_eweb=Funkcja strony internetowej nie jest włączona
+
 user_dirs=Zezwalaj na dostęp do katalogów internetowych
 user_opts=Wszystkie katalogi
 user_vals=Dozwolone katalogi
+
 links_link=Chronione katalogi
+
 add_title=Chroń nowy katalog
 add_header=Nowa ochrona katalogu internetowego
 add_dom=Wirtualny serwer
@@ -30,20 +37,30 @@ add_edir=Nie wpisano katalogu
 add_edir2=Nieprawidłowy katalog
 add_edir3=Katalog nie może zaczynać się od /
 add_edir4=Katalog internetowy nie istnieje
-add_eclash=Plik ochronny $1 już istnieje
-add_eclash2=Plik użytkowników $1 już istnieje
-add_eclash3=Plik ochronny $1 już istnieje i zawiera dyrektywę $2 
+add_egclash=Ochrona tego katalogu już istnieje
 add_edesc=Nie wprowadzono opisu
 add_esymlink=Plik zabezpieczający $1 jest dowiązaniem symbolicznym
+add_tip_under=tj. pod
+
 delete_err=Nie udało się usunąć ochrony
 delete_enone=Nie wybrano
 delete_ecannot=Nie możesz zarządzać tym katalogiem
+
 find_title=Znajdź chronione katalogi
 find_err=Nie udało się znaleźć chronionych katalogów
 find_edom=Brakuje serwera wirtualnego
 find_ecannot=Nie możesz znaleźć katalogów dla tego wirtualnego serwera
 find_doing=Wyszukiwanie chronionych katalogów w $1 ..
-find_found=Znaleziono nowy plik opcji Apache $1 z użytkownikami w $2.
-find_already=Pomijanie znanego pliku opcji Apache $1.
-find_noprot=Pomijanie pliku opcji Apache $1, ponieważ nie chroni katalogu.
-find_foundnot=Znaleziono nowy plik opcji Apache $1, ale nie możesz zarządzać tym katalogiem.
+find_found= ..znaleziono nowy plik opcji $1 z użytkownikami w $2
+find_already=..pomijam znany plik opcji $1
+find_noprot=..pomijam plik opcji $1, ponieważ nie chroni on katalogu
+find_foundnot=..znaleziono nowy plik opcji $1, ale nie masz uprawnień do zarządzania tym katalogiem
+find_found2= ..zaimportowano nowy plik opcji z katalogu $1
+find_already2=..pomijanie znanego pliku opcji z katalogu $1
+find_noprot2=..pomijam plik opcji z $1, ponieważ nie chroni on katalogu
+find_foundnot2=..znaleziono nowy plik opcji w $1, ale nie masz uprawnień do zarządzania tym katalogiem
+find_founddone=..zrobione
+find_authreq=Wymagane uwierzytelnienie
+find_webservstatus0=i dodano nowe ustawienia ochrony katalogów do konfiguracji serwera WWW
+find_webservstatus1=ale nie udało się dodać ustawień ochrony katalogów do konfiguracji serwera WWW
+find_webservstatus-1=i zachowałem istniejące ustawienia ochrony katalogów z konfiguracji serwera WWW

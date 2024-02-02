@@ -1,1 +1,22 @@
-feat_eweb=Apache-nettstedfunksjonen er ikke aktivert
+index_alert_added_desc=Du kan kontrollere hvilke brukere som har tilgang til $2 ved å bruke <a href='$1'>Rediger brukere: E-post- og FTP-brukere</a>-siden.
+index_alert_added_desc2=Du kan kontrollere hvilke brukere som har tilgang til $2-katalogen ved å bruke <a href='$1'>Rediger brukere: E-post- og FTP-brukere</a>-siden.
+index_alert_added_title=Beskyttelse aktivert!
+
+feat_eweb=En nettsidefunksjon er ikke aktivert
+
+add_egclash=Beskyttelsen for denne katalogen eksisterer allerede
+add_tip_under=dvs. under
+
+find_found= ..funnet ny alternativfil $1 med brukere i $2
+find_already=..hopper over kjente alternativer-fil $1
+find_noprot=..hoppe over alternativfilen $1, siden den ikke beskytter katalogen
+find_foundnot=..funnet ny alternativfil $1, men du har ikke lov til å administrere denne katalogen
+find_found2= ..importerte ny alternativfil fra katalogen $1
+find_already2=..hopper over kjente alternativer fra katalogen $1
+find_noprot2=..hopper over alternativfil fra $1, siden den ikke beskytter katalogen
+find_foundnot2=..funnet ny alternativfil i $1, men du har ikke lov til å administrere denne katalogen
+find_founddone=..ferdig
+find_authreq=Autentisering kreves
+find_webservstatus0=og lagt til nye katalogbeskyttelsesinnstillinger i webserverkonfigurasjonen
+find_webservstatus1=men klarte ikke å legge til katalogbeskyttelsesinnstillinger til webserverkonfigurasjonen
+find_webservstatus-1=og beholdt eksisterende katalogbeskyttelsesinnstillinger fra webserverkonfigurasjonen

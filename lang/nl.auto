@@ -1,1 +1,22 @@
-feat_eweb=De Apache-websitefunctie is niet ingeschakeld
+index_alert_added_desc=U kunt bepalen welke gebruikers toegang hebben tot $2 via de pagina <a href='$1'>Gebruikers bewerken: e-mail- en FTP-gebruikers</a>.
+index_alert_added_desc2=U kunt bepalen welke gebruikers toegang hebben tot de map $2 via de pagina <a href='$1'>Gebruikers bewerken: e-mail- en FTP-gebruikers</a>.
+index_alert_added_title=Bescherming ingeschakeld!
+
+feat_eweb=Een websitefunctie is niet ingeschakeld
+
+add_egclash=De beveiliging voor deze map bestaat al
+add_tip_under=d.w.z. onder
+
+find_found= ..nieuw optiebestand $1 gevonden met gebruikers in $2
+find_already=..bekend optiebestand $1 overgeslagen
+find_noprot=..optiebestand $1 overslaan, omdat dit de map niet beveiligt
+find_foundnot=..nieuw optiebestand $1 gevonden, maar u mag deze map niet beheren
+find_found2= ..nieuw optiebestand geïmporteerd uit map $1
+find_already2=..bestand met bekende opties uit map $1 overslaan
+find_noprot2=..optiebestand van $1 overslaan, omdat de map hierdoor niet wordt beveiligd
+find_foundnot2=..nieuw optiebestand gevonden in $1, maar u heeft geen toestemming om deze map te beheren
+find_founddone=..klaar
+find_authreq=Verificatie vereist
+find_webservstatus0=en nieuwe directorybeveiligingsinstellingen toegevoegd aan de webserverconfiguratie
+find_webservstatus1=maar kon de instellingen voor mapbeveiliging niet toevoegen aan de webserverconfiguratie
+find_webservstatus-1=en behield de bestaande mapbeveiligingsinstellingen van de webserverconfiguratie

@@ -1,1 +1,22 @@
-feat_eweb=La fonction de site Web Apache n'est pas activée
+index_alert_added_desc=Vous pouvez contrôler quels utilisateurs ont accès à $2 à l'aide de la page <a href='$1'>Modifier les utilisateurs : Utilisateurs de messagerie et FTP</a>.
+index_alert_added_desc2=Vous pouvez contrôler quels utilisateurs ont accès au répertoire $2 à l'aide de la page <a href='$1'>Modifier les utilisateurs : Utilisateurs de messagerie et FTP</a>.
+index_alert_added_title=Protection activée !
+
+feat_eweb=Une fonctionnalité du site Web n'est pas activée
+
+add_egclash=La protection de ce répertoire existe déjà
+add_tip_under=c'est-à-dire sous
+
+find_found= ..un nouveau fichier d'options $1 a été trouvé avec des utilisateurs dans $2
+find_already=..ignorer le fichier d'options connues $1
+find_noprot=..ignorer le fichier d'options $1, car il ne protège pas le répertoire
+find_foundnot=..un nouveau fichier d'options $1 a été trouvé, mais vous n'êtes pas autorisé à gérer ce répertoire
+find_found2= ..nouveau fichier d'options importé du répertoire $1
+find_already2=..ignorer le fichier d'options connues du répertoire $1
+find_noprot2=..ignorer le fichier d'options de $1, car il ne protège pas le répertoire
+find_foundnot2=..un nouveau fichier d'options a été trouvé dans $1, mais vous n'êtes pas autorisé à gérer ce répertoire
+find_founddone=..fait
+find_authreq=Authentification requise
+find_webservstatus0=et ajout de nouveaux paramètres de protection de répertoire à la configuration du serveur Web
+find_webservstatus1=mais n'a pas réussi à ajouter les paramètres de protection du répertoire à la configuration du serveur Web
+find_webservstatus-1=et conservé les paramètres de protection des répertoires existants de la configuration du serveur Web
