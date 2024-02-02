@@ -55,9 +55,14 @@ find_found= ..found new options file $1 with users in $2
 find_already=..skipping known options file $1
 find_noprot=..skipping options file $1, as it does not protect the directory
 find_foundnot=..found new options file $1, but you are not allowed to manage this directory
-find_found2= ..found new options file in $1 directory
+find_found2= ..imported new options file from $1 directory
 find_already2=..skipping known options file in $1 directory
 find_noprot2=..skipping options file in $1, as it does not protect the directory
 find_foundnot2=..found new options file in $1, but you are not allowed to manage this directory
 find_founddone=..done
+find_authreq=Authentication Required
+find_webservstatus0=and added new directory protection settings to the web server config
+find_webservstatus1=but failed to add directory protection settings to the web server config
+find_webservstatus-1=and kept existing directory protection settings from the web server config
+
 __norefs=1

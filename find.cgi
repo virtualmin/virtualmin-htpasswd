@@ -47,8 +47,23 @@ while(my $f = <$FIND>) {
 		$dir =~ s/\/$htaccess_htpasswd::config{'htaccess'}$//;
 		if (&can_directory($dir, $d)) {
 			push(@dirs, [ $dir, $currfile ]);
+			my $f_extra;
+			if (!$f_apache) {
+				# Now add newly found protected directory in other webserver plugins
+				my $currfilename = $currfile; # Extract filename from path
+				$currfilename =~ s/.*\///;
+				foreach my $p (&virtual_server::list_feature_plugins()) {
+					my ($err, $status) = &virtual_server::plugin_call($p,
+						"feature_add_protected_dir", $d, 
+							{ 'protected_dir' => $dir,
+							  'protected_user_file_path' => $currfile, 
+							  'protected_user_file' => $currfilename,
+							  'protected_name' => $text{'find_authreq'} });
+					$f_extra = $text{"find_webservstatus$status"} if (defined($status));
+					}
+				}
 			print $f_indent.&text("find_found$f_label", "<tt>$f_name</tt>",
-				    "<tt>$currfile</tt>"),"<br>\n";
+				"<tt>$currfile</tt>")." $f_extra","<br>\n";
 			}
 		else {
 			print $f_indent.&text("find_foundnot$f_label", "<tt>$f_name</tt>"),"<br>\n";
