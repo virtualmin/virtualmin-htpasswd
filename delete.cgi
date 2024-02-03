@@ -25,11 +25,13 @@ foreach my $path (@d) {
 	if ($dir) {
 		# Delete protected directory in other webserver plugins
 		foreach my $p (&virtual_server::list_feature_plugins()) {
-			my $err = &virtual_server::plugin_call($p,
-				"feature_delete_protected_dir", $d,
-					{ 'protected_dir' => $dir->[0],
-					  'protected_user_file_path' => $dir->[1] });
-			&error($err) if ($err);
+			if (&virtual_server::plugin_defined($p, "feature_delete_protected_dir")) {
+				my $err = &virtual_server::plugin_call($p,
+					"feature_delete_protected_dir", $d,
+						{ 'protected_dir' => $dir->[0],
+						  'protected_user_file_path' => $dir->[1] });
+				&error($err) if ($err);
+				}
 			}
 		# Remove protection directives
 		no warnings "once";

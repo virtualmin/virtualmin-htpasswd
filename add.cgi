@@ -56,13 +56,15 @@ foreach my $clash ("AuthUserFile", "AuthType", "AuthName") {
 
 # Add protected directory in other webserver plugins
 foreach my $p (&virtual_server::list_feature_plugins()) {
-	my $err = &virtual_server::plugin_call($p,
-		"feature_add_protected_dir", $d, 
-			{ 'protected_dir' => $dir,
-			  'protected_user_file_path' => $usersfile, 
-			  'protected_user_file' => $htusers,
-			  'protected_name' => $in{'desc'} });
-	&error($err) if ($err);
+	if (&virtual_server::plugin_defined($p, "feature_add_protected_dir")) {
+		my $err = &virtual_server::plugin_call($p,
+			"feature_add_protected_dir", $d, 
+				{ 'protected_dir' => $dir,
+				  'protected_user_file_path' => $usersfile, 
+				  'protected_user_file' => $htusers,
+				  'protected_name' => $in{'desc'} });
+		&error($err) if ($err);
+		}
 	}
 
 # Create .htaccess (as domain owner)
