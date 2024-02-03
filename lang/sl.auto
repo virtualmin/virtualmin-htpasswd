@@ -10,13 +10,20 @@ index_return=zaščiteni imeniki
 index_hdir=Celotno spletno mesto
 index_find=Poiščite zaščitene imenike
 index_finddesc=Poiščite druge imenike pod $1, ki so bili ročno zaščiteni, tako da bodo njihovi dovoljeni uporabniki lahko upravljali.
+index_alert_added_desc=Na strani <a href='$1'>Urejanje uporabnikov: uporabniki pošte in FTP</a> lahko nadzorujete, kateri uporabniki imajo dostop do $2.
+index_alert_added_desc2=Na strani <a href='$1'>Urejanje uporabnikov: uporabniki pošte in FTP</a> lahko nadzorujete, kateri uporabniki imajo dostop do imenika $2.
+index_alert_added_title=Zaščita omogočena!
+
 feat_name=Zaščiteni spletni imeniki
 feat_edep=Modul zaščitenih spletnih imenikov ni nameščen
-feat_eweb=Funkcija spletnega mesta Apache ni omogočena
+feat_eweb=Funkcija spletnega mesta ni omogočena
+
 user_dirs=Dovoli dostop do spletnih imenikov
 user_opts=Vsi imeniki
 user_vals=Dovoljeni imeniki
+
 links_link=Zaščiteni imeniki
+
 add_title=Zaščitite nov imenik
 add_header=Nova zaščita spletnega imenika
 add_dom=Virtualni strežnik
@@ -30,20 +37,30 @@ add_edir=Imenik ni vnesen
 add_edir2=Napačen direktorij
 add_edir3=Imenik se ne sme začeti z /
 add_edir4=Spletni imenik ne obstaja
-add_eclash=Zaščitna datoteka $1 že obstaja
-add_eclash2=Uporabniška datoteka $1 že obstaja
-add_eclash3=Zaščitna datoteka $1 že obstaja in vsebuje direktivo $2 
+add_egclash=Zaščita za ta imenik že obstaja
 add_edesc=Opis ni vnesen
 add_esymlink=Zaščitna datoteka $1 je simbolična povezava
+add_tip_under=tj pod
+
 delete_err=Zaščite ni bilo mogoče odstraniti
 delete_enone=Izbrana ni nobena
 delete_ecannot=Ne morete upravljati tega imenika
+
 find_title=Poiščite zaščitene imenike
 find_err=Ni bilo mogoče najti zaščitenih imenikov
 find_edom=Manjka navidezni strežnik
 find_ecannot=Ni dovoljeno najti imenikov za ta virtualni strežnik
 find_doing=Iskanje zaščitenih imenikov pod $1 ..
-find_found=Najdena je nova datoteka z Apache datotekami $1 z uporabniki v $2.
-find_already=Preskok znane datoteke z možnostmi Apache $1.
-find_noprot=Preskakovanje datoteke z možnostmi Apache $1, ker ne ščiti imenika.
-find_foundnot=Najdeno je novo datoteko z možnostmi Apache $1, vendar vam ni dovoljeno upravljati tega imenika.
+find_found= ..našel novo datoteko možnosti $1 z uporabniki v $2
+find_already=..preskok datoteke z znanimi možnostmi $1
+find_noprot=..preskoči datoteko možnosti $1, ker ne ščiti imenika
+find_foundnot=..našel novo datoteko možnosti $1, vendar nimate dovoljenja za upravljanje tega imenika
+find_found2= ..uvožena nova datoteka z možnostmi iz imenika $1
+find_already2=..preskok datoteke znanih možnosti iz imenika $1
+find_noprot2=..preskoči datoteko možnosti iz $1, ker ne ščiti imenika
+find_foundnot2=..našel novo datoteko z možnostmi v $1, vendar nimate dovoljenja za upravljanje tega imenika
+find_founddone=..Končano
+find_authreq=Zahtevana avtentikacija
+find_webservstatus0=in dodal nove nastavitve zaščite imenika v konfiguracijo spletnega strežnika
+find_webservstatus1=vendar ni uspelo dodati nastavitev zaščite imenika v konfiguracijo spletnega strežnika
+find_webservstatus-1=in obdržal obstoječe nastavitve zaščite imenika iz konfiguracije spletnega strežnika

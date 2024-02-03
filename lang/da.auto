@@ -10,13 +10,20 @@ index_return=beskyttede kataloger
 index_hdir=Hele webstedet
 index_find=Find beskyttede kataloger
 index_finddesc=Find andre mapper under $1, der er beskyttet manuelt, så deres tilladte brugere kan styres.
+index_alert_added_desc=Du kan kontrollere, hvilke brugere der har adgang til $2 ved at bruge siden <a href='$1'>Rediger brugere: Mail- og FTP-brugere</a>.
+index_alert_added_desc2=Du kan kontrollere, hvilke brugere der har adgang til mappen $2 ved at bruge siden <a href='$1'>Rediger brugere: Mail- og FTP-brugere</a>.
+index_alert_added_title=Beskyttelse aktiveret!
+
 feat_name=Beskyttede webmapper
 feat_edep=Modulet Protected Web Directories er ikke installeret
-feat_eweb=Apache-webstedets funktion er ikke aktiveret
+feat_eweb=En hjemmesidefunktion er ikke aktiveret
+
 user_dirs=Tillad adgang til webkataloger
 user_opts=Alle mapper
 user_vals=Tilladte mapper
+
 links_link=Beskyttede kataloger
+
 add_title=Beskyt ny telefonbog
 add_header=Ny webkatalogbeskyttelse
 add_dom=Virtuel server
@@ -30,20 +37,30 @@ add_edir=Intet katalog indtastet
 add_edir2=Ugyldig mappe
 add_edir3=Directory må ikke starte med et /
 add_edir4=Webbibliotek findes ikke
-add_eclash=Beskyttelsesfilen $1 findes allerede
-add_eclash2=Brugerfilen $1 findes allerede
-add_eclash3=Beskyttelsesfilen $1 findes allerede og indeholder $2 -direktivet
+add_egclash=Beskyttelsen for denne mappe findes allerede
 add_edesc=Ingen beskrivelse er indtastet
 add_esymlink=Beskyttelsesfilen $1 er et symbolsk link
+add_tip_under=dvs under
+
 delete_err=Kunne ikke fjerne beskyttelsen
 delete_enone=Ingen valgt
 delete_ecannot=Du har ikke tilladelse til at administrere dette bibliotek
+
 find_title=Find beskyttede kataloger
 find_err=Kunne ikke finde beskyttede mapper
 find_edom=Mangler virtuel server
 find_ecannot=Du har ikke tilladelse til at finde mapper til denne virtuelle server
 find_doing=Søger efter beskyttede kataloger under $1 ..
-find_found=Fundet ny Apache-indstillingsfil $1 hos brugere i $2.
-find_already=Spring over kendte Apache-indstillingsfiler $1.
-find_noprot=Spring over Apache-indstillingsfilen $1, da den ikke beskytter biblioteket.
-find_foundnot=Fundet ny Apache-indstillingsfil $1, men du har ikke tilladelse til at administrere dette bibliotek.
+find_found= ..fundet ny indstillingsfil $1 med brugere i $2
+find_already=..springer over kendte indstillingsfil $1
+find_noprot=..springer indstillingsfilen $1 over, da den ikke beskytter mappen
+find_foundnot=..fundet ny indstillingsfil $1, men du har ikke tilladelse til at administrere denne mappe
+find_found2= ..importerede ny indstillingsfil fra mappen $1
+find_already2=..springer fil med kendte muligheder over fra mappen $1
+find_noprot2=..springer indstillingsfil fra $1, da den ikke beskytter mappen
+find_foundnot2=..fundet ny indstillingsfil i $1, men du har ikke tilladelse til at administrere denne mappe
+find_founddone=..Færdig
+find_authreq=Godkendelse påkrævet
+find_webservstatus0=og tilføjede nye biblioteksbeskyttelsesindstillinger til webserverens konfiguration
+find_webservstatus1=men det lykkedes ikke at tilføje biblioteksbeskyttelsesindstillinger til webserverens konfiguration
+find_webservstatus-1=og beholdt eksisterende biblioteksbeskyttelsesindstillinger fra webserverens konfiguration

@@ -10,13 +10,20 @@ index_return=aizsargāti katalogi
 index_hdir=Visa vietne
 index_find=Atrodiet aizsargātos direktorijus
 index_finddesc=Atrodiet citus direktorijas zem $1, kas ir aizsargāti manuāli, lai varētu pārvaldīt to atļautos lietotājus.
+index_alert_added_desc=Varat kontrolēt, kuriem lietotājiem ir piekļuve $2, izmantojot lapu <a href='$1'>Lietotāju rediģēšana: pasts un FTP lietotāji</a>.
+index_alert_added_desc2=Varat kontrolēt, kuriem lietotājiem ir piekļuve $2 direktorijam, izmantojot lapu <a href='$1'>Lietotāju rediģēšana: pasts un FTP lietotāji</a>.
+index_alert_added_title=Aizsardzība iespējota!
+
 feat_name=Aizsargāti tīmekļa direktoriji
 feat_edep=Aizsargāto tīmekļa direktoriju modulis nav instalēts
-feat_eweb=Apache vietnes funkcija nav iespējota
+feat_eweb=Vietnes funkcija nav iespējota
+
 user_dirs=Atļaut piekļuvi tīmekļa direktorijiem
 user_opts=Visi katalogi
 user_vals=Atļautie direktoriji
+
 links_link=Aizsargātie katalogi
+
 add_title=Aizsargājiet jauno direktoriju
 add_header=Jauna tīmekļa direktoriju aizsardzība
 add_dom=Virtuālais serveris
@@ -30,20 +37,30 @@ add_edir=Nav ievadīts direktorijs
 add_edir2=Nederīgs direktorijs
 add_edir3=Katalogs nedrīkst sākties ar /
 add_edir4=Tīmekļa direktorija neeksistē
-add_eclash=Aizsardzības fails $1 jau pastāv
-add_eclash2=Lietotāju fails $1 jau pastāv
-add_eclash3=Aizsardzības fails $1 jau pastāv, un tajā ir $2 direktīva
+add_egclash=Šī direktorija aizsardzība jau pastāv
 add_edesc=Nav ievadīts neviens apraksts
 add_esymlink=Aizsardzības fails $1 ir simboliska saite
+add_tip_under=i., zem
+
 delete_err=Neizdevās noņemt aizsardzību
 delete_enone=Nav atlasīts
 delete_ecannot=Jums nav atļauts pārvaldīt šo direktoriju
+
 find_title=Atrodiet aizsargātos direktorijus
 find_err=Neizdevās atrast aizsargātus direktorijus
 find_edom=Trūkst virtuālā servera
 find_ecannot=Jums nav atļauts atrast šī virtuālā servera direktorijas
 find_doing=Notiek aizsargātu direktoriju meklēšana zem $1.
-find_found=Atrasts jauns Apache opciju fails $1 ar lietotājiem $2.
-find_already=Izlaižot zināmo Apache opciju failu $1.
-find_noprot=Izlaižot Apache opciju failu $1, jo tas neaizsargā direktoriju.
-find_foundnot=Atrasts jauns Apache opciju fails $1, taču jums nav atļauts pārvaldīt šo direktoriju.
+find_found= ..atrasts jauns opciju fails $1 ar lietotājiem $2
+find_already=..izlaižot zināmo opciju failu $1
+find_noprot=..izlaižot opciju failu $1, jo tas neaizsargā direktoriju
+find_foundnot=..atradu jaunu opciju failu $1, bet jums nav atļauts pārvaldīt šo direktoriju
+find_found2= ..importēts jauns opciju fails no $1 direktorija
+find_already2=..izlaižot zināmo opciju failu no $1 direktorijas
+find_noprot2=..izlaižot opciju failu no $1, jo tas neaizsargā direktoriju
+find_foundnot2=..atrasts jauns opciju fails $1, bet jums nav atļauts pārvaldīt šo direktoriju
+find_founddone=..darīts
+find_authreq=Nepieciešama autentifikācija
+find_webservstatus0=un pievienoja jaunus direktoriju aizsardzības iestatījumus tīmekļa servera konfigurācijai
+find_webservstatus1=bet neizdevās pievienot direktoriju aizsardzības iestatījumus tīmekļa servera konfigurācijai
+find_webservstatus-1=un saglabāja esošos direktoriju aizsardzības iestatījumus no tīmekļa servera konfigurācijas

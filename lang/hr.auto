@@ -10,13 +10,20 @@ index_return=zaštićeni imenici
 index_hdir=Cijela web stranica
 index_find=Pronađite zaštićene direktorije
 index_finddesc=Pronađite druge imenike ispod $1 koji su ručno zaštićeni kako bi se njihovim dozvoljenim korisnicima moglo upravljati.
+index_alert_added_desc=Možete kontrolirati koji korisnici imaju pristup $2 pomoću stranice <a href='$1'>Uređivanje korisnika: Korisnici pošte i FTP-a</a>.
+index_alert_added_desc2=Možete kontrolirati koji korisnici imaju pristup direktoriju $2 pomoću stranice <a href='$1'>Uređivanje korisnika: Korisnici pošte i FTP-a</a>.
+index_alert_added_title=Zaštita uključena!
+
 feat_name=Zaštićene web mape
 feat_edep=Modul zaštićenih web direktorija nije instaliran
-feat_eweb=Značajka web lokacije Apache nije omogućena
+feat_eweb=Značajka web stranice nije omogućena
+
 user_dirs=Dopusti pristup web imenicima
 user_opts=Svi imenici
 user_vals=Dopušteni direktoriji
+
 links_link=Zaštićene mape
+
 add_title=Zaštiti novu mapu
 add_header=Nova zaštita web kataloga
 add_dom=Virtualni poslužitelj
@@ -30,20 +37,30 @@ add_edir=Nije upisan direktorij
 add_edir2=Nevažeći imenik
 add_edir3=Imenik ne smije započeti s /
 add_edir4=Web direktorij ne postoji
-add_eclash=Zaštitna datoteka $1 već postoji
-add_eclash2=Korisnici datoteku $1 već postoje
-add_eclash3=Zaštitna datoteka $1 već postoji i sadrži direktivu $2 
+add_egclash=Zaštita za ovaj imenik već postoji
 add_edesc=Nije upisan opis
 add_esymlink=Zaštitna datoteka $1 simbolička je veza
+add_tip_under=tj. pod
+
 delete_err=Uklanjanje zaštite nije uspjelo
 delete_enone=Nijedna nije odabrana
 delete_ecannot=Nije vam dopušteno upravljanje ovim direktorijom
+
 find_title=Pronađite zaštićene direktorije
 find_err=Pronalazak zaštićenih imenika nije uspio
 find_edom=Nedostaje virtualni poslužitelj
 find_ecannot=Nije vam dopušteno pronaći direktorije za ovaj virtualni poslužitelj
 find_doing=Traženje zaštićenih direktorija pod $1 ..
-find_found=Pronađena je nova Apacheova datoteka datoteke $1 s korisnicima u $2.
-find_already=Preskakanje poznate datoteke Apache opcija $1.
-find_noprot=Preskakanje datoteka Apache opcija $1, jer ne štiti direktorij.
-find_foundnot=Pronađena je nova datoteka opcija Apache $1, ali vam nije dopušteno upravljanje ovom direktorijom.
+find_found= ..našao novu datoteku opcija $1 s korisnicima u $2
+find_already=..preskakanje datoteke s poznatim opcijama $1
+find_noprot=..preskakanje datoteke opcija $1 jer ne štiti direktorij
+find_foundnot=..pronašao novu datoteku s opcijama $1, ali vam nije dopušteno upravljati ovim direktorijem
+find_found2= ..uvezena nova datoteka s opcijama iz direktorija $1
+find_already2=..preskakanje datoteke s poznatim opcijama iz direktorija $1
+find_noprot2=..preskakanje datoteke opcija iz $1 jer ne štiti direktorij
+find_foundnot2=..pronašao novu datoteku opcija u $1, ali nemate dopuštenje za upravljanje ovim direktorijem
+find_founddone=..gotovo
+find_authreq=Potrebna provjera
+find_webservstatus0=i dodao nove postavke zaštite imenika u konfiguraciju web poslužitelja
+find_webservstatus1=ali nije uspio dodati postavke zaštite direktorija u konfiguraciju web poslužitelja
+find_webservstatus-1=i zadržao postojeće postavke zaštite imenika iz konfiguracije web poslužitelja

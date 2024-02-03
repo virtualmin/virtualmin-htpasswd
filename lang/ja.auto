@@ -10,13 +10,20 @@ index_return=保護されたディレクトリ
 index_hdir=ウェブサイト全体
 index_find=保護されたディレクトリを見つける
 index_finddesc=許可されたユーザーを管理できるように、手動で保護されている $1の下の他のディレクトリを見つけます。
+index_alert_added_desc=<a href='$1'>ユーザーの編集: メール ユーザーと FTP ユーザー</a> ページを使用して、$2 にアクセスできるユーザーを制御できます。
+index_alert_added_desc2=<a href='$1'>ユーザーの編集: メール ユーザーと FTP ユーザー</a> ページを使用して、$2 ディレクトリにアクセスできるユーザーを制御できます。
+index_alert_added_title=保護が有効になりました!
+
 feat_name=保護されたWebディレクトリ
 feat_edep=保護されたWebディレクトリモジュールがインストールされていません
-feat_eweb=Apache Webサイト機能が有効になっていません
+feat_eweb=Web サイトの機能が有効になっていません
+
 user_dirs=Webディレクトリへのアクセスを許可する
 user_opts=すべてのディレクトリ
 user_vals=許可されたディレクトリ
+
 links_link=保護されたディレクトリ
+
 add_title=新しいディレクトリを保護
 add_header=新しいWebディレクトリ保護
 add_dom=仮想サーバー
@@ -30,20 +37,30 @@ add_edir=ディレクトリが入力されていません
 add_edir2=無効なディレクトリ
 add_edir3=ディレクトリは/で始めてはいけません
 add_edir4=Webディレクトリが存在しません
-add_eclash=保護ファイル $1は既に存在します
-add_eclash2=ユーザーファイル $1は既に存在します
-add_eclash3=保護ファイル $1は既に存在し、 $2ディレクティブが含まれています
+add_egclash=このディレクトリの保護はすでに存在します
 add_edesc=説明が入力されていません
 add_esymlink=保護ファイル $1はシンボリックリンクです
+add_tip_under=つまり、以下の
+
 delete_err=保護を削除できませんでした
 delete_enone=何も選択されていません
 delete_ecannot=このディレクトリの管理は許可されていません
+
 find_title=保護されたディレクトリを見つける
 find_err=保護されたディレクトリが見つかりませんでした
 find_edom=仮想サーバーがありません
 find_ecannot=この仮想サーバーのディレクトリを検索することはできません
 find_doing=$1の下の保護されたディレクトリを検索しています. ..
-find_found=$2にユーザーがいる新しいApacheオプションファイル $1が見つかりました。
-find_already=既知のApacheオプションファイル $1をスキップします。
-find_noprot=ディレクトリを保護しないため、Apacheオプションファイル $1をスキップします。
-find_foundnot=新しいApacheオプションファイル $1が見つかりましたが、このディレクトリの管理は許可されていません。
+find_found= ..$2 のユーザーを含む新しいオプション ファイル $1 が見つかりました
+find_already=..既知のオプション ファイル $1 をスキップします
+find_noprot=..ディレクトリを保護しないため、オプション ファイル $1 をスキップします
+find_foundnot=..新しいオプション ファイル $1 が見つかりましたが、このディレクトリを管理することは許可されていません
+find_found2= ..$1 ディレクトリから新しいオプション ファイルをインポートしました
+find_already2=..$1 ディレクトリから既知のオプション ファイルをスキップします
+find_noprot2=..ディレクトリを保護しないため、$1 からのオプション ファイルをスキップします
+find_foundnot2=..$1 で新しいオプション ファイルが見つかりましたが、このディレクトリを管理することは許可されていません
+find_founddone=..終わり
+find_authreq=認証が必要です
+find_webservstatus0=新しいディレクトリ保護設定を Web サーバー構成に追加しました
+find_webservstatus1=しかし、ディレクトリ保護設定を Web サーバー構成に追加できませんでした
+find_webservstatus-1=Web サーバー構成からの既存のディレクトリ保護設定を保持しました

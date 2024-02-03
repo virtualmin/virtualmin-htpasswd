@@ -10,13 +10,20 @@ index_return=geschützte Verzeichnisse
 index_hdir=Ganze Website
 index_find=Suchen Sie nach geschützten Verzeichnissen
 index_finddesc=Suchen Sie unter $1 nach anderen Verzeichnissen, die manuell geschützt wurden, damit die zulässigen Benutzer verwaltet werden können.
+index_alert_added_desc=Sie können steuern, welche Benutzer Zugriff auf $2 haben, indem Sie die Seite <a href='$1'>Benutzer bearbeiten: E-Mail- und FTP-Benutzer</a> verwenden.
+index_alert_added_desc2=Sie können steuern, welche Benutzer Zugriff auf das Verzeichnis $2 haben, indem Sie die Seite <a href='$1'>Benutzer bearbeiten: E-Mail- und FTP-Benutzer</a> verwenden.
+index_alert_added_title=Schutz aktiviert!
+
 feat_name=Geschützte Webverzeichnisse
 feat_edep=Das Modul Geschützte Webverzeichnisse ist nicht installiert
-feat_eweb=Die Apache-Website-Funktion ist nicht aktiviert
+feat_eweb=Eine Website-Funktion ist nicht aktiviert
+
 user_dirs=Ermöglichen Sie den Zugriff auf Webverzeichnisse
 user_opts=Alle Verzeichnisse
 user_vals=Zulässige Verzeichnisse
+
 links_link=Geschützte Verzeichnisse
+
 add_title=Neues Verzeichnis schützen
 add_header=Neuer Webverzeichnisschutz
 add_dom=Virtueller Server
@@ -30,20 +37,30 @@ add_edir=Kein Verzeichnis eingegeben
 add_edir2=Ungültiges Verzeichnis
 add_edir3=Das Verzeichnis darf nicht mit einem / beginnen
 add_edir4=Webverzeichnis existiert nicht
-add_eclash=Die Schutzdatei $1 ist bereits vorhanden
-add_eclash2=Die Benutzerdatei $1 ist bereits vorhanden
-add_eclash3=Die Schutzdatei $1 ist bereits vorhanden und enthält die Direktive $2 
+add_egclash=Der Schutz für dieses Verzeichnis besteht bereits
 add_edesc=Keine Beschreibung eingegeben
 add_esymlink=Die Schutzdatei $1 ist eine symbolische Verknüpfung
+add_tip_under=d.h. unter
+
 delete_err=Schutz konnte nicht entfernt werden
 delete_enone=Nichts ausgewählt
 delete_ecannot=Sie dürfen dieses Verzeichnis nicht verwalten
+
 find_title=Suchen Sie nach geschützten Verzeichnissen
 find_err=Geschützte Verzeichnisse konnten nicht gefunden werden
 find_edom=Fehlender virtueller Server
 find_ecannot=Sie dürfen keine Verzeichnisse für diesen virtuellen Server finden
 find_doing=Suche nach geschützten Verzeichnissen unter $1 ..
-find_found=Neue Apache-Optionsdatei $1 mit Benutzern in $2 gefunden.
-find_already=Überspringen der bekannten Apache-Optionsdatei $1.
-find_noprot=Überspringen der Apache-Optionsdatei $1, da sie das Verzeichnis nicht schützt.
-find_foundnot=Es wurde eine neue Apache-Optionsdatei $1 gefunden, aber Sie dürfen dieses Verzeichnis nicht verwalten.
+find_found= ..neue Optionsdatei $1 mit Benutzern in $2 gefunden
+find_already=..bekannte Optionsdatei $1 wird übersprungen
+find_noprot=..Optionsdatei $1 wird übersprungen, da sie das Verzeichnis nicht schützt
+find_foundnot=..neue Optionsdatei $1 gefunden, aber Sie sind nicht berechtigt, dieses Verzeichnis zu verwalten
+find_found2= ..neue Optionsdatei aus Verzeichnis $1 importiert
+find_already2=..bekannte Optionsdatei aus Verzeichnis $1 wird übersprungen
+find_noprot2=..Optionsdatei von $1 wird übersprungen, da sie das Verzeichnis nicht schützt
+find_foundnot2=..neue Optionsdatei in $1 gefunden, aber Sie sind nicht berechtigt, dieses Verzeichnis zu verwalten
+find_founddone=..Erledigt
+find_authreq=Authentifizierung erforderlich
+find_webservstatus0=und neue Verzeichnisschutzeinstellungen zur Webserverkonfiguration hinzugefügt
+find_webservstatus1=Es konnten jedoch keine Verzeichnisschutzeinstellungen zur Webserverkonfiguration hinzugefügt werden
+find_webservstatus-1=und die vorhandenen Verzeichnisschutzeinstellungen aus der Webserverkonfiguration beibehalten

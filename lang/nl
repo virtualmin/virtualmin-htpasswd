@@ -10,12 +10,16 @@ index_return=beschermde directory's
 index_hdir=Gehele website
 index_find=Zoek Beschermde Directory's
 index_finddesc=Zoek andere directory's onder $1 die handmatig beschermd worden, zodat zijn gebruikers kunnen worden beheerd.
+
 feat_name=Beschermde web directory's
 feat_edep=De Beschermde Web Directory's module is niet geinstalleerd
+
 user_dirs=Toegang toestaan aan web directory's
 user_opts=Alle directory's
 user_vals=Toegestane directory's
+
 links_link=Beschermde Directory's
+
 add_title=Bescherm Nieuwe Directory
 add_header=Nieuwe web directory bescherming
 add_dom=Virtuele server
@@ -29,20 +33,15 @@ add_edir=Geen directory ingevuld
 add_edir2=Ongeldige directory
 add_edir3=Directory mag niet beginnen met een /
 add_edir4=Web directory bestaat niet
-add_eclash=De bescherming's file $1 bestaat reeds
-add_eclash2=De gebruikers file $1 bestaat reeds
-add_eclash3=De bescherming file $1 bestaat reeds en bevat de $2 richtlijnen
 add_edesc=Geen omschrijving ingevuld
 add_esymlink=De bescherming's file $1 is een symbolische link
+
 delete_err=Bescherming verwijderen mislukt
 delete_enone=Niets geselecteerd
 delete_ecannot=U bent niet bevoegd om deze directory te beheren
+
 find_title=Gevonden Beschermde Directory's
 find_err=Vinden van beschermde directory's is mislukt
 find_edom=Ontbrekende virtuele server
 find_ecannot=U bent niet bevoegd om directory's op te zoeken voor deze virtuele server
 find_doing=Zoeken naar beschermde directory's onder $1 ..
-find_found=Nieuwe Apache optie file $1 gevonden met gebruikers in $2.
-find_already=Overslaan van Apache optie file $1.
-find_noprot=Apache optie file $1 is overgeslagen omdat hij niet de directory beschermd.
-find_foundnot=Nieuwe Apache optie file $1 gevonden, echter u bent niet bevoegd deze directory te beheren.

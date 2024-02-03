@@ -10,13 +10,20 @@ index_return=directoare protejate
 index_hdir=Site întreg
 index_find=Găsiți directoare protejate
 index_finddesc=Găsiți alte directoare sub $1 protejate manual, astfel încât utilizatorii permisiți să poată fi gestionați.
+index_alert_added_desc=Puteți controla ce utilizatori au acces la $2 utilizând pagina <a href='$1'>Editați utilizatori: utilizatori de e-mail și FTP</a>.
+index_alert_added_desc2=Puteți controla ce utilizatori au acces la directorul $2 utilizând pagina <a href='$1'>Editați utilizatori: utilizatori de e-mail și FTP</a>.
+index_alert_added_title=Protecție activată!
+
 feat_name=Directoare web protejate
 feat_edep=Modulul Directoare web protejate nu este instalat
-feat_eweb=Funcția site-ului Apache nu este activată
+feat_eweb=O funcție de site nu este activată
+
 user_dirs=Permiteți accesul la directoarele web
 user_opts=Toate directoarele
 user_vals=Directoare permise
+
 links_link=Directoare protejate
+
 add_title=Protejați noul director
 add_header=Protecție directoare web noi
 add_dom=Server virtual
@@ -30,20 +37,30 @@ add_edir=Nu a fost introdus niciun director
 add_edir2=Director nevalid
 add_edir3=Directorul nu trebuie să înceapă cu un /
 add_edir4=Directorul Web nu există
-add_eclash=Fișierul de protecție $1 există deja
-add_eclash2=Fișierul de utilizatori $1 există deja
-add_eclash3=Fișierul de protecție $1 există deja și conține directiva $2 
+add_egclash=Protecția pentru acest director există deja
 add_edesc=Nu a fost introdusă nicio descriere
 add_esymlink=Fișierul de protecție $1 este o legătură simbolică
+add_tip_under=adică sub
+
 delete_err=Eroare la eliminarea protecției
 delete_enone=Nimic selectat
 delete_ecannot=Nu aveți voie să gestionați acest director
+
 find_title=Găsiți directoare protejate
 find_err=Nu a reușit să găsească directoarele protejate
 find_edom=Lipsește serverul virtual
 find_ecannot=Nu aveți voie să găsiți directoare pentru acest server virtual
 find_doing=Căutarea directoarelor protejate sub $1 ..
-find_found=Găsit noul fișier de opțiuni Apache $1 cu utilizatorii din $2.
-find_already=Saltul fișierului de opțiuni Apache cunoscut $1.
-find_noprot=Saltul fișierului de opțiuni Apache $1, deoarece nu protejează directorul.
-find_foundnot=Găsit noul fișier de opțiuni Apache $1, dar nu aveți voie să gestionați acest director.
+find_found= ..a găsit un nou fișier de opțiuni $1 cu utilizatori în $2
+find_already=..sărirea fișierului de opțiuni cunoscute $1
+find_noprot=..sărirea fișierului de opțiuni $1, deoarece nu protejează directorul
+find_foundnot=..a găsit un nou fișier de opțiuni $1, dar nu aveți voie să gestionați acest director
+find_found2= ..a importat un nou fișier de opțiuni din directorul $1
+find_already2=..sărirea fișierului cu opțiuni cunoscute din directorul $1
+find_noprot2=..sărirea fișierului cu opțiuni din $1, deoarece nu protejează directorul
+find_foundnot2=..am găsit un fișier de opțiuni nou în $1, dar nu aveți voie să gestionați acest director
+find_founddone=..Terminat
+find_authreq=Autentificare necesara
+find_webservstatus0=și a adăugat noi setări de protecție a directorului la configurația serverului web
+find_webservstatus1=dar nu a reușit să adăugați setări de protecție a directorului la configurația serverului web
+find_webservstatus-1=și a păstrat setările existente de protecție a directorului din configurația serverului web

@@ -10,13 +10,20 @@ index_return=védett könyvtárak
 index_hdir=Teljes weboldal
 index_find=Keressen védett könyvtárakat
 index_finddesc=Keressen más olyan könyvtárakat, amelyek $1 alá tartoznak, és amelyeket kézzel védtek, hogy azok engedélyezett felhasználói kezelhetők legyenek.
+index_alert_added_desc=A <a href='$1'>Felhasználók szerkesztése: Levelezés és FTP-felhasználók</a> oldalon szabályozhatja, hogy mely felhasználók férhetnek hozzá a $2-hez.
+index_alert_added_desc2=A <a href='$1'>Felhasználók szerkesztése: Levelezés és FTP-felhasználók</a> oldalon szabályozhatja, hogy mely felhasználók férhessenek hozzá a $2 könyvtárhoz.
+index_alert_added_title=Védelem engedélyezve!
+
 feat_name=Védett webes könyvtárak
 feat_edep=A Védett web könyvtárak modul nincs telepítve
-feat_eweb=Az Apache webhely szolgáltatás nem engedélyezett
+feat_eweb=Egy webhely funkció nincs engedélyezve
+
 user_dirs=Hozzáférés engedélyezése a webes könyvtárakhoz
 user_opts=Minden könyvtár
 user_vals=Megengedett könyvtárak
+
 links_link=Védett könyvtárak
+
 add_title=Új könyvtár védelme
 add_header=Új webes címtárvédelem
 add_dom=Virtuális szerver
@@ -30,20 +37,30 @@ add_edir=Nincs megadva könyvtár
 add_edir2=Érvénytelen könyvtár
 add_edir3=A könyvtár nem kezdődik a /
 add_edir4=A webes könyvtár nem létezik
-add_eclash=A $1 védelmi fájl már létezik
-add_eclash2=A $1 fájl már létezik
-add_eclash3=A $1 védelmi fájl már létezik, és tartalmazza a $2 irányelvet
+add_egclash=A címtár védelme már létezik
 add_edesc=Nincs megadva leírás
 add_esymlink=A $1 védelmi fájl egy szimbolikus link
+add_tip_under=azaz alatta
+
 delete_err=A védelem eltávolítása nem sikerült
 delete_enone=Egy sincs kiválasztva
 delete_ecannot=Ezt a könyvtárat nem szabad kezelni
+
 find_title=Keressen védett könyvtárakat
 find_err=Nem sikerült megtalálni a védett könyvtárakat
 find_edom=Hiányzik a virtuális szerver
 find_ecannot=Nem szabad könyvtárakat találni ehhez a virtuális kiszolgálóhoz
 find_doing=$1 alatti védett könyvtárak keresése ..
-find_found=Új Apache beállításfájlt talált a (z) $1 felhasználóban a $2 -ben.
-find_already=A (z) $1 ismert Apache beállításfájl kihagyása.
-find_noprot=A (z) $1 Apache beállításfájl kihagyása, mivel nem védi a könyvtárat.
-find_foundnot=Megtalálta az $1 új Apache beállításfájlt, de nem engedélyezi a könyvtár kezelését.
+find_found= ..a(z) $1 új beállításfájlt talált $2 felhasználóival
+find_already=..az ismert beállítási fájl $1 átugrása
+find_noprot=..kihagyja a(z) $1 beállításfájlt, mivel nem védi a könyvtárat
+find_foundnot=..a(z) $1 új beállítási fájlt talált, de nem kezelheti ezt a könyvtárat
+find_found2= ..új beállítási fájl importálva a $1 könyvtárból
+find_already2=..az ismert beállítási fájl kihagyása a $1 könyvtárból
+find_noprot2=..beállítási fájl kihagyása a(z) $1 fájlból, mivel nem védi a könyvtárat
+find_foundnot2=..új beállítási fájlt talált itt: $1, de Ön nem kezelheti ezt a könyvtárat
+find_founddone=..Kész
+find_authreq=Azonosítás szükséges
+find_webservstatus0=és új címtárvédelmi beállításokat adott a webszerver konfigurációjához
+find_webservstatus1=de nem sikerült hozzáadni a címtárvédelmi beállításokat a webszerver konfigurációjához
+find_webservstatus-1=és megtartotta a meglévő címtárvédelmi beállításokat a webszerver konfigurációjában

@@ -10,13 +10,20 @@ index_return=diretórios protegidos
 index_hdir=Site inteiro
 index_find=Encontre diretórios protegidos
 index_finddesc=Encontre outros diretórios em $1 que foram protegidos manualmente, para que seus usuários permitidos possam ser gerenciados.
+index_alert_added_desc=Você pode controlar quais usuários têm acesso a $2 usando a página <a href='$1'>Editar usuários: usuários de email e FTP</a>.
+index_alert_added_desc2=Você pode controlar quais usuários têm acesso ao diretório $2 usando a página <a href='$1'>Editar usuários: usuários de email e FTP</a>.
+index_alert_added_title=Proteção habilitada!
+
 feat_name=Diretórios da web protegidos
 feat_edep=O módulo Diretórios da Web Protegidos não está instalado
-feat_eweb=O recurso do site Apache não está ativado
+feat_eweb=Um recurso do site não está ativado
+
 user_dirs=Permitir acesso a diretórios da web
 user_opts=Todos os diretórios
 user_vals=Diretórios permitidos
+
 links_link=Diretórios protegidos
+
 add_title=Proteger novo diretório
 add_header=Nova proteção de diretório da web
 add_dom=Servidor virtual
@@ -30,20 +37,30 @@ add_edir=Nenhum diretório inserido
 add_edir2=Diretório inválido
 add_edir3=O diretório não deve começar com um /
 add_edir4=O diretório da Web não existe
-add_eclash=O arquivo de proteção $1 já existe
-add_eclash2=O arquivo de usuários $1 já existe
-add_eclash3=O arquivo de proteção $1 já existe e contém a diretiva $2 
+add_egclash=A proteção para este diretório já existe
 add_edesc=Nenhuma descrição inserida
 add_esymlink=O arquivo de proteção $1 é um link simbólico
+add_tip_under=ou seja, sob
+
 delete_err=Falha ao remover a proteção
 delete_enone=Nenhum selecionado
 delete_ecannot=Você não tem permissão para gerenciar este diretório
+
 find_title=Encontre diretórios protegidos
 find_err=Falha ao encontrar diretórios protegidos
 find_edom=Servidor virtual ausente
 find_ecannot=Você não tem permissão para encontrar diretórios para este servidor virtual
 find_doing=Procurando diretórios protegidos em $1 ..
-find_found=Foi encontrado o novo arquivo de opções do Apache $1 com usuários em $2.
-find_already=Ignorando o arquivo de opções conhecido do Apache $1.
-find_noprot=Ignorando o arquivo de opções do Apache $1, pois não protege o diretório.
-find_foundnot=Foi encontrado o novo arquivo de opções do Apache $1, mas você não tem permissão para gerenciar este diretório.
+find_found= ..encontrado novo arquivo de opções $1 com usuários em $2 
+find_already=..ignorando o arquivo de opções conhecidas $1 
+find_noprot=..ignorando o arquivo de opções $1, pois não protege o diretório
+find_foundnot=..encontrado novo arquivo de opções $1, mas você não tem permissão para gerenciar este diretório
+find_found2= ..importou novo arquivo de opções do diretório $1 
+find_already2=..ignorando o arquivo de opções conhecidas do diretório $1 
+find_noprot2=..ignorando o arquivo de opções de $1, pois não protege o diretório
+find_foundnot2=..encontrou um novo arquivo de opções em $1, mas você não tem permissão para gerenciar este diretório
+find_founddone=..feito
+find_authreq=Autentificação requerida
+find_webservstatus0=e adicionou novas configurações de proteção de diretório à configuração do servidor web
+find_webservstatus1=mas não foi possível adicionar configurações de proteção de diretório à configuração do servidor web
+find_webservstatus-1=e manteve as configurações de proteção de diretório existentes na configuração do servidor web

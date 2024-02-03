@@ -10,13 +10,20 @@ index_return=saugomi katalogai
 index_hdir=Visa svetainė
 index_find=Raskite saugomus katalogus
 index_finddesc=Raskite kitus katalogus, esančius $1, kurie buvo apsaugoti rankiniu būdu, kad būtų galima valdyti jų leidžiamus vartotojus.
+index_alert_added_desc=Galite valdyti, kurie vartotojai turi prieigą prie $2, naudodami puslapį <a href='$1'>Redaguoti naudotojus: paštas ir FTP naudotojai</a>.
+index_alert_added_desc2=Galite valdyti, kurie vartotojai turi prieigą prie $2 katalogo, naudodami puslapį <a href='$1'>Redaguoti vartotojus: paštas ir FTP naudotojai</a>.
+index_alert_added_title=Apsauga įjungta!
+
 feat_name=Apsaugoti žiniatinklio katalogai
 feat_edep=Apsaugotų interneto katalogų modulis neįdiegtas
-feat_eweb=„Apache“ svetainės funkcija neįgalinta
+feat_eweb=Svetainės funkcija neįjungta
+
 user_dirs=Leisti prieigą prie žiniatinklio katalogų
 user_opts=Visi katalogai
 user_vals=Leidžiami katalogai
+
 links_link=Saugomi katalogai
+
 add_title=Apsaugokite naują katalogą
 add_header=Nauja interneto katalogų apsauga
 add_dom=Virtualus serveris
@@ -30,20 +37,30 @@ add_edir=Neįvestas katalogas
 add_edir2=Netinkamas katalogas
 add_edir3=Katalogas neturi prasidėti /
 add_edir4=Žiniatinklio katalogo nėra
-add_eclash=Apsaugos failas $1 jau yra
-add_eclash2=Naudotojų failas $1 jau yra
-add_eclash3=Apsaugos failas $1 jau yra ir jame yra $2 direktyva
+add_egclash=Šio katalogo apsauga jau yra
 add_edesc=Neįvestas aprašymas
 add_esymlink=Apsaugos failas $1 yra simbolinė nuoroda
+add_tip_under=y., pagal
+
 delete_err=Nepavyko pašalinti apsaugos
 delete_enone=Nepasirinkta
 delete_ecannot=Jums neleidžiama tvarkyti šio katalogo
+
 find_title=Raskite saugomus katalogus
 find_err=Nepavyko rasti apsaugotų katalogų
 find_edom=Trūksta virtualiojo serverio
 find_ecannot=Jums neleidžiama rasti šio virtualiojo serverio katalogų
 find_doing=Ieškoma apsaugotų katalogų, esančių mažiau nei $1.
-find_found=Surastas naujas „Apache“ parinkčių failas $1 su vartotojais $2.
-find_already=Praleidžiame žinomą „Apache“ parinkčių failą $1.
-find_noprot=Praleidžiamas „Apache“ parinkčių failas $1, nes jis neapsaugo katalogo.
-find_foundnot=Rastas naujas „Apache“ parinkčių failas $1, tačiau jums neleidžiama tvarkyti šio katalogo.
+find_found= ..rastas naujas parinkčių failas $1 su vartotojais iš $2
+find_already=..praleidžiant žinomų parinkčių failą $1
+find_noprot=..praleidžiamas parinkčių failas $1, nes jis neapsaugo katalogo
+find_foundnot=..rastas naujas parinkčių failas $1, bet jums neleidžiama tvarkyti šio katalogo
+find_found2= ..importuotas naujas parinkčių failas iš $1 katalogo
+find_already2=..praleidžiamas žinomų parinkčių failas iš $1 katalogo
+find_noprot2=..praleidžiamas parinkčių failas iš $1, nes jis neapsaugo katalogo
+find_foundnot2=..rastas naujas parinkčių failas $1, bet jums neleidžiama tvarkyti šio katalogo
+find_founddone=..padaryta
+find_authreq=Reikalingas autentifikavimas
+find_webservstatus0=ir į žiniatinklio serverio konfigūraciją įtraukė naujus katalogų apsaugos nustatymus
+find_webservstatus1=bet nepavyko pridėti katalogo apsaugos nustatymų prie žiniatinklio serverio konfigūracijos
+find_webservstatus-1=ir išlaikė esamus katalogų apsaugos nustatymus iš žiniatinklio serverio konfigūracijos

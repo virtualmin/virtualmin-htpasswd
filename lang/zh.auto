@@ -10,13 +10,20 @@ index_return=受保护的目录
 index_hdir=整个网站
 index_find=查找受保护的目录
 index_finddesc=在 $1下查找其他已手动保护的目录，以便可以管理其允许的用户。
+index_alert_added_desc=您可以使用<a href='$1'>编辑用户：邮件和 FTP 用户</a>页面控制哪些用户有权访问 $2。
+index_alert_added_desc2=您可以使用<a href='$1'>编辑用户：邮件和 FTP 用户</a>页面控制哪些用户有权访问 $2 目录。
+index_alert_added_title=保护已启用！
+
 feat_name=受保护的网页目录
 feat_edep=未安装受保护的Web目录模块
-feat_eweb=未启用Apache网站功能
+feat_eweb=网站功能未启用
+
 user_dirs=允许访问网页目录
 user_opts=所有目录
 user_vals=允许的目录
+
 links_link=受保护的目录
+
 add_title=保护新目录
 add_header=新的Web目录保护
 add_dom=虚拟服务器
@@ -30,20 +37,30 @@ add_edir=没有输入目录
 add_edir2=无效的目录
 add_edir3=目录不能以/开头
 add_edir4=Web目录不存在
-add_eclash=保护文件 $1已存在
-add_eclash2=用户文件 $1已存在
-add_eclash3=保护文件 $1已存在，并且包含 $2指令
+add_egclash=该目录的保护已存在
 add_edesc=未输入描述
 add_esymlink=保护文件 $1是符号链接
+add_tip_under=即在
+
 delete_err=无法删除保护
 delete_enone=未选择
 delete_ecannot=您无权管理此目录
+
 find_title=查找受保护的目录
 find_err=找不到受保护的目录
 find_edom=缺少虚拟服务器
 find_ecannot=不允许您找到此虚拟服务器的目录
 find_doing=在 $1..下搜索受保护的目录。
-find_found=在 $2的用户中找到了新的Apache选项文件 $1。
-find_already=跳过已知的Apache选项文件 $1。
-find_noprot=跳过Apache选项文件 $1，因为它不保护目录。
-find_foundnot=找到了新的Apache选项文件 $1，但不允许您管理此目录。
+find_found= ..发现新的选项文件 $1，用户位于 $2
+find_already=..正在跳过已知选项文件 $1
+find_noprot=..跳过选项文件 $1，因为它不保护目录
+find_foundnot=..发现新的选项文件 $1，但您无权管理此目录
+find_found2= ..从 $1 目录导入了新选项文件
+find_already2=..从 $1 目录跳过已知选项文件
+find_noprot2=..从 $1 跳过选项文件，因为它不保护该目录
+find_foundnot2=..在 $1 中找到新的选项文件，但您无权管理此目录
+find_founddone=..完毕
+find_authreq=需要身份验证
+find_webservstatus0=并向 Web 服务器配置添加了新的目录保护设置
+find_webservstatus1=但未能将目录保护设置添加到 Web 服务器配置
+find_webservstatus-1=并保留 Web 服务器配置中的现有目录保护设置

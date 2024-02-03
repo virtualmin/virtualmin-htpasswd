@@ -10,13 +10,20 @@ index_return=directory protette
 index_hdir=Intero sito web
 index_find=Trova directory protette
 index_finddesc=Trova altre directory in $1 che sono state protette manualmente, in modo che gli utenti autorizzati possano essere gestiti.
+index_alert_added_desc=Puoi controllare quali utenti hanno accesso a $2 utilizzando la pagina <a href='$1'>Modifica utenti: Utenti di posta e FTP</a>.
+index_alert_added_desc2=Puoi controllare quali utenti hanno accesso alla directory $2 utilizzando la pagina <a href='$1'>Modifica utenti: utenti di posta e FTP</a>.
+index_alert_added_title=Protezione abilitata!
+
 feat_name=Directory web protette
 feat_edep=Il modulo Directory Web protette non è installato
-feat_eweb=La funzionalità del sito Web Apache non è abilitata
+feat_eweb=Una funzionalità del sito Web non è abilitata
+
 user_dirs=Consentire l'accesso alle directory web
 user_opts=Tutte le directory
 user_vals=Directory consentite
+
 links_link=Elenchi protetti
+
 add_title=Proteggi la nuova directory
 add_header=Nuova protezione della directory web
 add_dom=Server virtuale
@@ -30,20 +37,30 @@ add_edir=Nessuna directory inserita
 add_edir2=Cartella non valida
 add_edir3=La directory non deve iniziare con un /
 add_edir4=La directory Web non esiste
-add_eclash=Il file di protezione $1 esiste già
-add_eclash2=Il file degli utenti $1 esiste già
-add_eclash3=Il file di protezione $1 esiste già e contiene la direttiva $2 
+add_egclash=La protezione per questa directory esiste già
 add_edesc=Nessuna descrizione inserita
 add_esymlink=Il file di protezione $1 è un collegamento simbolico
+add_tip_under=cioè sotto
+
 delete_err=Rimozione della protezione non riuscita
 delete_enone=Nessuno selezionato
 delete_ecannot=Non sei autorizzato a gestire questa directory
+
 find_title=Trova directory protette
 find_err=Impossibile trovare directory protette
 find_edom=Server virtuale mancante
 find_ecannot=Non è consentito trovare directory per questo server virtuale
 find_doing=Ricerca di directory protette in $1 ..
-find_found=Ho trovato il nuovo file delle opzioni di Apache $1 con gli utenti in $2.
-find_already=Saltare il file delle opzioni Apache noto $1.
-find_noprot=Saltare il file delle opzioni di Apache $1, in quanto non protegge la directory.
-find_foundnot=Ho trovato il nuovo file delle opzioni di Apache $1, ma non ti è permesso gestire questa directory.
+find_found= ..trovato nuovo file di opzioni $1 con utenti in $2
+find_already=..saltando il file delle opzioni conosciute $1
+find_noprot=..salta il file delle opzioni $1, poiché non protegge la directory
+find_foundnot=..trovato un nuovo file di opzioni $1, ma non ti è consentito gestire questa directory
+find_found2= ..importato il nuovo file di opzioni dalla directory $1
+find_already2=..saltando il file delle opzioni conosciute dalla directory $1
+find_noprot2=..salta il file delle opzioni da $1, poiché non protegge la directory
+find_foundnot2=..trovato un nuovo file di opzioni in $1, ma non ti è consentito gestire questa directory
+find_founddone=..Fatto
+find_authreq=Autenticazione richiesta
+find_webservstatus0=e aggiunte nuove impostazioni di protezione della directory alla configurazione del server web
+find_webservstatus1=ma non è riuscito ad aggiungere le impostazioni di protezione della directory alla configurazione del server web
+find_webservstatus-1=e mantenuto le impostazioni di protezione della directory esistenti dalla configurazione del server web

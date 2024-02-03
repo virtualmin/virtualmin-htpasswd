@@ -10,13 +10,20 @@ index_return=direttorji protetti
 index_hdir=Websajt sħiħa
 index_find=Sib Direttorji Protetti
 index_finddesc=Sib direttorji oħra taħt $1 li ġew protetti bl-idejn, sabiex l-utenti permessi tagħhom ikunu jistgħu jiġu ġestiti.
+index_alert_added_desc=Tista' tikkontrolla liema utenti għandhom aċċess għal $2 billi tuża l-paġna <a href='$1'>Editja Utenti: Utenti tal-Posta u FTP</a>.
+index_alert_added_desc2=Tista' tikkontrolla liema utenti għandhom aċċess għad-direttorju $2 billi tuża l-paġna <a href='$1'>Editja Utenti: Utenti tal-Posta u FTP</a>.
+index_alert_added_title=Protezzjoni Ippermettiet!
+
 feat_name=Direttorji web protetti
 feat_edep=Il-modulu tad-Direttorji tal-Web Protetti mhuwiex installat
-feat_eweb=Il-karatteristika tal-websajt Apache mhix attivata
+feat_eweb=Karatteristika tal-websajt mhix attivata
+
 user_dirs=Ħalli aċċess għad-direttorji tal-web
 user_opts=Direttorji kollha
 user_vals=Direttorji permessi
+
 links_link=Direttorji Protetti
+
 add_title=Ipproteġi Direttorju Ġdid
 add_header=Protezzjoni ta 'direttorju web ġdid
 add_dom=Server virtwali
@@ -30,20 +37,30 @@ add_edir=L-ebda direttorju ma daħal
 add_edir2=Direttorju mhux validu
 add_edir3=Id-Direttorju ma għandux jibda b '/
 add_edir4=Direttorju tal-Web ma jeżistix
-add_eclash=Il-fajl tal-protezzjoni $1 diġà jeżisti
-add_eclash2=L-utenti tal-fajl $1 diġà jeżistu
-add_eclash3=Il-fajl tal-protezzjoni $1 diġà jeżisti u fih id-direttiva $2 
+add_egclash=Il-protezzjoni għal dan id-direttorju diġà teżisti
 add_edesc=Ma ddaħħlet l-ebda deskrizzjoni
 add_esymlink=Il-fajl ta 'protezzjoni $1 huwa rabta simbolika
+add_tip_under=jiġifieri taħt
+
 delete_err=Ma rnexxielux ineħħi l-protezzjoni
 delete_enone=L-ebda magħżul
 delete_ecannot=M'għandekx permess immexxi dan id-direttorju
+
 find_title=Sib Direttorji Protetti
 find_err=Naqsu milli jsibu direttorji protetti
 find_edom=Server virtwali nieqes
 find_ecannot=M'għandekx permess issib direttorji għal dan is-server virtwali
 find_doing=Tiftix għal direttorji protetti taħt $1 ..
-find_found=Jinstabu fajls ta 'għażliet ġodda ta' Apache $1 ma 'utenti f' $2.
-find_already=Taqbeż il-fajl magħruf għall-għażliet Apache $1.
-find_noprot=Taqbeż il-fajl tal-għażliet Apache $1, peress li ma tipproteġix id-direttorju.
-find_foundnot=Jinstabu fajls ġodda ta 'għażliet ta' Apache $1, iżda m'intix permess li timmaniġġja dan id-direttorju.
+find_found= ..sabu fajl ta' għażliet ġodda $1 ma' utenti f' $2 
+find_already=..taqbeż il-fajl tal-għażliet magħrufa $1
+find_noprot=..skipping options file $1, peress li ma jipproteġix id-direttorju
+find_foundnot=..sabu fajl ta' għażliet ġodda $1, iżda m'intix permess li timmaniġġja dan id-direttorju
+find_found2= ..importa fajl ta' għażliet ġodda minn $1 direttorju
+find_already2=..taqbeż il-fajl tal-għażliet magħrufa minn $1 direttorju
+find_noprot2=..skipping options file minn $1, peress li ma jipproteġix id-direttorju
+find_foundnot2=..sabu fajl ta' għażliet ġodda f' $1, iżda m'intix permess li timmaniġġja dan id-direttorju
+find_founddone=..magħmul
+find_authreq=Awtentikazzjoni Meħtieġa
+find_webservstatus0=u miżjuda settings ġodda għall-protezzjoni tad-direttorju mal-konfigurazzjoni tas-server tal-web
+find_webservstatus1=iżda naqset milli żżid is-settings tal-protezzjoni tad-direttorju mal-konfigurazzjoni tas-server tal-web
+find_webservstatus-1=u żamm is-settings tal-protezzjoni tad-direttorju eżistenti mill-konfigurazzjoni tas-server tal-web

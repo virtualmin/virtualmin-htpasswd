@@ -10,13 +10,20 @@ index_return=thư mục được bảo vệ
 index_hdir=Toàn bộ trang web
 index_find=Tìm thư mục được bảo vệ
 index_finddesc=Tìm các thư mục khác dưới $1 đã được bảo vệ thủ công để người dùng được phép của họ có thể được quản lý.
+index_alert_added_desc=Bạn có thể kiểm soát những người dùng nào có quyền truy cập vào $2 bằng cách sử dụng trang <a href='$1'>Chỉnh sửa người dùng: Người dùng thư và FTP</a>.
+index_alert_added_desc2=Bạn có thể kiểm soát người dùng nào có quyền truy cập vào thư mục $2 bằng cách sử dụng trang <a href='$1'>Chỉnh sửa người dùng: Người dùng thư và FTP</a>.
+index_alert_added_title=Đã kích hoạt bảo vệ!
+
 feat_name=Thư mục web được bảo vệ
 feat_edep=Mô-đun Thư mục được bảo vệ không được cài đặt
-feat_eweb=Tính năng trang web Apache không được bật
+feat_eweb=Một tính năng trang web chưa được kích hoạt
+
 user_dirs=Cho phép truy cập vào các thư mục web
 user_opts=Tất cả các thư mục
 user_vals=Thư mục được phép
+
 links_link=Thư mục được bảo vệ
+
 add_title=Bảo vệ thư mục mới
 add_header=Bảo vệ thư mục web mới
 add_dom=Máy chủ ảo
@@ -30,20 +37,30 @@ add_edir=Không có thư mục nào được nhập
 add_edir2=Thư mục không hợp lệ
 add_edir3=Thư mục không được bắt đầu bằng /
 add_edir4=Thư mục web không tồn tại
-add_eclash=Tệp bảo vệ $1 đã tồn tại
-add_eclash2=Tệp người dùng $1 đã tồn tại
-add_eclash3=Tệp bảo vệ $1 đã tồn tại và chứa chỉ thị $2 
+add_egclash=Sự bảo vệ cho thư mục này đã tồn tại
 add_edesc=Không có mô tả nào được nhập
 add_esymlink=Tệp bảo vệ $1 là một liên kết tượng trưng
+add_tip_under=tức là dưới
+
 delete_err=Không thể xóa bảo vệ
 delete_enone=Không được chọn
 delete_ecannot=Bạn không được phép quản lý thư mục này
+
 find_title=Tìm thư mục được bảo vệ
 find_err=Không thể tìm thấy các thư mục được bảo vệ
 find_edom=Thiếu máy chủ ảo
 find_ecannot=Bạn không được phép tìm thư mục cho máy chủ ảo này
 find_doing=Tìm kiếm các thư mục được bảo vệ theo $1 ..
-find_found=Đã tìm thấy tệp tùy chọn Apache mới $1 với người dùng ở $2.
-find_already=Bỏ qua tệp tùy chọn Apache đã biết $1.
-find_noprot=Bỏ qua tệp tùy chọn Apache $1, vì nó không bảo vệ thư mục.
-find_foundnot=Đã tìm thấy tệp tùy chọn Apache mới $1, nhưng bạn không được phép quản lý thư mục này.
+find_found= ..đã tìm thấy tệp tùy chọn mới $1 với người dùng ở $2
+find_already=..bỏ qua tệp tùy chọn đã biết $1
+find_noprot=..bỏ qua tệp tùy chọn $1, vì nó không bảo vệ thư mục
+find_foundnot=..đã tìm thấy tệp tùy chọn mới $1, nhưng bạn không được phép quản lý thư mục này
+find_found2= ..đã nhập tệp tùy chọn mới từ thư mục $1
+find_already2=..bỏ qua tệp tùy chọn đã biết từ thư mục $1
+find_noprot2=..bỏ qua tệp tùy chọn từ $1, vì nó không bảo vệ thư mục
+find_foundnot2=..tìm thấy tệp tùy chọn mới trong $1, nhưng bạn không được phép quản lý thư mục này
+find_founddone=..xong
+find_authreq=Yêu cầu xác thực
+find_webservstatus0=và thêm cài đặt bảo vệ thư mục mới vào cấu hình máy chủ web
+find_webservstatus1=nhưng không thể thêm cài đặt bảo vệ thư mục vào cấu hình máy chủ web
+find_webservstatus-1=và giữ các cài đặt bảo vệ thư mục hiện có từ cấu hình máy chủ web

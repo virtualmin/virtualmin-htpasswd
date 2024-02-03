@@ -10,13 +10,20 @@ index_return=chránené adresáre
 index_hdir=Celá webová stránka
 index_find=Vyhľadajte chránené adresáre
 index_finddesc=Vyhľadajte ďalšie adresáre pod $1, ktoré boli chránené manuálne, aby ste mohli spravovať ich povolených používateľov.
+index_alert_added_desc=Pomocou stránky <a href='$1'>Upraviť používateľov: Používatelia pošty a FTP</a> môžete ovládať, ktorí používatelia majú prístup k $2.
+index_alert_added_desc2=Pomocou stránky <a href='$1'>Upraviť používateľov: Používatelia pošty a FTP</a> môžete ovládať, ktorí používatelia majú prístup k adresáru $2.
+index_alert_added_title=Ochrana povolená!
+
 feat_name=Chránené webové adresáre
 feat_edep=Modul Chránené webové adresáre nie je nainštalovaný
-feat_eweb=Funkcia webovej stránky Apache nie je povolená
+feat_eweb=Funkcia webovej stránky nie je povolená
+
 user_dirs=Povoliť prístup k webovým adresárom
 user_opts=Všetky adresáre
 user_vals=Povolené adresáre
+
 links_link=Chránené adresáre
+
 add_title=Chrániť nový adresár
 add_header=Nová ochrana webového adresára
 add_dom=Virtuálny server
@@ -30,20 +37,30 @@ add_edir=Nebol zadaný žiadny adresár
 add_edir2=Neplatný adresár
 add_edir3=Adresár nesmie začínať /
 add_edir4=Webový adresár neexistuje
-add_eclash=Súbor ochrany $1 už existuje
-add_eclash2=Súbor používateľov $1 už existuje
-add_eclash3=Súbor ochrany $1 už existuje a obsahuje smernicu $2 
+add_egclash=Ochrana pre tento adresár už existuje
 add_edesc=Nebol zadaný žiadny popis
 add_esymlink=Ochranný súbor $1 je symbolický odkaz
+add_tip_under=t.j. pod
+
 delete_err=Nepodarilo sa odstrániť ochranu
 delete_enone=Žiadne vybraté
 delete_ecannot=Nemáte oprávnenie spravovať tento adresár
+
 find_title=Vyhľadajte chránené adresáre
 find_err=Nepodarilo sa nájsť chránené adresáre
 find_edom=Chýba virtuálny server
 find_ecannot=Nemáte povolenie vyhľadávať adresáre pre tento virtuálny server
 find_doing=Hľadajú sa chránené adresáre pod $1 ..
-find_found=Našiel sa nový súbor možností Apache $1 s používateľmi v $2.
-find_already=Preskakovanie známeho súboru možností Apache $1.
-find_noprot=Vynecháva sa súbor možností Apache $1, pretože nechráni adresár.
-find_foundnot=Našiel sa nový súbor možností Apache $1, ale nemáte oprávnenie spravovať tento adresár.
+find_found= ..našiel nový súbor možností $1 s používateľmi v $2
+find_already=..preskočenie súboru známych možností $1
+find_noprot=..preskakovanie súboru volieb $1, pretože nechráni adresár
+find_foundnot=..našiel sa nový súbor volieb $1, ale nemáte povolené spravovať tento adresár
+find_found2= ..importoval nový súbor volieb z adresára $1
+find_already2=..preskočenie súboru známych volieb z adresára $1
+find_noprot2=..preskakovanie súboru volieb z $1, pretože nechráni adresár
+find_foundnot2=..našiel sa nový súbor volieb v $1, ale nemáte povolené spravovať tento adresár
+find_founddone=..hotový
+find_authreq=Vyžaduje sa overenie
+find_webservstatus0=a pridal nové nastavenia ochrany adresárov do konfigurácie webového servera
+find_webservstatus1=ale nepodarilo sa pridať nastavenia ochrany adresára do konfigurácie webového servera
+find_webservstatus-1=a zachoval si existujúce nastavenia ochrany adresárov z konfigurácie webového servera

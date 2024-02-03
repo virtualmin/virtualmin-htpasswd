@@ -1,11 +1,17 @@
 index_ecannot=Není dovoleno konfigurovat chráněné adresáře pro tuto doménu
 index_dir=Webový adresář
 index_users=Uživatelé
+index_alert_added_desc=Pomocí stránky <a href='$1'>Upravit uživatele: Uživatelé pošty a FTP</a> můžete ovládat, kteří uživatelé mají přístup k $2.
+index_alert_added_desc2=Pomocí stránky <a href='$1'>Upravit uživatele: Uživatelé pošty a FTP</a> můžete ovládat, kteří uživatelé mají přístup k adresáři $2.
+index_alert_added_title=Ochrana povolena!
+
 feat_edep=Modul Chráněné webové adresáře není nainstalován
-feat_eweb=Funkce webových stránek Apache není povolena
+feat_eweb=Funkce webových stránek není povolena
+
 user_dirs=Povolit přístup k webovým adresářům
 user_opts=Všechny adresáře
 user_vals=Povolené adresáře
+
 add_title=Chránit nový adresář
 add_dom=Virtuální server
 add_err=Nepodařilo se chránit nový adresář
@@ -13,19 +19,29 @@ add_edir=Nebyl zadán žádný adresář
 add_edir2=Neplatný adresář
 add_edir3=Adresář nesmí začínat /
 add_edir4=Webový adresář neexistuje
-add_eclash=Soubor ochrany $1 již existuje
-add_eclash2=Soubor uživatelů $1 již existuje
-add_eclash3=Soubor ochrany $1 již existuje a obsahuje směrnici $2 
+add_egclash=Ochrana pro tento adresář již existuje
 add_edesc=Nebyl zadán žádný popis
 add_esymlink=Soubor ochrany $1 je symbolický odkaz
+add_tip_under=tj. pod
+
 delete_err=Ochranu se nepodařilo odstranit
 delete_enone=Nebyl vybrán žádný
 delete_ecannot=Nemáte oprávnění spravovat tento adresář
+
 find_err=Nalezené chráněné adresáře se nepodařilo najít
 find_edom=Chybí virtuální server
 find_ecannot=Není dovoleno najít adresáře pro tento virtuální server
 find_doing=Hledání chráněných adresářů pod $1 ..
-find_found=Nalezen nový soubor voleb Apache $1 s uživateli v $2.
-find_already=Přeskočení známého souboru voleb Apache $1.
-find_noprot=Přeskočení souboru voleb Apache $1, protože nechrání adresář.
-find_foundnot=Nalezen nový soubor voleb Apache $1, ale nemáte oprávnění spravovat tento adresář.
+find_found= ..nalezen nový soubor možností $1 s uživateli v $2
+find_already=..přeskočení souboru známých voleb $1
+find_noprot=..přeskočení souboru voleb $1, protože nechrání adresář
+find_foundnot=..nalezen nový soubor voleb $1, ale nemáte oprávnění spravovat tento adresář
+find_found2= ..importoval nový soubor voleb z adresáře $1
+find_already2=..přeskočení souboru známých voleb z adresáře $1
+find_noprot2=..přeskočení souboru voleb z $1, protože nechrání adresář
+find_foundnot2=..našel nový soubor voleb v $1, ale nemáte oprávnění spravovat tento adresář
+find_founddone=..Hotovo
+find_authreq=Vyžadováno ověření
+find_webservstatus0=a do konfigurace webového serveru přidali nová nastavení ochrany adresářů
+find_webservstatus1=ale nepodařilo se přidat nastavení ochrany adresáře do konfigurace webového serveru
+find_webservstatus-1=a zachoval stávající nastavení ochrany adresářů z konfigurace webového serveru

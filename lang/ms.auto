@@ -10,13 +10,20 @@ index_return=direktori yang dilindungi
 index_hdir=Keseluruhan laman web
 index_find=Cari Direktori yang Dilindungi
 index_finddesc=Cari direktori lain di bawah $1 yang telah dilindungi secara manual, agar pengguna mereka yang dibenarkan dapat diuruskan.
+index_alert_added_desc=Anda boleh mengawal pengguna yang mempunyai akses kepada $2 menggunakan halaman <a href='$1'>Edit Pengguna: Pengguna Mel dan FTP</a>.
+index_alert_added_desc2=Anda boleh mengawal pengguna yang mempunyai akses kepada direktori $2 menggunakan halaman <a href='$1'>Edit Pengguna: Pengguna Mel dan FTP</a>.
+index_alert_added_title=Perlindungan Didayakan!
+
 feat_name=Direktori web yang dilindungi
 feat_edep=Modul Direktori Web yang Dilindungi tidak dipasang
-feat_eweb=Ciri laman web Apache tidak diaktifkan
+feat_eweb=Ciri tapak web tidak didayakan
+
 user_dirs=Benarkan akses ke direktori web
 user_opts=Semua direktori
 user_vals=Direktori yang dibenarkan
+
 links_link=Direktori yang dilindungi
+
 add_title=Lindungi Direktori Baru
 add_header=Perlindungan direktori web baru
 add_dom=Pelayan maya
@@ -30,20 +37,30 @@ add_edir=Tidak ada direktori yang dimasukkan
 add_edir2=Direktori tidak sah
 add_edir3=Direktori tidak boleh bermula dengan /
 add_edir4=Direktori web tidak ada
-add_eclash=Fail perlindungan $1 sudah ada
-add_eclash2=Fail pengguna $1 sudah ada
-add_eclash3=Fail perlindungan $1 sudah ada dan mengandungi arahan $2 
+add_egclash=Perlindungan untuk direktori ini sudah wujud
 add_edesc=Tiada keterangan dimasukkan
 add_esymlink=Fail perlindungan $1 adalah pautan simbolik
+add_tip_under=iaitu di bawah
+
 delete_err=Gagal mengeluarkan perlindungan
 delete_enone=Tiada yang dipilih
 delete_ecannot=Anda tidak dibenarkan menguruskan direktori ini
+
 find_title=Cari Direktori yang Dilindungi
 find_err=Gagal mencari direktori yang dilindungi
 find_edom=Pelayan maya tiada
 find_ecannot=Anda tidak dibenarkan mencari direktori untuk pelayan maya ini
 find_doing=Mencari direktori yang dilindungi di bawah $1 ..
-find_found=Menjumpai fail pilihan Apache baru $1 dengan pengguna di $2.
-find_already=Melangkau fail pilihan Apache yang diketahui $1.
-find_noprot=Melangkau fail pilihan Apache $1, kerana tidak melindungi direktori.
-find_foundnot=Menjumpai fail pilihan Apache baru $1, tetapi anda tidak dibenarkan menguruskan direktori ini.
+find_found= ..menemui fail pilihan baharu $1 dengan pengguna dalam $2 
+find_already=.. melangkau fail pilihan yang diketahui $1 
+find_noprot=..melangkau fail pilihan $1, kerana ia tidak melindungi direktori
+find_foundnot=..menjumpai fail pilihan baharu $1, tetapi anda tidak dibenarkan mengurus direktori ini
+find_found2= ..mengimport fail pilihan baharu daripada $1 direktori
+find_already2=.. melangkau fail pilihan yang diketahui daripada $1 direktori
+find_noprot2=.. melangkau fail pilihan daripada $1, kerana ia tidak melindungi direktori
+find_foundnot2=..menemui fail pilihan baharu dalam $1, tetapi anda tidak dibenarkan mengurus direktori ini
+find_founddone=..selesai
+find_authreq=Pengesahan diperlukan
+find_webservstatus0=dan menambah tetapan perlindungan direktori baharu pada konfigurasi pelayan web
+find_webservstatus1=tetapi gagal menambah tetapan perlindungan direktori pada konfigurasi pelayan web
+find_webservstatus-1=dan menyimpan tetapan perlindungan direktori sedia ada daripada konfigurasi pelayan web

@@ -48,11 +48,24 @@ my $usersfile = "$dir/$htusers";
 foreach my $clash ("AuthUserFile", "AuthType", "AuthName") {
 	my $dirclash = &apache::find_directive($clash, $conf);
 	if ($dirclash) {
-		&error(&text('add_eclash3', $file, $clash));
+		&error(&text('add_egclash', $file, $clash));
 		}
 	}
--r $usersfile && &error(&text('add_eclash2', $usersfile));
+-r $usersfile && &error(&text('add_egclash', $usersfile));
 -l $file && &error(&text('add_esymlink', $file));
+
+# Add protected directory in other webserver plugins
+foreach my $p (&virtual_server::list_feature_plugins()) {
+	if (&virtual_server::plugin_defined($p, "feature_add_protected_dir")) {
+		my $err = &virtual_server::plugin_call($p,
+			"feature_add_protected_dir", $d, 
+				{ 'protected_dir' => $dir,
+				  'protected_user_file_path' => $usersfile, 
+				  'protected_user_file' => $htusers,
+				  'protected_name' => $in{'desc'} });
+		&error($err) if ($err);
+		}
+	}
 
 # Create .htaccess (as domain owner)
 &lock_file($file);

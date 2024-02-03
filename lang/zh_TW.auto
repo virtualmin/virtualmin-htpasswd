@@ -10,13 +10,20 @@ index_return=受保護的目錄
 index_hdir=整個網站
 index_find=查找受保護的目錄
 index_finddesc=在 $1下查找其他已手動保護的目錄，以便可以管理其允許的用戶。
+index_alert_added_desc=您可以使用<a href='$1'>編輯使用者：郵件和 FTP 使用者</a>頁面控制哪些使用者有權存取 $2。
+index_alert_added_desc2=您可以使用<a href='$1'>編輯使用者：郵件和 FTP 使用者</a>頁面控制哪些使用者有權存取 $2 目錄。
+index_alert_added_title=保護已啟用！
+
 feat_name=受保護的網頁目錄
 feat_edep=未安裝受保護的Web目錄模塊
-feat_eweb=未啟用Apache網站功能
+feat_eweb=網站功能未啟用
+
 user_dirs=允許訪問網頁目錄
 user_opts=所有目錄
 user_vals=允許的目錄
+
 links_link=受保護的目錄
+
 add_title=保護新目錄
 add_header=新的Web目錄保護
 add_dom=虛擬服務器
@@ -30,20 +37,30 @@ add_edir=沒有輸入目錄
 add_edir2=無效的目錄
 add_edir3=目錄不能以/開頭
 add_edir4=Web目錄不存在
-add_eclash=保護文件 $1已存在
-add_eclash2=用戶文件 $1已存在
-add_eclash3=保護文件 $1已經存在，並且包含 $2指令
+add_egclash=該目錄的保護已存在
 add_edesc=未輸入描述
 add_esymlink=保護文件 $1是符號鏈接
+add_tip_under=即在
+
 delete_err=無法刪除保護
 delete_enone=未選擇
 delete_ecannot=您無權管理此目錄
+
 find_title=查找受保護的目錄
 find_err=找不到受保護的目錄
 find_edom=缺少虛擬服務器
 find_ecannot=不允許您找到此虛擬服務器的目錄
 find_doing=在 $1..下搜索受保護的目錄。
-find_found=在 $2的用戶中找到了新的Apache選項文件 $1。
-find_already=跳過已知的Apache選項文件 $1。
-find_noprot=跳過Apache選項文件 $1，因為它不保護目錄。
-find_foundnot=找到了新的Apache選項文件 $1，但不允許您管理此目錄。
+find_found= ..發現新的選項檔 $1，使用者位於 $2
+find_already=..正在跳過已知選項檔 $1
+find_noprot=..跳過選項檔 $1，因為它不保護目錄
+find_foundnot=..發現新的選項檔案 $1，但您無權管理此目錄
+find_found2= ..從 $1 目錄匯入了新選項文件
+find_already2=..從 $1 目錄跳過已知選項文件
+find_noprot2=..從 $1 跳過選項文件，因為它不保護該目錄
+find_foundnot2=..在 $1 中找到新的選項文件，但您無權管理此目錄
+find_founddone=..完畢
+find_authreq=需要身份驗證
+find_webservstatus0=並向 Web 伺服器配置新增了新的目錄保護設置
+find_webservstatus1=但未能將目錄保護設定新增至 Web 伺服器配置
+find_webservstatus-1=並保留 Web 伺服器配置中的現有目錄保護設置

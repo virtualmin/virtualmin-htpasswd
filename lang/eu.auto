@@ -10,13 +10,20 @@ index_return=babestutako direktorioak
 index_hdir=Webgune osoa
 index_find=Bilatu Babestutako Direktorioak
 index_finddesc=Eskuz babestutako $1 azpiko beste direktorio batzuk aurkitu, baimendutako erabiltzaileak kudeatu ahal izateko.
+index_alert_added_desc=$2-rako sarbidea duten erabiltzaileek kontrola dezakezu <a href='$1'>Editatu erabiltzaileak: posta eta FTP erabiltzaileak</a> orrialdea erabiliz.
+index_alert_added_desc2=$2 direktoriorako zein erabiltzaile duten sarbidea kontrola dezakezu <a href='$1'>Editatu erabiltzaileak: posta eta FTP erabiltzaileak</a> orrialdea erabiliz.
+index_alert_added_title=Babesa gaituta!
+
 feat_name=Babestutako web direktorioak
 feat_edep=Babestutako Web Zuzendarien modulua ez dago instalatuta
-feat_eweb=Apache webgune funtzioa ez dago gaituta
+feat_eweb=Webgunearen eginbide bat ez dago gaituta
+
 user_dirs=Baimendu web direktorioetarako sarbidea
 user_opts=Direktorio guztiak
 user_vals=Onartutako direktorioak
+
 links_link=Babestutako Zuzendaritzak
+
 add_title=Babestu direktorio berria
 add_header=Web direktorioen babes berria
 add_dom=Zerbitzari birtuala
@@ -30,20 +37,30 @@ add_edir=Ez da direktoriorik sartu
 add_edir2=Direktorio baliogabea
 add_edir3=Direktorioa ez da a /
 add_edir4=Ez da web direktoriorik existitzen
-add_eclash=$1 babes-fitxategia lehendik dago
-add_eclash2=Erabiltzaile $1 fitxategia lehendik dago
-add_eclash3=$1 babes fitxategia lehendik dago eta $2 zuzentaraua du
+add_egclash=Direktorio honen babesa badago jada
 add_edesc=Ez da deskribapenik sartu
 add_esymlink=$1 babes fitxategia lotura sinbolikoa da
+add_tip_under=hau da, azpian
+
 delete_err=Ezin izan da babesa kendu
 delete_enone=Ez da hautatu
 delete_ecannot=Ezin duzu direktorio hau kudeatu
+
 find_title=Bilatu Babestutako Direktorioak
 find_err=Ezin izan da direktorio direktorio babestu aurkitu
 find_edom=Zerbitzari birtuala falta da
 find_ecannot=Ezin duzu zerbitzari birtual hauetarako direktoriorik aurkitu
 find_doing=$1 azpian babestutako direktorioen bila.
-find_found=Apache $1 fitxategi berria aurkitu da $2 ko erabiltzaileekin.
-find_already=$1 Apache aukeren fitxategia saltatzea.
-find_noprot=Apache aukerak $1 fitxategian saltatzea, direktorioaren babesa ez duelako.
-find_foundnot=$1 fitxategi berri Apache aukera aurkitu dira, baina ezin duzu direktorio hau kudeatu.
+find_found= .. $1 aukera-fitxategi berria aurkitu du erabiltzaileekin $2-n
+find_already=.. $1 aukera-fitxategi ezaguna saltatzen
+find_noprot=..aukeren $1 fitxategia saltatuz, ez baitu direktorioa babesten
+find_foundnot=.. $1 aukera-fitxategi berria aurkitu du, baina ez duzu direktorio hau kudeatzeko baimenik
+find_found2= ..aukeren fitxategi berriak inportatu ditu $1 direktoriotik
+find_already2=.. $1 direktoriotik ezagutzen diren aukerak fitxategia saltatzen
+find_noprot2=.. $1 -eko aukeren fitxategia saltatuz, ez baitu direktorioa babesten
+find_foundnot2=..aukeren fitxategi berriak aurkitu ditu $1-en, baina ez duzu direktorio hau kudeatzeko baimenik
+find_founddone=..eginda
+find_authreq=Autentifikazioa beharrezkoa
+find_webservstatus0=eta direktorioa babesteko ezarpen berriak gehitu ditu web zerbitzariaren konfigurazioan
+find_webservstatus1=baina ezin izan dira gehitu direktorio babesteko ezarpenak web zerbitzariaren konfigurazioan
+find_webservstatus-1=eta lehendik dauden direktorioa babesteko ezarpenak mantendu ditu web zerbitzariaren konfiguraziotik

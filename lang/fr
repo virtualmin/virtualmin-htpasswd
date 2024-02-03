@@ -10,12 +10,16 @@ index_return=répertoires protégés
 index_hdir=Site Web entier
 index_find=Trouver les Répertoires Protégés
 index_finddesc=Trouver les autres répertoires sous $1 qui ont été protégés manuellement, pour permettre la gestion des utilisateurs à travers cette interface.
+
 feat_name=Répertoires web protégés
 feat_edep=Le module de protection de répertoires Web n'est pas installé
+
 user_dirs=Autoriser l'accès aux répertoires Web
 user_opts=Tous les répertoires
 user_vals=Répertoires autorisés
+
 links_link=Répertoires protégés
+
 add_title=Protéger un Nouveau Répertoire
 add_header=Nouvelle protection d'un répertoire de site web
 add_dom=Serveur virtuel
@@ -29,20 +33,15 @@ add_edir=Aucun répertoire renseigné
 add_edir2=Répertoire invalide
 add_edir3=Le répertoire ne doit pas commencer par un '/'
 add_edir4=Le répertoire n'existe pas
-add_eclash=Le fichier de protection $1 existe déjà
-add_eclash2=Le fichier utilisateurs $1 existe déjà
-add_eclash3=Le fichier de protection $1 existe déjà et contient la directive $2.
 add_edesc=Aucune description renseignée
 add_esymlink=Le fichier de protection $1 est un lien symbolique
+
 delete_err=Impossible d'enlever la protection
 delete_enone=Aucun sélectionné
 delete_ecannot=Vous n'êtes pas autorisé à gérer ce répertoire
+
 find_title=Trouver les Répertoires Protégés
 find_err=Impossible de trouver les répertoires protégés
 find_edom=Serveur virtuel manquant
 find_ecannot=Vous n'êtes pas autorisé à trouver d'autres répertoires pour ce serveur virtuel
 find_doing=Recherche de répertoires protégés sous $1 ..
-find_found=Nouvelles options Apache trouvées pour le fichier $1 avec les utilisateurs dans $2.
-find_already=Ne pas tenir compte des options Apache connues du fichier $1.
-find_noprot=Ne pas tenir compte des options Apache connues du fichier $1, comme il ne protège pas le répertoire.
-find_foundnot=Nouveau fichier $1 d'options Apache trouvé, mais vous n'êtes pas autorisé à géré ce répertoire.
