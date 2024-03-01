@@ -89,7 +89,7 @@ my ($user, $old, $in, $new, $dom) = @_;
 my @dirs = &htaccess_htpasswd::list_directories();
 @dirs = grep { &can_directory($_->[0], $dom) } @dirs;
 return undef if (!@dirs);
-my %indir = &get_in_dirs(\@dirs, $old->{'user'});
+my %indir = $old ? &get_in_dirs(\@dirs, $old->{'user'}) : ( );
 my $count = 0;
 
 # Update them all
@@ -155,7 +155,7 @@ my ($user, $old, $dom) = @_;
 # Find protected directories
 my @dirs = &htaccess_htpasswd::list_directories();
 @dirs = grep { &can_directory($_->[0], $dom) } @dirs;
-my %indir = &get_in_dirs(\@dirs, $old->{'user'});
+my %indir = $old ? &get_in_dirs(\@dirs, $old->{'user'}) : ( );
 
 # Update the user
 foreach my $d (@dirs) {
