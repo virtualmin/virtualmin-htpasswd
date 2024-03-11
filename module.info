@@ -1,5 +1,5 @@
 desc=Virtualmin Protected Directories
 hidden=1
-depends=htaccess-htpasswd apache virtual-server/3.70 1.420
+depends=htaccess-htpasswd virtual-server/3.70 1.420
 version=3.3
 feedback=jcameron@webmin.com
