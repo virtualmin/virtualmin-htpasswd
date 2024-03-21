@@ -37,7 +37,7 @@ foreach my $dir (@dirs) {
 	my $conf = &apache::get_htaccess_config(
 		"$dir->[0]/$htaccess_htpasswd::config{'htaccess'}");
 	my $desc = &apache::find_directive("AuthName", $conf, 1);
-	my $users = $dir->[2] == 3 ?
+	my $users = ($dir->[2] && $dir->[2] == 3) ?
 		&htaccess_htpasswd::list_digest_users($dir->[1]) :
 		&htaccess_htpasswd::list_users($dir->[1]);
 	push(@table, [

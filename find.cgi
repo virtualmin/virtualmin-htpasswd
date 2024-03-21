@@ -19,7 +19,7 @@ my %got = map { ( "$_->[0]/$htaccess_htpasswd::config{'htaccess'}", 1 ) } @dirs;
 
 my $f_apache = $virtual_server::config{'web'};
 my $f_indent = "&nbsp;" x 4;
-my $f_label;
+my $f_label = "";
 $f_label = 2 if (!$f_apache);
 print &text('find_doing', "<tt>$d->{'home'}</tt>"),"<br>\n";
 open(my $FIND, "find ".quotemeta($d->{'home'})." -name ".
