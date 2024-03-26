@@ -8,7 +8,7 @@ sub module_install
 {
 # Enable virtualmin-htpasswd module once
 my @p = split(/\s+/, $virtual_server::config{'plugins'});
-my @ppe = split(/\s+/, $virtual_server::config{'plugins_postinstall_enabled'});
+my @ppe = split(/\s+/, $virtual_server::config{'plugins_postinstall_enabled'} // '');
 if (&indexof('virtualmin-nginx', @virtual_server::plugins) > -1 &&
     &indexof($module_name, @p) == -1 &&
     &indexof($module_name, @ppe) == -1) {
