@@ -10,8 +10,8 @@ index_return=aizsargāti katalogi
 index_hdir=Visa vietne
 index_find=Atrodiet aizsargātos direktorijus
 index_finddesc=Atrodiet citus direktorijas zem $1, kas ir aizsargāti manuāli, lai varētu pārvaldīt to atļautos lietotājus.
-index_alert_added_desc=Varat kontrolēt, kuriem lietotājiem ir piekļuve $2, izmantojot lapu <a href='$1'>Lietotāju rediģēšana: pasts un FTP lietotāji</a>.
-index_alert_added_desc2=Varat kontrolēt, kuriem lietotājiem ir piekļuve $2 direktorijam, izmantojot lapu <a href='$1'>Lietotāju rediģēšana: pasts un FTP lietotāji</a>.
+index_alert_added_desc=Varat kontrolēt, kuriem lietotājiem ir piekļuve $2, izmantojot lapu <a href='$1'>Lietotāju rediģēšana</a>.
+index_alert_added_desc2=Izmantojot lapu <a href='$1'>Lietotāju rediģēšana</a>, varat kontrolēt, kuriem lietotājiem ir piekļuve $2 direktorijam.
 index_alert_added_title=Aizsardzība iespējota!
 
 feat_name=Aizsargāti tīmekļa direktoriji

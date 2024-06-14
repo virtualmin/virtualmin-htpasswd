@@ -10,8 +10,8 @@ index_return=beskyttede kataloger
 index_hdir=Hele webstedet
 index_find=Find beskyttede kataloger
 index_finddesc=Find andre mapper under $1, der er beskyttet manuelt, så deres tilladte brugere kan styres.
-index_alert_added_desc=Du kan kontrollere, hvilke brugere der har adgang til $2 ved at bruge siden <a href='$1'>Rediger brugere: Mail- og FTP-brugere</a>.
-index_alert_added_desc2=Du kan kontrollere, hvilke brugere der har adgang til mappen $2 ved at bruge siden <a href='$1'>Rediger brugere: Mail- og FTP-brugere</a>.
+index_alert_added_desc=Du kan kontrollere, hvilke brugere der har adgang til $2 ved at bruge siden <a href='$1'>Rediger brugere</a>.
+index_alert_added_desc2=Du kan kontrollere, hvilke brugere der har adgang til mappen $2 ved at bruge siden <a href='$1'>Rediger brugere</a>.
 index_alert_added_title=Beskyttelse aktiveret!
 
 feat_name=Beskyttede webmapper

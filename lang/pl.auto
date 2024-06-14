@@ -10,8 +10,8 @@ index_return=chronione katalogi
 index_hdir=Cała strona internetowa
 index_find=Znajdź chronione katalogi
 index_finddesc=Znajdź inne katalogi w $1, które zostały ręcznie zabezpieczone, aby można było zarządzać ich dozwolonymi użytkownikami.
-index_alert_added_desc=Możesz kontrolować, którzy użytkownicy mają dostęp do $2, korzystając ze strony <a href='$1'>Edytuj użytkowników: Użytkownicy poczty i FTP</a>.
-index_alert_added_desc2=Możesz kontrolować, którzy użytkownicy mają dostęp do katalogu $2, korzystając ze strony <a href='$1'>Edytuj użytkowników: Użytkownicy poczty i FTP</a>.
+index_alert_added_desc=Możesz kontrolować, którzy użytkownicy mają dostęp do $2, korzystając ze strony <a href='$1'>Edytuj użytkowników</a>.
+index_alert_added_desc2=Możesz kontrolować, którzy użytkownicy mają dostęp do katalogu $2, korzystając ze strony <a href='$1'>Edytuj użytkowników</a>.
 index_alert_added_title=Ochrona włączona!
 
 feat_name=Chronione katalogi internetowe

@@ -10,8 +10,8 @@ index_return=direktori yang dilindungi
 index_hdir=Keseluruhan laman web
 index_find=Cari Direktori yang Dilindungi
 index_finddesc=Cari direktori lain di bawah $1 yang telah dilindungi secara manual, agar pengguna mereka yang dibenarkan dapat diuruskan.
-index_alert_added_desc=Anda boleh mengawal pengguna yang mempunyai akses kepada $2 menggunakan halaman <a href='$1'>Edit Pengguna: Pengguna Mel dan FTP</a>.
-index_alert_added_desc2=Anda boleh mengawal pengguna yang mempunyai akses kepada direktori $2 menggunakan halaman <a href='$1'>Edit Pengguna: Pengguna Mel dan FTP</a>.
+index_alert_added_desc=Anda boleh mengawal pengguna yang mempunyai akses kepada $2 menggunakan halaman <a href='$1'>Edit Pengguna</a>.
+index_alert_added_desc2=Anda boleh mengawal pengguna yang mempunyai akses kepada $2 direktori menggunakan halaman <a href='$1'>Edit Pengguna</a>.
 index_alert_added_title=Perlindungan Didayakan!
 
 feat_name=Direktori web yang dilindungi

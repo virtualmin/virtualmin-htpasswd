@@ -1,8 +1,8 @@
 index_ecannot=Není dovoleno konfigurovat chráněné adresáře pro tuto doménu
 index_dir=Webový adresář
 index_users=Uživatelé
-index_alert_added_desc=Pomocí stránky <a href='$1'>Upravit uživatele: Uživatelé pošty a FTP</a> můžete ovládat, kteří uživatelé mají přístup k $2.
-index_alert_added_desc2=Pomocí stránky <a href='$1'>Upravit uživatele: Uživatelé pošty a FTP</a> můžete ovládat, kteří uživatelé mají přístup k adresáři $2.
+index_alert_added_desc=Pomocí stránky <a href='$1'>Upravit uživatele</a> můžete ovládat, kteří uživatelé mají přístup k $2.
+index_alert_added_desc2=Pomocí stránky <a href='$1'>Upravit uživatele</a> můžete ovládat, kteří uživatelé mají přístup k adresáři $2.
 index_alert_added_title=Ochrana povolena!
 
 feat_edep=Modul Chráněné webové adresáře není nainstalován

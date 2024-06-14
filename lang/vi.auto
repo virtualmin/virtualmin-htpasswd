@@ -10,8 +10,8 @@ index_return=thư mục được bảo vệ
 index_hdir=Toàn bộ trang web
 index_find=Tìm thư mục được bảo vệ
 index_finddesc=Tìm các thư mục khác dưới $1 đã được bảo vệ thủ công để người dùng được phép của họ có thể được quản lý.
-index_alert_added_desc=Bạn có thể kiểm soát những người dùng nào có quyền truy cập vào $2 bằng cách sử dụng trang <a href='$1'>Chỉnh sửa người dùng: Người dùng thư và FTP</a>.
-index_alert_added_desc2=Bạn có thể kiểm soát người dùng nào có quyền truy cập vào thư mục $2 bằng cách sử dụng trang <a href='$1'>Chỉnh sửa người dùng: Người dùng thư và FTP</a>.
+index_alert_added_desc=Bạn có thể kiểm soát người dùng nào có quyền truy cập vào $2 bằng cách sử dụng trang <a href='$1'>Chỉnh sửa người dùng</a>.
+index_alert_added_desc2=Bạn có thể kiểm soát người dùng nào có quyền truy cập vào thư mục $2 bằng cách sử dụng trang <a href='$1'>Chỉnh sửa người dùng</a>.
 index_alert_added_title=Đã kích hoạt bảo vệ!
 
 feat_name=Thư mục web được bảo vệ

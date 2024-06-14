@@ -1,5 +1,5 @@
-index_alert_added_desc=Vous pouvez contrôler quels utilisateurs ont accès à $2 à l'aide de la page <a href='$1'>Modifier les utilisateurs : Utilisateurs de messagerie et FTP</a>.
-index_alert_added_desc2=Vous pouvez contrôler quels utilisateurs ont accès au répertoire $2 à l'aide de la page <a href='$1'>Modifier les utilisateurs : Utilisateurs de messagerie et FTP</a>.
+index_alert_added_desc=Vous pouvez contrôler quels utilisateurs ont accès à $2 à l'aide de la page <a href='$1'>Modifier les utilisateurs</a>.
+index_alert_added_desc2=Vous pouvez contrôler quels utilisateurs ont accès au répertoire $2 à l'aide de la page <a href='$1'>Modifier les utilisateurs</a>.
 index_alert_added_title=Protection activée !
 
 feat_eweb=Une fonctionnalité du site Web n'est pas activée

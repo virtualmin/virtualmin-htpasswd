@@ -10,8 +10,8 @@ index_return=保護されたディレクトリ
 index_hdir=ウェブサイト全体
 index_find=保護されたディレクトリを見つける
 index_finddesc=許可されたユーザーを管理できるように、手動で保護されている $1の下の他のディレクトリを見つけます。
-index_alert_added_desc=<a href='$1'>ユーザーの編集: メール ユーザーと FTP ユーザー</a> ページを使用して、$2 にアクセスできるユーザーを制御できます。
-index_alert_added_desc2=<a href='$1'>ユーザーの編集: メール ユーザーと FTP ユーザー</a> ページを使用して、$2 ディレクトリにアクセスできるユーザーを制御できます。
+index_alert_added_desc=<a href='$1'>ユーザーの編集</a> ページを使用して、$2 にアクセスできるユーザーを制御できます。
+index_alert_added_desc2=<a href='$1'>ユーザーの編集</a> ページを使用して、$2 ディレクトリにアクセスできるユーザーを制御できます。
 index_alert_added_title=保護が有効になりました!
 
 feat_name=保護されたWebディレクトリ

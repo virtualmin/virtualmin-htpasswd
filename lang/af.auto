@@ -10,8 +10,8 @@ index_return=beskermde kaarte
 index_hdir=Die hele webwerf
 index_find=Vind beskermde kaarte
 index_finddesc=Soek ander kaarte onder $1 wat met die hand beskerm is, sodat hul toegelate gebruikers bestuur kan word.
-index_alert_added_desc=Jy kan beheer watter gebruikers toegang tot $2 het deur die <a href='$1'>Redigeer gebruikers: Pos- en FTP-gebruikers</a>-bladsy.
-index_alert_added_desc2=Jy kan beheer watter gebruikers toegang tot $2-gids het deur die <a href='$1'>Redigeer Gebruikers: Pos- en FTP-gebruikers</a>-bladsy.
+index_alert_added_desc=Jy kan beheer watter gebruikers toegang tot $2 het deur die <a href='$1'>Redigeer gebruikers</a>-bladsy.
+index_alert_added_desc2=Jy kan beheer watter gebruikers toegang tot $2-gids het deur die <a href='$1'>Redigeer gebruikers</a>-bladsy.
 index_alert_added_title=Beskerming geaktiveer!
 
 feat_name=Beskermde webgidse

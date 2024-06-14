@@ -10,8 +10,8 @@ index_return=diretórios protegidos
 index_hdir=Site inteiro
 index_find=Encontre diretórios protegidos
 index_finddesc=Encontre outros diretórios em $1 que foram protegidos manualmente, para que seus usuários permitidos possam ser gerenciados.
-index_alert_added_desc=Você pode controlar quais usuários têm acesso a $2 usando a página <a href='$1'>Editar usuários: usuários de email e FTP</a>.
-index_alert_added_desc2=Você pode controlar quais usuários têm acesso ao diretório $2 usando a página <a href='$1'>Editar usuários: usuários de email e FTP</a>.
+index_alert_added_desc=Você pode controlar quais usuários têm acesso a $2 usando a página <a href='$1'>Editar usuários</a>.
+index_alert_added_desc2=Você pode controlar quais usuários têm acesso ao diretório $2 usando a página <a href='$1'>Editar usuários</a>.
 index_alert_added_title=Proteção habilitada!
 
 feat_name=Diretórios da web protegidos

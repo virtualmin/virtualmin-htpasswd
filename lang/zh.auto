@@ -10,8 +10,8 @@ index_return=受保护的目录
 index_hdir=整个网站
 index_find=查找受保护的目录
 index_finddesc=在 $1下查找其他已手动保护的目录，以便可以管理其允许的用户。
-index_alert_added_desc=您可以使用<a href='$1'>编辑用户：邮件和 FTP 用户</a>页面控制哪些用户有权访问 $2。
-index_alert_added_desc2=您可以使用<a href='$1'>编辑用户：邮件和 FTP 用户</a>页面控制哪些用户有权访问 $2 目录。
+index_alert_added_desc=您可以使用<a href='$1'>编辑用户</a>页面控制哪些用户可以访问 $2。
+index_alert_added_desc2=您可以使用<a href='$1'>编辑用户</a>页面控制哪些用户可以访问 $2 目录。
 index_alert_added_title=保护已启用！
 
 feat_name=受保护的网页目录

@@ -10,8 +10,8 @@ index_return=korunan dizinler
 index_hdir=Tüm web sitesi
 index_find=Korumalı Klasörleri Bul
 index_finddesc=$1 altında, izin verilen kullanıcılarının yönetilebilmesi için manuel olarak korunan diğer dizinleri bulun.
-index_alert_added_desc=<a href='$1'>Kullanıcıları Düzenle: Posta ve FTP Kullanıcıları</a> sayfasını kullanarak $2'ye hangi kullanıcıların erişebileceğini kontrol edebilirsiniz.
-index_alert_added_desc2=<a href='$1'>Kullanıcıları Düzenle: Posta ve FTP Kullanıcıları</a> sayfasını kullanarak hangi kullanıcıların $2 dizinine erişebileceğini kontrol edebilirsiniz.
+index_alert_added_desc=<a href='$1'>Kullanıcıları Düzenle</a> sayfasını kullanarak hangi kullanıcıların $2'ye erişebileceğini kontrol edebilirsiniz.
+index_alert_added_desc2=<a href='$1'>Kullanıcıları Düzenle</a> sayfasını kullanarak hangi kullanıcıların $2 dizinine erişebileceğini kontrol edebilirsiniz.
 index_alert_added_title=Koruma Etkinleştirildi!
 
 feat_eweb=Bir web sitesi özelliği etkin değil

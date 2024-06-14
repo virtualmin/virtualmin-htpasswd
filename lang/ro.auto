@@ -10,8 +10,8 @@ index_return=directoare protejate
 index_hdir=Site întreg
 index_find=Găsiți directoare protejate
 index_finddesc=Găsiți alte directoare sub $1 protejate manual, astfel încât utilizatorii permisiți să poată fi gestionați.
-index_alert_added_desc=Puteți controla ce utilizatori au acces la $2 utilizând pagina <a href='$1'>Editați utilizatori: utilizatori de e-mail și FTP</a>.
-index_alert_added_desc2=Puteți controla ce utilizatori au acces la directorul $2 utilizând pagina <a href='$1'>Editați utilizatori: utilizatori de e-mail și FTP</a>.
+index_alert_added_desc=Puteți controla ce utilizatori au acces la $2 folosind pagina <a href='$1'>Editați utilizatori</a>.
+index_alert_added_desc2=Puteți controla ce utilizatori au acces la directorul $2 folosind pagina <a href='$1'>Editați utilizatori</a>.
 index_alert_added_title=Protecție activată!
 
 feat_name=Directoare web protejate

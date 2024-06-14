@@ -10,8 +10,8 @@ index_return=direttorji protetti
 index_hdir=Websajt sħiħa
 index_find=Sib Direttorji Protetti
 index_finddesc=Sib direttorji oħra taħt $1 li ġew protetti bl-idejn, sabiex l-utenti permessi tagħhom ikunu jistgħu jiġu ġestiti.
-index_alert_added_desc=Tista' tikkontrolla liema utenti għandhom aċċess għal $2 billi tuża l-paġna <a href='$1'>Editja Utenti: Utenti tal-Posta u FTP</a>.
-index_alert_added_desc2=Tista' tikkontrolla liema utenti għandhom aċċess għad-direttorju $2 billi tuża l-paġna <a href='$1'>Editja Utenti: Utenti tal-Posta u FTP</a>.
+index_alert_added_desc=Tista' tikkontrolla liema utenti għandhom aċċess għal $2 billi tuża l-paġna <a href='$1'>Editja l-Utenti</a>.
+index_alert_added_desc2=Tista' tikkontrolla liema utenti għandhom aċċess għad-direttorju $2 billi tuża l-paġna <a href='$1'>Editja l-Utenti</a>.
 index_alert_added_title=Protezzjoni Ippermettiet!
 
 feat_name=Direttorji web protetti

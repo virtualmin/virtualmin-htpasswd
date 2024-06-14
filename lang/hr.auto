@@ -10,8 +10,8 @@ index_return=zaštićeni imenici
 index_hdir=Cijela web stranica
 index_find=Pronađite zaštićene direktorije
 index_finddesc=Pronađite druge imenike ispod $1 koji su ručno zaštićeni kako bi se njihovim dozvoljenim korisnicima moglo upravljati.
-index_alert_added_desc=Možete kontrolirati koji korisnici imaju pristup $2 pomoću stranice <a href='$1'>Uređivanje korisnika: Korisnici pošte i FTP-a</a>.
-index_alert_added_desc2=Možete kontrolirati koji korisnici imaju pristup direktoriju $2 pomoću stranice <a href='$1'>Uređivanje korisnika: Korisnici pošte i FTP-a</a>.
+index_alert_added_desc=Možete kontrolirati koji korisnici imaju pristup $2 koristeći stranicu <a href='$1'>Uređivanje korisnika</a>.
+index_alert_added_desc2=Možete kontrolirati koji korisnici imaju pristup direktoriju $2 pomoću stranice <a href='$1'>Uređivanje korisnika</a>.
 index_alert_added_title=Zaštita uključena!
 
 feat_name=Zaštićene web mape

@@ -10,8 +10,8 @@ index_return=محفوظ ڈائریکٹریاں
 index_hdir=پوری ویب سائٹ
 index_find=محفوظ ڈائریکٹریاں تلاش کریں
 index_finddesc=$1 کے تحت ایسی دیگر ڈائریکٹریز ڈھونڈیں جن کو دستی طور پر محفوظ کیا گیا ہو ، تاکہ ان کے استعمال شدہ صارفین کا انتظام کیا جاسکے۔
-index_alert_added_desc=You can control which users have access to $2 using <a href='$1'>Edit Users: Mail and FTP Users</a> page.
-index_alert_added_desc2=You can control which users have access to $2 directory using <a href='$1'>Edit Users: Mail and FTP Users</a> page.
+index_alert_added_desc=You can control which users have access to $2 using <a href='$1'>Edit Users</a> page.
+index_alert_added_desc2=You can control which users have access to $2 directory using <a href='$1'>Edit Users</a> page.
 index_alert_added_title=تحفظ فعال!
 
 feat_name=محفوظ ویب ڈائریکٹریز

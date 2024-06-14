@@ -10,8 +10,8 @@ index_return=zaščiteni imeniki
 index_hdir=Celotno spletno mesto
 index_find=Poiščite zaščitene imenike
 index_finddesc=Poiščite druge imenike pod $1, ki so bili ročno zaščiteni, tako da bodo njihovi dovoljeni uporabniki lahko upravljali.
-index_alert_added_desc=Na strani <a href='$1'>Urejanje uporabnikov: uporabniki pošte in FTP</a> lahko nadzorujete, kateri uporabniki imajo dostop do $2.
-index_alert_added_desc2=Na strani <a href='$1'>Urejanje uporabnikov: uporabniki pošte in FTP</a> lahko nadzorujete, kateri uporabniki imajo dostop do imenika $2.
+index_alert_added_desc=Na strani <a href='$1'>Urejanje uporabnikov</a> lahko nadzorujete, kateri uporabniki imajo dostop do $2.
+index_alert_added_desc2=Na strani <a href='$1'>Urejanje uporabnikov</a> lahko nadzorujete, kateri uporabniki imajo dostop do imenika $2.
 index_alert_added_title=Zaščita omogočena!
 
 feat_name=Zaščiteni spletni imeniki

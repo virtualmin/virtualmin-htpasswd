@@ -10,8 +10,8 @@ index_return=보호 된 디렉토리
 index_hdir=전체 웹 사이트
 index_find=보호 된 디렉토리 찾기
 index_finddesc=허용 된 사용자를 관리 할 수 있도록 $1 에서 수동으로 보호 된 다른 디렉토리를 찾으십시오.
-index_alert_added_desc=<a href='$1'>사용자 편집: 메일 및 FTP 사용자</a> 페이지를 사용하여 $2에 액세스할 수 있는 사용자를 제어할 수 있습니다.
-index_alert_added_desc2=<a href='$1'>사용자 편집: 메일 및 FTP 사용자</a> 페이지를 사용하여 $2 디렉토리에 액세스할 수 있는 사용자를 제어할 수 있습니다.
+index_alert_added_desc=<a href='$1'>사용자 편집</a> 페이지를 사용하여 $2에 액세스할 수 있는 사용자를 제어할 수 있습니다.
+index_alert_added_desc2=<a href='$1'>사용자 편집</a> 페이지를 사용하여 $2 디렉토리에 액세스할 수 있는 사용자를 제어할 수 있습니다.
 index_alert_added_title=보호가 활성화되었습니다!
 
 feat_name=보호 된 웹 디렉토리

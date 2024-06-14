@@ -10,8 +10,8 @@ index_return=chránené adresáre
 index_hdir=Celá webová stránka
 index_find=Vyhľadajte chránené adresáre
 index_finddesc=Vyhľadajte ďalšie adresáre pod $1, ktoré boli chránené manuálne, aby ste mohli spravovať ich povolených používateľov.
-index_alert_added_desc=Pomocou stránky <a href='$1'>Upraviť používateľov: Používatelia pošty a FTP</a> môžete ovládať, ktorí používatelia majú prístup k $2.
-index_alert_added_desc2=Pomocou stránky <a href='$1'>Upraviť používateľov: Používatelia pošty a FTP</a> môžete ovládať, ktorí používatelia majú prístup k adresáru $2.
+index_alert_added_desc=Pomocou stránky <a href='$1'>Upraviť používateľov</a> môžete ovládať, ktorí používatelia majú prístup k $2.
+index_alert_added_desc2=Pomocou stránky <a href='$1'>Upraviť používateľov</a> môžete ovládať, ktorí používatelia majú prístup k adresáru $2.
 index_alert_added_title=Ochrana povolená!
 
 feat_name=Chránené webové adresáre

@@ -1,5 +1,5 @@
-index_alert_added_desc=Du kan kontrollere hvilke brukere som har tilgang til $2 ved å bruke <a href='$1'>Rediger brukere: E-post- og FTP-brukere</a>-siden.
-index_alert_added_desc2=Du kan kontrollere hvilke brukere som har tilgang til $2-katalogen ved å bruke <a href='$1'>Rediger brukere: E-post- og FTP-brukere</a>-siden.
+index_alert_added_desc=Du kan kontrollere hvilke brukere som har tilgang til $2 ved å bruke <a href='$1'>Rediger brukere</a>-siden.
+index_alert_added_desc2=Du kan kontrollere hvilke brukere som har tilgang til $2-katalogen ved å bruke siden <a href='$1'>Rediger brukere</a>.
 index_alert_added_title=Beskyttelse aktivert!
 
 feat_eweb=En nettsidefunksjon er ikke aktivert

@@ -10,8 +10,8 @@ index_return=suojatut hakemistot
 index_hdir=Koko verkkosivusto
 index_find=Etsi suojattuja hakemistoja
 index_finddesc=Etsi muut hakemistossa $1 olevat hakemistot, jotka on suojattu manuaalisesti, jotta niiden sallittuja käyttäjiä voidaan hallita.
-index_alert_added_desc=Voit hallita, millä käyttäjillä on pääsy kohteeseen $2 <a href='$1'>Muokkaa käyttäjiä: sähköposti- ja FTP-käyttäjiä</a> -sivulla.
-index_alert_added_desc2=Voit hallita, millä käyttäjillä on pääsy $2-hakemistoon <a href='$1'>Muokkaa käyttäjiä: sähköposti- ja FTP-käyttäjiä</a> -sivulla.
+index_alert_added_desc=Voit hallita, millä käyttäjillä on pääsy kohteeseen $2 <a href='$1'>Muokkaa käyttäjiä</a> -sivulla.
+index_alert_added_desc2=Voit hallita, millä käyttäjillä on pääsy hakemistoon $2 <a href='$1'>Muokkaa käyttäjiä</a> -sivulla.
 index_alert_added_title=Suojaus käytössä!
 
 feat_eweb=Verkkosivustotoiminto ei ole käytössä

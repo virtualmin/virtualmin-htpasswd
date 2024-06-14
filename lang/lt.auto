@@ -10,8 +10,8 @@ index_return=saugomi katalogai
 index_hdir=Visa svetainė
 index_find=Raskite saugomus katalogus
 index_finddesc=Raskite kitus katalogus, esančius $1, kurie buvo apsaugoti rankiniu būdu, kad būtų galima valdyti jų leidžiamus vartotojus.
-index_alert_added_desc=Galite valdyti, kurie vartotojai turi prieigą prie $2, naudodami puslapį <a href='$1'>Redaguoti naudotojus: paštas ir FTP naudotojai</a>.
-index_alert_added_desc2=Galite valdyti, kurie vartotojai turi prieigą prie $2 katalogo, naudodami puslapį <a href='$1'>Redaguoti vartotojus: paštas ir FTP naudotojai</a>.
+index_alert_added_desc=Galite valdyti, kurie vartotojai turi prieigą prie $2, naudodami puslapį <a href='$1'>Redaguoti naudotojus</a>.
+index_alert_added_desc2=Puslapyje <a href='$1'>Redaguoti naudotojus</a> galite valdyti, kurie vartotojai turi prieigą prie $2 katalogo.
 index_alert_added_title=Apsauga įjungta!
 
 feat_name=Apsaugoti žiniatinklio katalogai

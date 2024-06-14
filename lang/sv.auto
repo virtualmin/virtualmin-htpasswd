@@ -10,8 +10,8 @@ index_return=skyddade kataloger
 index_hdir=Hela webbplatsen
 index_find=Hitta skyddade kataloger
 index_finddesc=Hitta andra kataloger under $1 som har skyddats manuellt så att deras tillåtna användare kan hanteras.
-index_alert_added_desc=Du kan styra vilka användare som har åtkomst till $2 med hjälp av sidan <a href='$1'>Redigera användare: Mail- och FTP-användare</a>.
-index_alert_added_desc2=Du kan styra vilka användare som har åtkomst till katalogen $2 med hjälp av sidan <a href='$1'>Redigera användare: E-post- och FTP-användare</a>.
+index_alert_added_desc=Du kan styra vilka användare som har åtkomst till $2 med hjälp av sidan <a href='$1'>Redigera användare</a>.
+index_alert_added_desc2=Du kan styra vilka användare som har åtkomst till katalogen $2 med sidan <a href='$1'>Redigera användare</a>.
 index_alert_added_title=Skydd aktiverat!
 
 feat_name=Skyddade webbkataloger

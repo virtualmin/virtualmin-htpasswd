@@ -10,8 +10,8 @@ index_return=geschützte Verzeichnisse
 index_hdir=Ganze Website
 index_find=Suchen Sie nach geschützten Verzeichnissen
 index_finddesc=Suchen Sie unter $1 nach anderen Verzeichnissen, die manuell geschützt wurden, damit die zulässigen Benutzer verwaltet werden können.
-index_alert_added_desc=Sie können steuern, welche Benutzer Zugriff auf $2 haben, indem Sie die Seite <a href='$1'>Benutzer bearbeiten: E-Mail- und FTP-Benutzer</a> verwenden.
-index_alert_added_desc2=Sie können steuern, welche Benutzer Zugriff auf das Verzeichnis $2 haben, indem Sie die Seite <a href='$1'>Benutzer bearbeiten: E-Mail- und FTP-Benutzer</a> verwenden.
+index_alert_added_desc=Sie können mithilfe der Seite <a href='$1'>Benutzer bearbeiten</a> steuern, welche Benutzer Zugriff auf $2 haben.
+index_alert_added_desc2=Sie können mithilfe der Seite <a href='$1'>Benutzer bearbeiten</a> steuern, welche Benutzer Zugriff auf das Verzeichnis $2 haben.
 index_alert_added_title=Schutz aktiviert!
 
 feat_name=Geschützte Webverzeichnisse

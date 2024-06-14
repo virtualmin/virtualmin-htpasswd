@@ -10,8 +10,8 @@ index_return=directoris protegits
 index_hdir=Lloc web complet
 index_find=Cerqueu directoris protegits
 index_finddesc=Cerqueu altres directoris de $1 protegits manualment, de manera que es puguin gestionar els usuaris permesos.
-index_alert_added_desc=Podeu controlar quins usuaris tenen accés a $2 mitjançant la pàgina <a href='$1'>Edita usuaris: usuaris de correu i FTP</a>.
-index_alert_added_desc2=Podeu controlar quins usuaris tenen accés al directori $2 mitjançant la pàgina <a href='$1'>Edita usuaris: usuaris de correu i FTP</a>.
+index_alert_added_desc=Podeu controlar quins usuaris tenen accés a $2 mitjançant la pàgina <a href='$1'>Edita usuaris</a>.
+index_alert_added_desc2=Podeu controlar quins usuaris tenen accés al directori $2 mitjançant la pàgina <a href='$1'>Edita usuaris</a>.
 index_alert_added_title=Protecció activada!
 
 feat_name=Directori web protegit

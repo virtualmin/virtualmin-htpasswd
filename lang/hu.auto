@@ -10,8 +10,8 @@ index_return=védett könyvtárak
 index_hdir=Teljes weboldal
 index_find=Keressen védett könyvtárakat
 index_finddesc=Keressen más olyan könyvtárakat, amelyek $1 alá tartoznak, és amelyeket kézzel védtek, hogy azok engedélyezett felhasználói kezelhetők legyenek.
-index_alert_added_desc=A <a href='$1'>Felhasználók szerkesztése: Levelezés és FTP-felhasználók</a> oldalon szabályozhatja, hogy mely felhasználók férhetnek hozzá a $2-hez.
-index_alert_added_desc2=A <a href='$1'>Felhasználók szerkesztése: Levelezés és FTP-felhasználók</a> oldalon szabályozhatja, hogy mely felhasználók férhessenek hozzá a $2 könyvtárhoz.
+index_alert_added_desc=A <a href='$1'>Felhasználók szerkesztése</a> oldalon szabályozhatja, hogy mely felhasználók férhessenek hozzá a $2-hez.
+index_alert_added_desc2=A <a href='$1'>Felhasználók szerkesztése</a> oldalon beállíthatja, hogy mely felhasználók férhessenek hozzá a $2 könyvtárhoz.
 index_alert_added_title=Védelem engedélyezve!
 
 feat_name=Védett webes könyvtárak

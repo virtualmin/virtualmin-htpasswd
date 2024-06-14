@@ -1,5 +1,5 @@
-index_alert_added_desc=U kunt bepalen welke gebruikers toegang hebben tot $2 via de pagina <a href='$1'>Gebruikers bewerken: e-mail- en FTP-gebruikers</a>.
-index_alert_added_desc2=U kunt bepalen welke gebruikers toegang hebben tot de map $2 via de pagina <a href='$1'>Gebruikers bewerken: e-mail- en FTP-gebruikers</a>.
+index_alert_added_desc=U kunt bepalen welke gebruikers toegang hebben tot $2 via de pagina <a href='$1'>Gebruikers bewerken</a>.
+index_alert_added_desc2=U kunt bepalen welke gebruikers toegang hebben tot de map $2 via de pagina <a href='$1'>Gebruikers bewerken</a>.
 index_alert_added_title=Bescherming ingeschakeld!
 
 feat_eweb=Een websitefunctie is niet ingeschakeld

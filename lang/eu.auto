@@ -10,8 +10,8 @@ index_return=babestutako direktorioak
 index_hdir=Webgune osoa
 index_find=Bilatu Babestutako Direktorioak
 index_finddesc=Eskuz babestutako $1 azpiko beste direktorio batzuk aurkitu, baimendutako erabiltzaileak kudeatu ahal izateko.
-index_alert_added_desc=$2-rako sarbidea duten erabiltzaileek kontrola dezakezu <a href='$1'>Editatu erabiltzaileak: posta eta FTP erabiltzaileak</a> orrialdea erabiliz.
-index_alert_added_desc2=$2 direktoriorako zein erabiltzaile duten sarbidea kontrola dezakezu <a href='$1'>Editatu erabiltzaileak: posta eta FTP erabiltzaileak</a> orrialdea erabiliz.
+index_alert_added_desc=$2-rako sarbidea duten erabiltzaileek kontrola dezakezu <a href='$1'>Editatu erabiltzaileak</a> orria erabiliz.
+index_alert_added_desc2=$2 direktoriorako zein erabiltzaile duten sarbidea kontrola dezakezu <a href='$1'>Editatu erabiltzaileak</a> orria erabiliz.
 index_alert_added_title=Babesa gaituta!
 
 feat_name=Babestutako web direktorioak
