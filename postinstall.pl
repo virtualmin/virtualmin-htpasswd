@@ -7,18 +7,18 @@ do 'virtualmin-htpasswd-lib.pl';
 sub module_install
 {
 # Enable virtualmin-htpasswd module once
-my @p = split(/\s+/, $virtual_server::config{'plugins'});
-my @ppe = split(/\s+/, $virtual_server::config{'plugins_postinstall_enabled'} // '');
-if (&indexof('virtualmin-nginx', @virtual_server::plugins) > -1 &&
-    &indexof($module_name, @p) == -1 &&
-    &indexof($module_name, @ppe) == -1) {
+my %vconfig = &foreign_config("virtual-server");
+my @p = split(/\s+/, $vconfig{'plugins'});
+my @ppe = split(/\s+/, $vconfig{'plugins_postinstall_enabled'});
+if (&indexof('virtualmin-nginx', @p) >= 0 &&
+    &indexof($module_name, @p) < 0 &&
+    &indexof($module_name, @ppe) < 0) {
 	&virtual_server::lock_file($virtual_server::module_config_file);
 	push(@p, $module_name);
 	push(@ppe, $module_name);
-	$virtual_server::config{'plugins'} = join(" ", @p);
-	$virtual_server::config{'plugins_postinstall_enabled'} = join(" ", @ppe);
-	&virtual_server::save_module_config(\%virtual_server::config, 'virtual-server');
+	$vconfig{'plugins'} = join(" ", @p);
+	$vconfig{'plugins_postinstall_enabled'} = join(" ", @ppe);
+	&virtual_server::save_module_config(\%vconfig, 'virtual-server');
 	&virtual_server::unlock_file($virtual_server::module_config_file);
 	}
 }
-
