@@ -281,4 +281,18 @@ else {
 	}
 }
 
+# feature_remote_api_commands()
+# Returns the API commands that domain owners can run over the remote API.
+# Each one authorizes the requested domain itself, and confines the directories
+# it touches to that domain's home
+sub feature_remote_api_commands
+{
+return ( "create-protected-directory",
+	 "delete-protected-directory",
+	 "list-protected-directories",
+	 "create-protected-user",
+	 "delete-protected-user",
+	 "list-protected-users" );
+}
+
 1;

@@ -52,7 +52,7 @@ while(@ARGV > 0) {
 
 # Validate parameters
 $dname || &usage("Missing --domain parameter");
-my $d = &virtual_server::get_domain_by("dom", $dname);
+my $d = &virtual_server::get_remote_api_owned_domain("dom", $dname);
 $d || &usage("No domain named $dname found");
 $path || &usage("Missing --path parameter");
 if ($path !~ /^\//) {
